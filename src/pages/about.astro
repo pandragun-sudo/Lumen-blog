@@ -53,22 +53,24 @@ import Layout from '../layouts/BlogPost.astro';
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
-		background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-		color: #ffffff;
+		background: #111827; /* 세련되고 가시성 높은 다크톤 */
+		color: #ffffff !important; /* 글로벌 링크 스타일 덮어쓰기 */
 		padding: 16px 36px;
 		border-radius: 12px;
 		font-weight: 700;
 		font-size: 1.15rem;
-		text-decoration: none;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+		text-decoration: none !important; /* 글로벌 밑줄 강제 제거 */
+		box-shadow: 0 4px 15px rgba(17, 24, 39, 0.3);
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid #374151;
 	}
 	
 	.premium-btn:hover {
 		transform: translateY(-3px) scale(1.02);
-		box-shadow: 0 12px 30px rgba(99, 102, 241, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-		color: #ffffff;
+		background: #1f2937;
+		box-shadow: 0 8px 25px rgba(17, 24, 39, 0.4);
+		color: #ffffff !important;
+		text-decoration: none !important;
 	}
 	
 	.premium-btn .btn-icon {
