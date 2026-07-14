@@ -2,7 +2,7 @@
 title: "유튜브 쇼츠 급상승 비결 완벽 분석"
 description: "최근 엄청난 조회수를 기록한 영상들을 통해 유튜브 쇼츠 급상승 비결을 철저하게 분석했습니다. 350만 뷰를 넘긴 콘텐츠부터 심리 관련 영상까지 성공적인 기획 노하우를 확인하세요."
 pubDate: "Jul 14 2026"
-heroImage: "/blog-placeholder-1.jpg"
+heroImage: "../../assets/blog-placeholder-1.jpg"
 category: "guide"
 ---
 
