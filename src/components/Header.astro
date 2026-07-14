@@ -6,10 +6,15 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+		<div class="nav-right">
+			<div class="internal-links">
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+				<HeaderLink href="/about">About</HeaderLink>
+			</div>
+			<a href="https://lumeninsights.kr" target="_blank" rel="noopener noreferrer" class="header-premium-btn">
+				<span class="rocket">🚀</span> Lumen Insights
+			</a>
 		</div>
 	</nav>
 </header>
@@ -62,11 +67,43 @@ import HeaderLink from './HeaderLink.astro';
 		color: var(--text-main);
 		border-bottom-color: var(--text-main);
 	}
+	.nav-right {
+		display: flex;
+		align-items: center;
+		gap: 2em;
+	}
+	.header-premium-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		background: #111827;
+		color: #ffffff !important;
+		padding: 8px 16px;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 0.85em;
+		text-decoration: none !important;
+		border: 1px solid #374151;
+		transition: all 0.2s ease;
+		box-shadow: 0 2px 8px rgba(17, 24, 39, 0.2);
+	}
+	.header-premium-btn:hover {
+		background: #1f2937;
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(17, 24, 39, 0.3);
+	}
+	.rocket {
+		font-size: 1.1em;
+	}
 	@media (max-width: 720px) {
 		nav {
 			flex-direction: column;
 			height: auto;
 			padding: 1em 0;
+			gap: 1em;
+		}
+		.nav-right {
+			flex-direction: column;
 			gap: 1em;
 		}
 		.internal-links {

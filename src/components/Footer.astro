@@ -4,7 +4,16 @@ const today = new Date();
 
 <footer>
 	<div class="footer-content">
-		&copy; {today.getFullYear()} Lumen Insights. All rights reserved.
+		<div class="footer-legal">
+			<a href="https://lumeninsights.kr/terms" target="_blank" rel="noopener noreferrer">이용약관</a>
+			<span class="divider">|</span>
+			<a href="https://lumeninsights.kr/privacy" target="_blank" rel="noopener noreferrer"><strong>개인정보처리방침</strong></a>
+			<span class="divider">|</span>
+			<a href="mailto:support@lumeninsights.kr">제휴 문의</a>
+		</div>
+		<div class="footer-copyright">
+			&copy; {today.getFullYear()} Lumen Insights. All rights reserved.
+		</div>
 	</div>
 	
 	<!-- Floating Chat Button -->
@@ -27,6 +36,31 @@ const today = new Date();
 		max-width: 1200px;
 		margin: 0 auto;
 		font-size: 0.9em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.footer-legal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		font-size: 0.95em;
+	}
+	.footer-legal a {
+		color: var(--text-muted);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.footer-legal a:hover {
+		color: var(--text-main);
+	}
+	.footer-legal .divider {
+		color: var(--border-color);
+		font-size: 0.8em;
+	}
+	.footer-copyright {
+		opacity: 0.8;
 	}
 	
 	.floating-tg-btn {
