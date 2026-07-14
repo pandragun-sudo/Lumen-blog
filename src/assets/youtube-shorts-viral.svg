@@ -40,8 +40,8 @@
   
   <!-- Floating elements -->
   <rect x="210" y="210" width="80" height="26" rx="13" fill="#38bdf8" fill-opacity="0.15" />
-  <text x="250" y="227" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#38bdf8" text-anchor="middle">조회수 26만</text>
+  <text x="250" y="227" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#38bdf8" text-anchor="middle">조회수 192만</text>
 
   <rect x="510" y="110" width="80" height="26" rx="13" fill="#e879f9" fill-opacity="0.15" />
-  <text x="550" y="127" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#e879f9" text-anchor="middle">조회수 45만</text>
+  <text x="550" y="127" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#e879f9" text-anchor="middle">조회수 358만</text>
 </svg>
