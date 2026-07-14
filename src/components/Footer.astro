@@ -7,12 +7,11 @@ const today = new Date();
 		&copy; {today.getFullYear()} Lumen Insights. All rights reserved.
 	</div>
 	
-	<!-- Floating Telegram Bot Button -->
-	<a href="https://t.me/LumenInsightsBot" target="_blank" rel="noopener noreferrer" class="floating-tg-btn">
-		<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-			<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.686c.223-.195-.054-.282-.346-.09l-6.405 4.032-2.76-.865c-.6-.195-.622-.6.125-.89l10.736-4.13c.49-.18.91.135.75.908z"/>
+	<!-- Floating Chat Button -->
+	<a href="https://t.me/LumenInsightsBot" target="_blank" rel="noopener noreferrer" class="floating-tg-btn" title="텔레그램 봇 문의하기">
+		<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+			<path d="M12 2C6.477 2 2 6.03 2 11c0 2.84 1.5 5.38 3.82 7.04l-1.34 3.4c-.16.4.24.78.62.6l3.52-1.63c1.05.3 2.16.46 3.33.46 5.523 0 10-4.03 10-9s-4.477-9-10-9z"/>
 		</svg>
-		<span>텔레그램 봇</span>
 	</a>
 </footer>
 <style>
@@ -34,22 +33,22 @@ const today = new Date();
 		position: fixed;
 		bottom: 30px;
 		right: 30px;
-		background-color: #0088cc;
+		width: 64px;
+		height: 64px;
+		background-color: #8b5cf6;
 		color: white;
-		padding: 12px 20px;
-		border-radius: 50px;
+		border-radius: 50%;
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		gap: 10px;
 		text-decoration: none;
-		font-weight: bold;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 		z-index: 1000;
 		transition: transform 0.2s ease, box-shadow 0.2s ease;
 	}
 	.floating-tg-btn:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+		transform: translateY(-4px);
+		box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
 	}
 	.floating-tg-btn svg {
 		flex-shrink: 0;
