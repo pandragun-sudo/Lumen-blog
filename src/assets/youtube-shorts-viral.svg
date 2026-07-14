@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  
+  <!-- Grid Lines -->
+  <path d="M 100 350 L 700 350 M 100 250 L 700 250 M 100 150 L 700 150" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05" stroke-dasharray="5,5" />
+  
+  <!-- Glowing Trend Line -->
+  <path d="M 100 320 L 250 260 L 400 290 L 550 160 L 700 100" fill="none" stroke="url(#lineGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+  
+  <!-- Trend Line Core -->
+  <path d="M 100 320 L 250 260 L 400 290 L 550 160 L 700 100" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Data Points -->
+  <circle cx="100" cy="320" r="5" fill="#38bdf8" />
+  <circle cx="250" cy="260" r="5" fill="#7dd3fc" />
+  <circle cx="400" cy="290" r="5" fill="#a78bfa" />
+  <circle cx="550" cy="160" r="5" fill="#c084fc" />
+  <circle cx="700" cy="100" r="7" fill="#ffffff" filter="url(#glow)" />
+  <circle cx="700" cy="100" r="3" fill="#e879f9" />
+
+  <!-- Text -->
+  <text x="400" y="380" font-family="'Pretendard', -apple-system, sans-serif" font-weight="800" font-size="34" fill="#ffffff" text-anchor="middle" letter-spacing="-1">유튜브 쇼츠 급상승 비결</text>
+  <text x="400" y="415" font-family="'Pretendard', -apple-system, sans-serif" font-weight="500" font-size="16" fill="#94a3b8" text-anchor="middle" letter-spacing="-0.5">상위 1% 알고리즘 데이터 분석 리포트</text>
+  
+  <!-- Floating elements -->
+  <rect x="210" y="210" width="80" height="26" rx="13" fill="#38bdf8" fill-opacity="0.15" />
+  <text x="250" y="227" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#38bdf8" text-anchor="middle">조회수 358만</text>
+
+  <rect x="510" y="110" width="80" height="26" rx="13" fill="#e879f9" fill-opacity="0.15" />
+  <text x="550" y="127" font-family="'Pretendard', -apple-system, sans-serif" font-weight="700" font-size="12" fill="#e879f9" text-anchor="middle">조회수 293만</text>
+</svg>
