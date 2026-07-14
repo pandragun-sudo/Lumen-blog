@@ -1,5 +1,5 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import AboutHeroImage from '../assets/lumen_insights_premium_hero.jpg';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
@@ -33,9 +33,45 @@ import Layout from '../layouts/BlogPost.astro';
 		여러분의 첫 번째 10만 구독자 달성 여정에 가장 든든한 파트너가 되겠습니다.
 	</p>
 
-	<div style="text-align: center; margin-top: 3rem;">
-		<a href="https://lumeninsights.kr" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2rem; transition: background-color 0.2s ease;">
-			🚀 Lumen Insights 공식 웹사이트 방문하기
+	<div class="premium-btn-container">
+		<a href="https://lumeninsights.kr" target="_blank" rel="noopener noreferrer" class="premium-btn">
+			<span class="btn-icon">🚀</span>
+			<span>Lumen Insights 공식 웹사이트 방문하기</span>
 		</a>
 	</div>
 </Layout>
+
+<style>
+	.premium-btn-container {
+		text-align: center;
+		margin-top: 4rem;
+		margin-bottom: 2rem;
+	}
+	
+	.premium-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+		color: #ffffff;
+		padding: 16px 36px;
+		border-radius: 12px;
+		font-weight: 700;
+		font-size: 1.15rem;
+		text-decoration: none;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	.premium-btn:hover {
+		transform: translateY(-3px) scale(1.02);
+		box-shadow: 0 12px 30px rgba(99, 102, 241, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+		color: #ffffff;
+	}
+	
+	.premium-btn .btn-icon {
+		font-size: 1.3rem;
+	}
+</style>
