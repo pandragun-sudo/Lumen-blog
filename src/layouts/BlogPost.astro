@@ -18,64 +18,139 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			main {
 				width: 100%;
 				margin: 0 auto;
+				padding-bottom: 4em;
 			}
 			.hero-image {
 				width: 100%;
-				max-width: 1000px;
-				margin: 0 auto 2rem;
+				max-width: 1200px;
+				margin: 0 auto 3rem;
+				padding: 0 1rem;
 			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
 				width: 100%;
+				border-radius: 20px;
+				box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 				max-height: 600px;
 				object-fit: cover;
 			}
 			.prose {
 				width: 100%;
-				max-width: 1000px;
+				max-width: 760px; /* Better readability for text */
 				margin: auto;
-				padding: 1em;
+				padding: 0 1.5rem;
 				color: var(--text-main);
 			}
 			.title {
-				margin-bottom: 2em;
+				margin-bottom: 3rem;
 				padding: 1em 0;
 				text-align: center;
-				line-height: 1;
-				border-bottom: 1px solid var(--border-color);
+				line-height: 1.2;
+				border-bottom: 1px solid var(--border-light);
 				padding-bottom: 2em;
 			}
 			.title h1 {
 				margin: 0.5em 0;
-				font-size: 2.8rem;
+				font-size: 3rem;
+				font-weight: 800;
+				letter-spacing: -0.03em;
 				word-break: keep-all;
 			}
 			.date {
-				margin-bottom: 0.5em;
-				color: var(--text-light);
-				font-size: 0.95rem;
+				margin-bottom: 1em;
+				color: var(--text-muted);
+				font-size: 1rem;
+				font-weight: 500;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
 			}
 			.last-updated-on {
 				font-style: italic;
-				margin-top: 0.2rem;
+				color: var(--text-light);
 			}
 			
 			/* Content Formatting */
 			.prose :global(h2) {
 				font-size: 1.8rem;
-				margin-top: 2em;
+				font-weight: 700;
+				margin-top: 2.5em;
 				margin-bottom: 1em;
-				padding-bottom: 0.5em;
-				border-bottom: 1px solid var(--border-light);
+				padding-bottom: 0.3em;
+				color: #1e293b;
+				position: relative;
 			}
+			.prose :global(h2)::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 40px;
+				height: 3px;
+				background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+				border-radius: 2px;
+			}
+			
+			.prose :global(h3) {
+				font-size: 1.4rem;
+				font-weight: 700;
+				margin-top: 2em;
+				margin-bottom: 0.8em;
+				color: #334155;
+			}
+			
 			.prose :global(p) {
-				font-size: 1.1rem;
+				font-size: 1.15rem;
 				line-height: 1.8;
-				margin-bottom: 1.5em;
+				margin-bottom: 1.8em;
+				letter-spacing: -0.01em;
+				word-break: keep-all;
 			}
+			
 			.prose :global(img) {
-				margin: 2em auto;
+				margin: 2.5em auto;
+				border-radius: 12px;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+			}
+			
+			.prose :global(blockquote) {
+				margin: 2em 0;
+				padding: 1.5em 2em;
+				background: rgba(59, 130, 246, 0.05);
+				border-left: 4px solid #3b82f6;
+				border-radius: 0 12px 12px 0;
+				color: #1e293b;
+				font-size: 1.15rem;
+				line-height: 1.7;
+				font-weight: 500;
+			}
+			
+			.prose :global(a) {
+				color: #2563eb;
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 4px;
+				font-weight: 600;
+				transition: color 0.2s, text-decoration-color 0.2s;
+			}
+			
+			.prose :global(a:hover) {
+				color: #1d4ed8;
+				text-decoration-color: #1d4ed8;
+			}
+
+			@media (max-width: 768px) {
+				.title h1 {
+					font-size: 2.2rem;
+				}
+				.prose :global(p) {
+					font-size: 1.05rem;
+				}
+				.hero-image {
+					margin-bottom: 2rem;
+				}
 			}
 		</style>
 	</head>
@@ -93,9 +168,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
-									<div class="last-updated-on">
-										최종 수정일: <FormattedDate date={updatedDate} />
-									</div>
+									<>
+										<span>•</span>
+										<div class="last-updated-on">
+											최종 수정일: <FormattedDate date={updatedDate} />
+										</div>
+									</>
 								)
 							}
 						</div>
@@ -106,5 +184,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+		<script>
+			// 모든 마크다운 본문 내 링크를 새 창 열기로 변경
+			document.querySelectorAll('.prose a').forEach(a => {
+				a.setAttribute('target', '_blank');
+				a.setAttribute('rel', 'noopener noreferrer');
+			});
+		</script>
 	</body>
 </html>
