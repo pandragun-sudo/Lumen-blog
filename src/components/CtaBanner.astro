@@ -1,0 +1,141 @@
+---
+---
+<div class="cta-banner-container">
+	<div class="cta-glass-card">
+		<div class="cta-content">
+			<div class="cta-badge">Lumen Insights</div>
+			<h3 class="cta-title">내 채널에 숨겨진 <span>'급상승 키워드'</span>를 찾고 싶다면?</h3>
+			<p class="cta-desc">
+				채널 성장을 이끈 핵심 데이터 분석 도구.<br/>
+				단 1분 만에 내 유튜브 채널을 무료로 진단해보세요.
+			</p>
+			<a href="https://lumeninsights.kr/" target="_blank" rel="noopener noreferrer" class="cta-button">
+				지금 바로 무료 진단하기 🚀
+			</a>
+		</div>
+	</div>
+</div>
+
+<style>
+	.cta-banner-container {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.cta-glass-card {
+		position: relative;
+		background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+		border-radius: 16px;
+		padding: 2.5rem 2rem;
+		text-align: center;
+		overflow: hidden;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	
+	/* Decorative glowing orbs */
+	.cta-glass-card::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -20%;
+		width: 300px;
+		height: 300px;
+		background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+		border-radius: 50%;
+		z-index: 0;
+	}
+	.cta-glass-card::after {
+		content: '';
+		position: absolute;
+		bottom: -50%;
+		right: -20%;
+		width: 250px;
+		height: 250px;
+		background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+		border-radius: 50%;
+		z-index: 0;
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.cta-badge {
+		background: rgba(255, 255, 255, 0.1);
+		color: #e2e8f0;
+		padding: 0.4rem 1rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.cta-title {
+		font-size: 1.6rem;
+		font-weight: 800;
+		color: #ffffff;
+		margin: 0 0 1rem 0;
+		line-height: 1.4;
+		word-break: keep-all;
+	}
+	
+	.cta-title span {
+		background: linear-gradient(to right, #60a5fa, #a78bfa);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.cta-desc {
+		font-size: 1.05rem;
+		color: #94a3b8;
+		margin: 0 0 2rem 0;
+		line-height: 1.6;
+		word-break: keep-all;
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+		color: #ffffff;
+		padding: 1rem 2rem;
+		border-radius: 30px;
+		font-size: 1.1rem;
+		font-weight: 700;
+		text-decoration: none !important;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+		border: 1px solid rgba(255,255,255,0.1);
+	}
+	
+	.cta-button:hover {
+		transform: translateY(-2px) scale(1.02);
+		box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+		color: #ffffff;
+	}
+
+	@media (max-width: 768px) {
+		.cta-glass-card {
+			padding: 2rem 1.5rem;
+		}
+		.cta-title {
+			font-size: 1.3rem;
+		}
+		.cta-desc {
+			font-size: 0.95rem;
+		}
+		.cta-button {
+			width: 100%;
+			padding: 0.9rem 1.5rem;
+			font-size: 1rem;
+		}
+	}
+</style>
