@@ -21,7 +21,7 @@ const relatedPosts = posts.filter(post => post.data.title !== currentTitle).slic
 		<div class="posts-grid">
 			{
 				relatedPosts.map((post) => (
-					<a href={`/blog/${post.slug}/`} class="post-card">
+					<a href={`/blog/${post.id}/`} class="post-card">
 						{post.data.heroImage ? (
 							<div class="img-container">
 								<img src={typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage.src} alt="" />
