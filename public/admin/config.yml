@@ -3,8 +3,8 @@ backend:
   repo: pandragun-sudo/Lumen-blog
   branch: main
 
-media_folder: "src/assets/images"
-public_folder: "../../assets/images"
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
 
 collections:
   - name: "blog"
