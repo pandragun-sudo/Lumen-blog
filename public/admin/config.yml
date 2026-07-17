@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: pandragun-sudo/Lumen-blog
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "../../assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
