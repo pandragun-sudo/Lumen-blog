@@ -2,6 +2,7 @@
 title: "유튜브 쇼츠 급상승 치트키 분석"
 description: "유튜브 쇼츠 급상승 채널을 만들기 위한 구체적인 방법론을 공개합니다. 본 블로그에서 직접 운영 중인 1MIN DRAMA 채널의 실제 조회수 및 좋아요 데이터를 바탕으로, 어떤 영상이 시청자의 선택을 받는지 심도 있게 분석했습니다."
 pubDate: "Jul 17 2026"
+heroImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop"
 ---
 
 ![유튜브 쇼츠 급상승 분석](https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop)
