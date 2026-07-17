@@ -1,5 +1,5 @@
 ---
-title: "유튜브 쇼츠 성공을 위한 비밀 무기, 루멘 인사이트 소개"
+title: "유튜브 쇼츠 성공을 위한 비밀 무기,<br/>루멘 인사이트 소개"
 description: "감과 운에 의존하는 쇼츠 제작은 이제 그만! 누구나 쉽게 트렌드를 파악하고 채널을 성장시킬 수 있는 든든한 길잡이, 루멘 인사이트를 소개합니다."
 pubDate: "Jul 17 2026"
 heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
