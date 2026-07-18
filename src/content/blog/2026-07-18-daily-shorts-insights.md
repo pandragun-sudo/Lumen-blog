@@ -2,10 +2,10 @@
 title: "최고 조회수 쇼츠 분석! 인물과 서사의 힘으로 시청자를 사로잡는 법"
 description: "1MIN DRAMA 채널의 압도적 성과를 분석하여, 인물 중심 콘텐츠와 호기심 유발 전략, 그리고 핵심 감정 전달을 통한 쇼츠 성장 비결을 공개합니다."
 pubDate: "2026-07-18"
-heroImage: "https://img.youtube.com/vi/ROgoxDAECRo/hqdefault.jpg"
+heroImage: "https://img.youtube.com/vi/GFpVHuVJsw8/hqdefault.jpg"
 ---
 
-![썸네일](https://img.youtube.com/vi/ROgoxDAECRo/hqdefault.jpg)
+![썸네일](https://img.youtube.com/vi/GFpVHuVJsw8/hqdefault.jpg)
 
 ## 유튜브 쇼츠, 데이터로 증명된 압도적 성장의 비밀
 
