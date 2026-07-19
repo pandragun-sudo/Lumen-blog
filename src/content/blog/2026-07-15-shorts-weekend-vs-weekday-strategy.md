@@ -2,7 +2,7 @@
 title: '쇼츠 업로드 최적 시간대: 주말 vs 평일 전략'
 description: 유튜브 쇼츠 알고리즘이 주말과 평일에 다르게 반응한다는 사실을 알고 있습니까? 1MIN DRAMA 채널 데이터를 기반으로 요일별 최적 업로드 전략을 분석했습니다.
 pubDate: Jul 15 2026
-heroImage: https://www.youtube.com/shorts/26V4URJyktg/hqdefault.jpg
+heroImage: https://img.youtube.com/vi/26V4URJyktg/hqdefault.jpg
 ---
 
 본 블로그에서 직접 운영 중인 \*\*1MIN DRAMA 채널(@onemindrama)\*\*을 통해 데이터를 분석해 본 결과, 유튜브 쇼츠는 업로드하는 **요일과 시간대**에 따라 알고리즘이 영상을 추천하는 방식이 현저히 다르다는 것을 확인했습니다.<br>
