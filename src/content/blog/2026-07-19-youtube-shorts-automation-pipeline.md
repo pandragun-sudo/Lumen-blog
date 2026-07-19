@@ -1,7 +1,7 @@
 ---
 title: "유튜브 쇼츠 채널의 한계를 넘다: 100% 자동화 파이프라인 구축 비법"
 description: "매일 수십 개의 쇼츠 영상을 직접 관리하며 겪었던 시간적 한계를 어떻게 극복했을까요? 데이터 기반의 100% 자동화 파이프라인 구축 노하우를 공유합니다."
-pubDate: "2026-07-19"
+pubDate: "2026-07-19T13:16:00+09:00"
 heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop"
 ---
 
