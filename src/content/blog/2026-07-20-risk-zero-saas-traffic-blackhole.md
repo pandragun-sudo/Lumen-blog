@@ -2,7 +2,7 @@
 title: "SaaS 리스크 제로: 트래픽 블랙홀 전략"
 description: "유료 B2B SaaS가 겪는 치명적인 CS 리스크와 법적 문제를 회피하고, 프로그래매틱 SEO를 통해 막대한 트래픽을 창출하는 비즈니스 모델을 공개합니다."
 pubDate: "2026-07-20T17:00:00+09:00"
-heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop"
 category: guide
 ---
 
