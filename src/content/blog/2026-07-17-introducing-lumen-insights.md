@@ -31,3 +31,8 @@ heroImage: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1
 이제 더 이상 감으로만 영상을 만들며 불안해하지 마세요.  
 루멘 인사이트가 만들어가는 **데이터 기반의 길잡이**와 함께, 여러분의 채널 전략도 새롭게 다듬어 보시길 바랍니다.  
 우리는 앞으로도 크리에이터가 오직 \*\*<span style="color: #2563eb;">'재미있는 영상을 기획하는 일'</span>\*\*에만 집중할 수 있는 환경을 구축하기 위해 최선을 다할 것입니다.
+
+
+---
+> 💡 **Lumen Insights로 유튜브 채널 성장을 자동화하세요!**
+> 지금 바로 시작하기: [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)

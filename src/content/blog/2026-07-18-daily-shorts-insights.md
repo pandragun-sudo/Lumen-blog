@@ -80,3 +80,8 @@ heroImage: "https://img.youtube.com/vi/GFpVHuVJsw8/hqdefault.jpg"
 어떤 영상이 왜 잘 되는지, 시청자는 무엇에 반응하는지 깊이 있게 이해하는 것이야말로 급변하는 쇼츠 시장에서 지속적인 성장을 이룰 수 있는 유일한 길입니다.<br>
 여러분의 쇼츠 채널 또한 오늘 제시된 전략들을 적용하고, 'Lumen Insights'와 같은 데이터 분석 툴을 활용하여 시청자의 마음을 사로잡는 콘텐츠를 제작하시기를 강력히 권고합니다.<br>
 데이터는 거짓말을 하지 않습니다. 여러분의 쇼츠 성공, 이제 데이터와 함께 증명하십시오.
+
+
+---
+> 💡 **Lumen Insights로 유튜브 채널 성장을 자동화하세요!**
+> 지금 바로 시작하기: [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)
