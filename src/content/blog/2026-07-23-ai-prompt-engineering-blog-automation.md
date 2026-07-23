@@ -2,7 +2,7 @@
 title: "AI 블로그 자동화의 함정: 칼럼니스트로 바꾸는 프롬프트 전략"
 description: "기계적인 불릿 리스트를 남발하는 AI 블로그 자동화의 한계를 극복하고, 전문가의 칼럼처럼 유려한 산문체와 입체적인 분석을 부여하는 프롬프트 전략을 알아봅니다."
 pubDate: "2026-07-23T12:00:00Z"
-heroImage: "/images/ai_prompt_engineering_blog.jpg"
+heroImage: "../../assets/ai_prompt_engineering_blog.jpg"
 ---
 
 ## 기계적인 AI 글쓰기가 마주한 현실적인 한계
