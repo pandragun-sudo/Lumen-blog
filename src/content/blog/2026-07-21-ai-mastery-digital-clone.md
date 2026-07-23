@@ -2,7 +2,7 @@
 title: "1인 창업가 AI 마스터의 비기: '나의 복제 인간'을 만들고 잠자는 동안에도 일 시키는 3가지 시스템 설계법"
 description: "AI에게 업무 철학과 톤앤매너를 학습시켜 나만의 디지털 복제 인간을 만드는 컨텍스트 엔지니어링 전략을 공개합니다."
 pubDate: "2026-07-21T18:50:00+09:00"
-heroImage: "/images/2026-07-21-ai-mastery-digital-clone.jpg"
+heroImage: "../../assets/2026-07-21-ai-mastery-digital-clone.jpg"
 category: guide
 ---
 

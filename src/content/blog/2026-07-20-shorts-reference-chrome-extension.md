@@ -2,7 +2,7 @@
 title: 쇼츠 레퍼런스 수집기 직접 개발한 이유
 description: 쇼츠 레퍼런스 수집에 메타 데이터까지 한번에 추출하기 위해 직접 크롬 확장 프로그램을 개발한 이유와 로컬 설치 방법을 안내합니다.
 pubDate: 2026-07-20
-heroImage: ../../../public/images/blog/pasted-image-1784524404865.png
+heroImage: "../../assets/blog/pasted-image-1784524404865.png"
 category: guide
 ---
 
