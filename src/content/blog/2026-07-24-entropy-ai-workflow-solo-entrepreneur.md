@@ -1,5 +1,6 @@
 ---
 title: "1인 기업 기획: AI식 문제 해결"
+category: 'devlog'
 description: "혼자 모든 것을 감당해야 하는 1인 창업가를 위해, 앤스로픽 AI의 정교한 5단계 문제 해결 워크플로우를 활용하여 비즈니스 효율성을 극대화하는 기획 가이드를 소개합니다."
 pubDate: "2026-07-24T20:50:00Z"
 heroImage: "../../assets/entropy_workflow_thumbnail.jpg"

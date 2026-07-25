@@ -1,5 +1,6 @@
 ---
 title: "유튜브 쇼츠 급상승 비결, 데이터 분석으로 증명합니다"
+category: 'devlog'
 description: "1MIN DRAMA 채널의 폭발적 성장을 이끈 핵심 비결과 유튜브 쇼츠 급상승 전략을 공개합니다. 데이터 분석의 중요성을 실증 사례와 함께 설명합니다."
 pubDate: "2026-07-14"
 heroImage: "../../assets/youtube-shorts-viral-proof.jpg"

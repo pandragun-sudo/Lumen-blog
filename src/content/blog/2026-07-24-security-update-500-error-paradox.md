@@ -1,5 +1,6 @@
 ---
 title: "보안 강화가 부른 500 에러 역설"
+category: 'devlog'
 description: "완벽한 보안 조치로 인한 개인정보 컬럼 삭제가 예상치 못한 500 에러 역설을 부른 생생한 경험담. 시스템 강건성과 철저한 예외 처리의 중요성을 탐구합니다."
 pubDate: "2026-07-24T17:07:00Z"
 heroImage: "../../assets/server_error_security_thumbnail.jpg"

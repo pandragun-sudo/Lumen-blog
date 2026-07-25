@@ -1,5 +1,6 @@
 ---
 title: "엔트로피를 거스르는 기획: 앤스로픽 AI의 '생각하는 방식'으로 1인 기업 문제를 해결하는 5단계"
+category: 'devlog'
 description: "앤스로픽(Anthropic) AI의 정교한 5단계 문제 해결 워크플로우를 활용하여 1인 창업가의 비즈니스 엔트로피(무질서도)를 극복하는 실질적 가이드를 제시합니다."
 pubDate: "2026-07-23T17:45:00Z"
 heroImage: "../../assets/anthropic_thinking_process.jpg"

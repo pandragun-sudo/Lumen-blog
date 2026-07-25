@@ -1,5 +1,6 @@
 ---
 title: 압도적 조회수 보장! 쇼츠, '느낌'으로 시청자를 낚는 감정 극대화 전략
+category: 'devlog'
 description: 1MIN DRAMA 채널의 최고 성과 쇼츠 영상을 분석하여, 시청자의 몰입을 유도하는 서사 압축과 감정 증폭 전략을 공개합니다. 단순 편집을 넘어 '느낌'을 파는 쇼츠의 비결을 확인하십시오.
 pubDate: 2026-07-16
 heroImage: https://img.youtube.com/vi/uyQdpgcI3aw/hqdefault.jpg

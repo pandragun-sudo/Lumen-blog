@@ -1,5 +1,6 @@
 ---
 title: "자동화의 역설: 알림 봇이 멈춘 날 비로소 깨달은 시스템의 가치"
+category: 'devlog'
 description: "텔레그램 알림 봇 고장 에피소드를 통해 깨달은 자동화 시스템의 진정한 가치와 SaaS 서비스 설계 철학에 대해 이야기합니다."
 pubDate: "2026-07-23T14:00:00Z"
 heroImage: "../../assets/automation_paradox_bot.jpg"

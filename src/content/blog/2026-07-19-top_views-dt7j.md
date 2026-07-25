@@ -1,5 +1,6 @@
 ---
 title: "유튜브 쇼츠, 극적인 순간의 압축과 공명이 조회수를 폭발시킵니다"
+category: 'devlog'
 description: "1MIN DRAMA 채널의 최고 조회수 쇼츠 데이터를 분석하여, 짧은 영상 속에서 시청자의 감정을 사로잡고 폭발적인 반응을 이끌어내는 핵심 비결을 공개합니다."
 pubDate: "2026-07-19"
 heroImage: "https://img.youtube.com/vi/2TxhhFNUq8s/hqdefault.jpg"

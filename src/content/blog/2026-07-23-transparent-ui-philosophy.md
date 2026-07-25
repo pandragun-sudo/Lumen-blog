@@ -1,5 +1,6 @@
 ---
 title: "가짜 데이터를 거부하다: 1인 창업가의 투명한 UI 설계 철학"
+category: 'devlog'
 description: "데이터의 출처를 투명하게 공개하고 가짜 데이터를 거부하는 Lumen Insights의 UI 설계 원칙과 1인 창업가의 진정성에 대해 이야기합니다."
 pubDate: "2026-07-23T16:00:00Z"
 heroImage: "../../assets/transparent_ui_philosophy.jpg"

@@ -84,16 +84,47 @@ const posts = (await getCollection('blog')).sort(
 					font-size: 1.563em;
 				}
 			}
+			.category-filter {
+				display: flex;
+				gap: 0.5rem;
+				justify-content: center;
+				margin-bottom: 2rem;
+				flex-wrap: wrap;
+			}
+			.category-filter button {
+				padding: 0.5rem 1rem;
+				border: 1px solid rgb(var(--gray-light));
+				background: white;
+				border-radius: 20px;
+				cursor: pointer;
+				transition: 0.2s ease;
+				font-weight: 500;
+			}
+			.category-filter button:hover {
+				background: rgb(var(--gray-light));
+			}
+			.category-filter button.active {
+				background: rgb(var(--accent));
+				color: white;
+				border-color: rgb(var(--accent));
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<section>
+				<div class="category-filter">
+					<button class="active" data-filter="all">전체보기</button>
+					<button data-filter="devlog">개발일지 (Devlog)</button>
+					<button data-filter="trend">트렌드 (Trend)</button>
+					<button data-filter="guide">가이드 (Guide)</button>
+					<button data-filter="case-study">채널 분석 (Case Study)</button>
+				</div>
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
+							<li data-category={post.data.category}>
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
@@ -110,5 +141,25 @@ const posts = (await getCollection('blog')).sort(
 			</section>
 		</main>
 		<Footer />
+		<script>
+			const buttons = document.querySelectorAll('.category-filter button');
+			const items = document.querySelectorAll('main ul li');
+			
+			buttons.forEach(button => {
+				button.addEventListener('click', () => {
+					buttons.forEach(btn => btn.classList.remove('active'));
+					button.classList.add('active');
+					
+					const filter = button.getAttribute('data-filter');
+					items.forEach(item => {
+						if (filter === 'all' || item.getAttribute('data-category') === filter) {
+							item.style.display = '';
+						} else {
+							item.style.display = 'none';
+						}
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

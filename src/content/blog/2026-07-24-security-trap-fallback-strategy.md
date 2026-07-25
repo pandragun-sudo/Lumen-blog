@@ -1,5 +1,6 @@
 ---
 title: "보안 패치가 부른 마비, 선량한 의도의 함정"
+category: 'devlog'
 description: "개인정보 보호를 위한 선량한 보안 패치가 서비스 전체를 마비시킨 경험. 예외 처리와 폴백 전략으로 시스템 연쇄 반응을 막고 강건성을 확보하는 방법을 탐구합니다."
 pubDate: "2026-07-24T20:45:00Z"
 heroImage: "../../assets/security_trap_thumbnail.jpg"

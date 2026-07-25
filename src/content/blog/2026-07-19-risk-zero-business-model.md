@@ -1,5 +1,6 @@
 ---
 title: "유료 SaaS의 'CS 헬게이트'를 피하는 법: Risk-Zero 비즈니스 모델과 프로그래매틱 SEO 전략"
+category: 'devlog'
 description: "치명적인 법적 리스크와 CS 헬게이트를 피하고, 100% 무료 서비스를 통해 장기적인 트래픽 선순환을 창출하는 리스크 제로 비즈니스 청사진을 공개합니다."
 pubDate: "2026-07-19T22:45:00+09:00"
 heroImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1470&auto=format&fit=crop"

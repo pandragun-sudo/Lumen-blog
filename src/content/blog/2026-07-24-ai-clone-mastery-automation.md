@@ -1,5 +1,6 @@
 ---
 title: "잠든 사이 일하는 AI 복제인간"
+category: 'devlog'
 description: "단순한 프롬프트 엔지니어링을 넘어, 나만의 업무 철학과 톤앤매너를 학습한 AI 복제 인간을 만들어 1인 창업가의 24시간 자동화 시스템을 구축하는 3가지 방법을 소개합니다."
 pubDate: "2026-07-24T21:00:00Z"
 heroImage: "../../assets/ai_clone_mastery_thumbnail.jpg"
