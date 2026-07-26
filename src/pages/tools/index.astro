@@ -1,0 +1,97 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`무료 툴 모음 | ${SITE_TITLE}`} description="유튜브 쇼츠 크리에이터를 위한 루멘 인사이트 무료 웹 툴 모음" />
+		<style>
+			main {
+				width: 960px;
+			}
+			.tools-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+			.tool-card {
+				background: var(--bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 2rem;
+				text-decoration: none;
+				color: var(--text-main);
+				transition: all 0.2s ease;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
+			.tool-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+				border-color: #3b82f6;
+			}
+			.tool-icon {
+				font-size: 2.5rem;
+			}
+			.tool-title {
+				font-size: 1.25rem;
+				font-weight: 700;
+				margin: 0;
+			}
+			.tool-desc {
+				font-size: 0.95rem;
+				color: var(--text-muted);
+				line-height: 1.5;
+				margin: 0;
+				flex-grow: 1;
+			}
+			.tool-action {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #3b82f6;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>🚀 유튜브 크리에이터 무료 툴</h1>
+			<p style="color: var(--text-muted); margin-bottom: 2rem;">
+				유튜브 쇼츠 채널 성장에 필요한 필수 계산기와 분석 도구를 무료로 제공합니다.
+			</p>
+			
+			<div class="tools-grid">
+				<!-- Tool 1: Revenue Calculator -->
+				<a href="/tools/revenue-calculator" class="tool-card">
+					<div class="tool-icon">💰</div>
+					<h3 class="tool-title">쇼츠 예상 수익 계산기</h3>
+					<p class="tool-desc">
+						국가별, 주제별 평균 RPM을 기반으로 내 쇼츠 채널의 예상 월수익과 연수익을 정확하게 계산해 보세요.
+					</p>
+					<div class="tool-action">계산기 사용하기 &rarr;</div>
+				</a>
+
+				<!-- Tool 2: Title Analyzer -->
+				<a href="/tools/title-analyzer" class="tool-card">
+					<div class="tool-icon">📝</div>
+					<h3 class="tool-title">유튜브 제목 최적화 분석기</h3>
+					<p class="tool-desc">
+						모바일 화면에서 제목이 잘리지 않는지 체크하고, 클릭률(CTR)을 높이는 최적의 글자 수인지 분석합니다.
+					</p>
+					<div class="tool-action">제목 분석하기 &rarr;</div>
+				</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

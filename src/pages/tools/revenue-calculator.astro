@@ -1,0 +1,169 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`쇼츠 예상 수익 계산기 | ${SITE_TITLE}`} description="유튜브 쇼츠 조회수와 RPM을 기반으로 월 예상 수익을 계산해보세요." />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+			}
+			.tool-container {
+				background: var(--bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 2rem;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+				margin-bottom: 3rem;
+			}
+			.input-group {
+				margin-bottom: 1.5rem;
+			}
+			.input-group label {
+				display: block;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				color: var(--text-main);
+			}
+			.input-group input[type="number"], .input-group select {
+				width: 100%;
+				padding: 0.8rem;
+				border: 1px solid var(--border-color);
+				border-radius: 6px;
+				background: var(--bg-alt);
+				color: var(--text-main);
+				font-size: 1rem;
+			}
+			.result-box {
+				background: rgba(59, 130, 246, 0.1);
+				border: 1px solid rgba(59, 130, 246, 0.2);
+				border-radius: 8px;
+				padding: 1.5rem;
+				text-align: center;
+				margin-top: 2rem;
+			}
+			.result-title {
+				font-size: 1rem;
+				color: var(--text-muted);
+				margin-bottom: 0.5rem;
+			}
+			.result-value {
+				font-size: 2.5rem;
+				font-weight: 800;
+				color: #3b82f6;
+				margin: 0;
+			}
+			.seo-content {
+				line-height: 1.8;
+				color: var(--text-main);
+			}
+			.seo-content h2 {
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>💰 유튜브 쇼츠 예상 수익 계산기</h1>
+			<p style="color: var(--text-muted); margin-bottom: 2rem;">
+				채널의 월간 조회수와 예상 RPM(1,000회당 수익)을 입력하여 애드센스 수익을 예측해 보세요.
+			</p>
+			
+			<div class="tool-container">
+				<div class="input-group">
+					<label for="views">월간 쇼츠 조회수 (Views)</label>
+					<input type="number" id="views" placeholder="예: 10000000" value="10000000">
+				</div>
+				<div class="input-group">
+					<label for="rpm">예상 RPM (1,000회당 수익, 달러 $)</label>
+					<input type="number" id="rpm" step="0.01" placeholder="예: 0.15" value="0.15">
+					<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+						* 한국 타겟 쇼츠 평균 RPM: $0.10 ~ $0.15<br/>
+						* 미국/서구권 타겟 쇼츠 평균 RPM: $0.20 ~ $0.40
+					</p>
+				</div>
+				
+				<div class="result-box">
+					<div class="result-title">예상 월 수익 (USD)</div>
+					<p class="result-value" id="result-monthly">$0</p>
+					<div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;" id="result-krw">
+						(약 0원)
+					</div>
+				</div>
+			</div>
+
+			<div class="seo-content">
+				<h2>유튜브 쇼츠 수익 창출, 어떻게 계산될까?</h2>
+				<p>
+					유튜브 쇼츠(Shorts)의 수익 구조는 기존의 긴 가로 영상(롱폼)과는 다소 다른 방식으로 작동합니다. 
+					쇼츠 피드(Shorts Feed)에서 시청자가 스와이프하며 영상을 보는 도중 등장하는 광고에서 발생한 수익을 
+					해당 구간의 크리에이터들이 조회수 비율에 따라 나누어 갖는 **'크리에이터 풀(Creator Pool)'** 방식을 채택하고 있습니다.
+				</p>
+				<h2>RPM이란 무엇인가요?</h2>
+				<p>
+					RPM(Revenue Per Mille)은 **'조회수 1,000회당 발생하는 크리에이터의 실제 수익'**을 의미합니다.
+					롱폼 영상의 경우 보통 $1 ~ $3 수준의 높은 RPM을 형성하지만, 쇼츠는 영상 길이가 짧고 스와이프가 빠르기 때문에
+					평균적으로 **$0.05 ~ $0.20** 수준의 다소 낮은 RPM이 형성됩니다.
+				</p>
+				<h2>국가별, 주제별 RPM 차이</h2>
+				<p>
+					하지만 이 RPM은 절대적인 수치가 아닙니다. 여러분의 영상을 소비하는 시청자의 **국가**와 **콘텐츠 주제**에 따라 천차만별로 달라집니다.
+					<ul>
+						<li><strong>국가별 차이:</strong> 미국, 영국, 호주 등 광고 단가가 높은 서구권 시청자가 많을수록 RPM은 $0.30 이상으로 껑충 뜁니다. 반면 동남아시아나 인도 타겟의 경우 $0.01~$0.05 수준에 머물 수 있습니다.</li>
+						<li><strong>주제별 차이(Niche):</strong> 재테크, 금융, IT 리뷰 등 광고주가 높은 단가를 지불하는 카테고리는 단순 유머나 밈(Meme) 영상보다 RPM이 훨씬 높게 책정됩니다.</li>
+					</ul>
+				</p>
+				<h2>수익을 극대화하는 꿀팁</h2>
+				<p>
+					조회수를 늘리는 것도 중요하지만, 쇼츠의 RPM을 높여 적은 조회수로도 많은 수익을 내려면 **'글로벌 타겟팅'**이 필수적입니다.
+					대사가 없는 요리, ASMR, 댄스 챌린지 등의 콘텐츠로 미국 시청자를 공략하거나, 
+					[루멘 인사이트]와 같은 데이터 툴을 활용해 해외 급상승 키워드를 벤치마킹하는 전략을 세워보시길 추천합니다.
+				</p>
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			function calculateRevenue() {
+				const viewsInput = document.getElementById('views') as HTMLInputElement;
+				const rpmInput = document.getElementById('rpm') as HTMLInputElement;
+				const resultMonthly = document.getElementById('result-monthly');
+				const resultKrw = document.getElementById('result-krw');
+
+				const views = parseFloat(viewsInput.value) || 0;
+				const rpm = parseFloat(rpmInput.value) || 0;
+
+				// Revenue = (Views / 1000) * RPM
+				const monthlyRevenueUSD = (views / 1000) * rpm;
+				
+				// 환율 약 1,350원 가정
+				const exchangeRate = 1350; 
+				const monthlyRevenueKRW = monthlyRevenueUSD * exchangeRate;
+
+				if(resultMonthly && resultKrw) {
+					resultMonthly.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(monthlyRevenueUSD);
+					resultKrw.textContent = `(약 ${new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(monthlyRevenueKRW)})`;
+				}
+			}
+
+			// Add event listeners
+			const viewsInput = document.getElementById('views');
+			const rpmInput = document.getElementById('rpm');
+			
+			if(viewsInput) viewsInput.addEventListener('input', calculateRevenue);
+			if(rpmInput) rpmInput.addEventListener('input', calculateRevenue);
+
+			// Initial calculation
+			calculateRevenue();
+		</script>
+	</body>
+</html>

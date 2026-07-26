@@ -1,0 +1,211 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`유튜브 제목 최적화 분석기 | ${SITE_TITLE}`} description="유튜브 영상 제목의 길이를 체크하고 모바일 최적화 여부를 분석합니다." />
+		<style>
+			main {
+				width: 800px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+			}
+			.tool-container {
+				background: var(--bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 2rem;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+				margin-bottom: 3rem;
+			}
+			.input-group {
+				margin-bottom: 1.5rem;
+			}
+			.input-group label {
+				display: block;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				color: var(--text-main);
+			}
+			.input-group input[type="text"] {
+				width: 100%;
+				padding: 1rem;
+				border: 2px solid var(--border-color);
+				border-radius: 8px;
+				background: var(--bg-alt);
+				color: var(--text-main);
+				font-size: 1.1rem;
+				transition: border-color 0.2s;
+			}
+			.input-group input[type="text"]:focus {
+				outline: none;
+				border-color: #3b82f6;
+			}
+			.result-box {
+				background: var(--bg-alt);
+				border: 1px solid var(--border-color);
+				border-radius: 8px;
+				padding: 1.5rem;
+				margin-top: 2rem;
+			}
+			.stat-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				margin-bottom: 1.5rem;
+			}
+			.stat-item {
+				background: var(--bg);
+				padding: 1rem;
+				border-radius: 8px;
+				border: 1px solid var(--border-color);
+				text-align: center;
+			}
+			.stat-value {
+				font-size: 2rem;
+				font-weight: 800;
+				margin: 0.5rem 0;
+			}
+			.stat-label {
+				font-size: 0.85rem;
+				color: var(--text-muted);
+			}
+			.feedback-msg {
+				padding: 1rem;
+				border-radius: 8px;
+				font-weight: 600;
+				text-align: center;
+				margin-bottom: 0.5rem;
+			}
+			.msg-good {
+				background: rgba(34, 197, 94, 0.1);
+				color: #16a34a;
+				border: 1px solid rgba(34, 197, 94, 0.2);
+			}
+			.msg-warn {
+				background: rgba(234, 179, 8, 0.1);
+				color: #ca8a04;
+				border: 1px solid rgba(234, 179, 8, 0.2);
+			}
+			.msg-bad {
+				background: rgba(239, 68, 68, 0.1);
+				color: #dc2626;
+				border: 1px solid rgba(239, 68, 68, 0.2);
+			}
+			.seo-content {
+				line-height: 1.8;
+				color: var(--text-main);
+			}
+			.seo-content h2 {
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>📝 유튜브 제목 최적화 분석기</h1>
+			<p style="color: var(--text-muted); margin-bottom: 2rem;">
+				작성한 영상 제목이 모바일 화면에서 잘리지 않는지, 클릭률(CTR)에 최적화되어 있는지 즉시 분석해 보세요.
+			</p>
+			
+			<div class="tool-container">
+				<div class="input-group">
+					<label for="titleInput">유튜브 영상 제목 입력</label>
+					<input type="text" id="titleInput" placeholder="예: 조회수 떡상하는 유튜브 쇼츠 제목 짓는 법 대공개 (feat.루멘인사이트)" autocomplete="off">
+				</div>
+				
+				<div class="result-box">
+					<div class="stat-grid">
+						<div class="stat-item">
+							<div class="stat-label">글자 수 (공백 포함)</div>
+							<div class="stat-value" id="charCount">0</div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-label">이모지/특수기호</div>
+							<div class="stat-value" id="emojiCount">0</div>
+						</div>
+					</div>
+					<div id="feedbackBox" class="feedback-msg msg-good">
+						제목을 입력해 주세요.
+					</div>
+				</div>
+			</div>
+
+			<div class="seo-content">
+				<h2>왜 제목 길이가 중요한가요?</h2>
+				<p>
+					유튜브 시청자의 70% 이상은 **모바일 기기**를 통해 영상을 소비합니다. 모바일 유튜브 앱에서 영상 제목은 대략 **45자 ~ 50자**가 넘어가면 
+					말줄임표(...)로 뒤가 잘리게 됩니다. 제목의 핵심 키워드나 궁금증을 유발하는 단어가 잘려버리면 시청자는 썸네일만 보고 스크롤을 내려버릴 확률이 높습니다.
+				</p>
+				<h2>클릭률(CTR)을 극대화하는 제목 짓기 원칙</h2>
+				<ul>
+					<li><strong>핵심 키워드는 맨 앞으로:</strong> "VLOG | 나홀로 2박 3일 일본 도쿄 여행기" 보다는 **"혼자서 2박 3일 일본 도쿄 여행 다녀왔습니다 | VLOG"**가 훨씬 모바일에 유리합니다.</li>
+					<li><strong>황금 길이 유지:</strong> 30자 ~ 45자 사이의 간결하고 임팩트 있는 제목이 클릭률이 가장 높습니다.</li>
+					<li><strong>이모지 활용:</strong> 적절한 이모지(🔥, 🚨, 💡 등) 1~2개는 시선을 끌어 클릭률을 높이지만, 너무 남발하면 스팸 영상으로 오인받아 이탈률이 늘어납니다.</li>
+					<li><strong>구체적인 수치 포함:</strong> "살 빼는 법"보다 **"한 달 만에 체지방 5kg 감량한 식단"**처럼 구체적인 수치 데이터가 들어가면 신뢰도가 올라갑니다.</li>
+				</ul>
+				<h2>루멘 인사이트와 함께하는 트렌드 분석</h2>
+				<p>
+					제목을 잘 짓는 것도 중요하지만, 대중이 애초에 검색하지 않는 주제라면 조회수는 나오지 않습니다.
+					[루멘 인사이트]의 급상승 키워드 분석 도구를 활용하여 현재 시청자들이 가장 열광하는 주제를 찾아 제목에 녹여보세요.
+				</p>
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			function analyzeTitle() {
+				const input = document.getElementById('titleInput') as HTMLInputElement;
+				const text = input.value;
+				
+				const charCount = text.length;
+				
+				// 간단한 이모지 판별 정규식 (대략적)
+				const emojiRegex = /[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]/gu;
+				const emojis = text.match(emojiRegex);
+				const emojiCount = emojis ? emojis.length : 0;
+
+				document.getElementById('charCount').textContent = charCount.toString();
+				document.getElementById('emojiCount').textContent = emojiCount.toString();
+
+				const feedbackBox = document.getElementById('feedbackBox');
+				
+				if (charCount === 0) {
+					feedbackBox.className = 'feedback-msg msg-good';
+					feedbackBox.textContent = '제목을 입력해 주세요.';
+					return;
+				}
+
+				if (charCount > 55) {
+					feedbackBox.className = 'feedback-msg msg-bad';
+					feedbackBox.textContent = '🚨 제목이 너무 깁니다! 모바일에서 뒤가 잘립니다. (50자 이내 권장)';
+				} else if (charCount > 45) {
+					feedbackBox.className = 'feedback-msg msg-warn';
+					feedbackBox.textContent = '⚠️ 모바일 기기에 따라 제목 끝부분이 잘릴 수 있습니다.';
+				} else if (charCount < 10) {
+					feedbackBox.className = 'feedback-msg msg-warn';
+					feedbackBox.textContent = '⚠️ 제목이 너무 짧아 알고리즘 노출에 불리할 수 있습니다.';
+				} else {
+					feedbackBox.className = 'feedback-msg msg-good';
+					feedbackBox.textContent = '✅ 클릭률에 최적화된 완벽한 제목 길이입니다!';
+				}
+
+				if (emojiCount > 3) {
+					feedbackBox.textContent += ' (단, 이모지가 너무 많으면 스팸처럼 보일 수 있으니 주의하세요!)';
+				}
+			}
+
+			const titleInput = document.getElementById('titleInput');
+			if(titleInput) {
+				titleInput.addEventListener('input', analyzeTitle);
+			}
+		</script>
+	</body>
+</html>
