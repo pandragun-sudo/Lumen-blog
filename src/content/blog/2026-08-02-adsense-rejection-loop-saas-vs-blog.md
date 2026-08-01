@@ -3,7 +3,7 @@ title: "구글 애드센스 승인 무한 거절 탈출기"
 description: "SaaS 웹앱의 애드센스 심사 거절(콘텐츠 부족) 굴레에서 벗어나, 프로그래매틱 SEO 블로그로 수익화 전략을 180도 피벗한 생생한 창업기를 공유합니다."
 category: "case-study"
 pubDate: "2026-08-02T00:10:00Z"
-heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015"
+heroImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=2076"
 ---
 
 ## 화려한 SaaS와 구글 봇의 시각 차이
