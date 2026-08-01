@@ -3,12 +3,12 @@ title: "애드센스 넘어선 AI 기반 프로그래매틱 SEO: 데이터로 �
 description: "수익화 전략 피벗 및 프로그래매틱 SEO를 통해 애드센스를 넘어서는 콘텐츠 팩토리를 구축하는 실질적인 로드맵을 다룹니다."
 category: "devlog"
 pubDate: "2026-08-01T04:21:00Z"
-heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070"
 ---
 
 ## 한계에 봉착한 단일 수익 모델의 위험성
 
-본 블로그에서 직접 운영 중인 [루멘 인사이트](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post) 프로젝트는 최근 1년 이상 의미 있는 수익을 창출하지 못하는 심각한 병목 현상을 겪고 있었습니다.  
+본 블로그에서 직접 운영 중인 [루멘 인사이트](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post) 프로젝트는 최근 1년 이상 의미 있는 수익을 창출하지 못하는 심각한 병목 현상을 겪고 있었습니다.  
 모든 비즈니스 파이프라인이 웹 서비스의 구글 애드센스 승인이라는 전혀 통제 불가능한 구글의 블랙박스 심사에 직렬로 의존하고 있었기 때문입니다.  
 초기 자본과 리스크 문제로 유료 소프트웨어 서비스(SaaS) 전환은 보류된 상태에서 무료 서비스와 후원 모델만을 고집하는 것은 거대한 도박과도 같았습니다.  
 실제 운영 결과 웹 도구 기반의 서비스는 애드센스 심사 통과 난이도가 극도로 높다는 사실을 뼈저리게 깨달았습니다.  
