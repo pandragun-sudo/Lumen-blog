@@ -9,7 +9,7 @@ heroImage: "../../assets/scrapbook_routing_architecture.jpg"
 ## 화려한 UI 뒤에 감춰진 아키텍처의 부채
 
 우리는 언제나 더 나은 사용자 경험을 위해 아름답고 부드러운 인터페이스를 갈망합니다.  
-본 블로그에서 직접 운영 중인 유튜브 인텔리전스 서비스인 [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 대규모 V2 리뉴얼을 진행하면서, 우리는 넷플릭스와 같은 매끄러운 다크 글래스모피즘(Dark Glassmorphism) 테마를 프로덕트 전반에 입혔습니다.  
+본 블로그에서 직접 운영 중인 유튜브 인텔리전스 서비스인 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 대규모 V2 리뉴얼을 진행하면서, 우리는 넷플릭스와 같은 매끄러운 다크 글래스모피즘(Dark Glassmorphism) 테마를 프로덕트 전반에 입혔습니다.  
 수많은 쇼츠와 채널 데이터들이 페이지 이동의 깜빡임 없이 화면 하단에서 스르륵 솟아오르는 유려한 모달(Modal) 위에서 렌더링되도록 설계했습니다.  
 초기 반응은 폭발적이었지만 이내 화려한 겉모습 뒤에 감춰져 있던 거대한 설계 결함, 일명 **모달 지옥**이 우리의 발목을 잡기 시작했습니다.  
 
