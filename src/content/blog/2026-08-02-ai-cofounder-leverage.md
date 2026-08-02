@@ -8,7 +8,7 @@ heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=
 
 ## 1인 창업가와 AI의 새로운 관계
 수많은 1인 기업가들이 여전히 인공지능을 단순한 문서 요약기나 코드 생성기 정도로만 취급하고 있습니다.  
-하지만 본 블로그에서 직접 운영 중인 [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 개발 과정을 돌아보면, AI는 단순한 도구를 넘어 '영혼 없는 공동창업자' 역할을 완벽하게 수행했습니다.  
+하지만 본 블로그에서 직접 운영 중인 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 개발 과정을 돌아보면, AI는 단순한 도구를 넘어 '영혼 없는 공동창업자' 역할을 완벽하게 수행했습니다.  
 명령어를 깎는 피곤한 챗봇 프롬프팅에서 벗어나, 시스템과 환경을 통째로 설계하는 관점의 전환이 필요합니다.  
 우리의 자원은 항상 부족하지만, AI를 비즈니스 핵심 영역에 깊숙이 통합시킬 때 그 한계를 초월하는 **레버리지(Leverage)**를 얻을 수 있습니다.  
 
