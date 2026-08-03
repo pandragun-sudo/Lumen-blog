@@ -1,0 +1,111 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`쇼츠 노출락(섀도우밴) 자가 진단기 | ${SITE_TITLE}`} description="최근 유튜브 쇼츠 조회수 데이터를 바탕으로 내 채널이 알고리즘 노출 정지(섀도우밴) 상태인지 진단해 줍니다." />
+		<style>
+			main { width: 800px; max-width: calc(100% - 2em); margin: 0 auto; }
+			h1 { display: flex; align-items: center; gap: 0.5rem; }
+			.tool-container { background: var(--bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 3rem; }
+			.input-row { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; }
+			.input-row label { flex: 1; font-weight: 600; color: var(--text-main); }
+			.input-row input { flex: 2; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-alt); color: var(--text-main); font-size: 1rem; }
+			.btn-primary { width: 100%; padding: 1rem; background: #ef4444; color: #fff; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem; margin-top: 1rem; transition: background 0.2s; }
+			.btn-primary:hover { background: #dc2626; }
+			.result-box { display: none; margin-top: 2rem; padding: 2rem; border-radius: 8px; text-align: center; }
+			.result-box.normal { display: block; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); }
+			.result-box.warning { display: block; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); }
+			.result-box.danger { display: block; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); }
+			.result-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+			.normal .result-title { color: #10b981; }
+			.warning .result-title { color: #f59e0b; }
+			.danger .result-title { color: #ef4444; }
+			.result-desc { font-size: 1rem; color: var(--text-main); line-height: 1.6; }
+			.seo-content { line-height: 1.8; color: var(--text-main); }
+			.seo-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg> 쇼츠 노출락(섀도우밴) 진단기</h1>
+			<p style="color: var(--text-muted); margin-bottom: 2rem;">최근 업로드한 영상 5개의 조회수를 순서대로 입력하여 알고리즘 상태를 점검하세요.</p>
+			
+			<div class="tool-container">
+				<div class="input-row"><label>1번째 영상 (가장 오래된)</label><input type="number" id="v1" placeholder="조회수 입력"></div>
+				<div class="input-row"><label>2번째 영상</label><input type="number" id="v2" placeholder="조회수 입력"></div>
+				<div class="input-row"><label>3번째 영상</label><input type="number" id="v3" placeholder="조회수 입력"></div>
+				<div class="input-row"><label>4번째 영상</label><input type="number" id="v4" placeholder="조회수 입력"></div>
+				<div class="input-row"><label>5번째 영상 (최근)</label><input type="number" id="v5" placeholder="조회수 입력"></div>
+				
+				<button class="btn-primary" onclick="diagnose()">알고리즘 진단하기</button>
+
+				<div id="result-container" class="result-box">
+					<div id="result-title" class="result-title"></div>
+					<div id="result-desc" class="result-desc"></div>
+				</div>
+			</div>
+
+			<div class="seo-content">
+				<h2>유튜브 쇼츠 섀도우밴(노출락)이란?</h2>
+				<p>평소 1만 뷰 이상 꾸준히 나오던 채널이 갑자기 0뷰 혹은 100뷰 미만으로 멈춰버리는 현상을 크리에이터들은 흔히 '섀도우밴(Shadowban)' 혹은 '노출락'이라고 부릅니다. 이는 유튜브 공식 용어는 아니지만, 알고리즘이 해당 채널의 피드 노출을 의도적으로 차단한 상태를 의미합니다.</p>
+				<h2>조회수가 급감하는 진짜 이유</h2>
+				<p>유튜브 알고리즘이 쇼츠 노출을 멈추는 이유는 크게 세 가지입니다.<br/>첫째, 타인의 영상을 무단 재가공하여 '재사용된 콘텐츠'로 분류된 경우.<br/>둘째, 최근 업로드한 2~3개의 영상이 시청자들에게 외면받아 채널 전체의 평균 반응률(Engagement) 점수가 깎인 경우.<br/>셋째, 단순히 알고리즘이 시청자 타겟을 재조정(테스트)하고 있는 <strong>적응기</strong>인 경우입니다.</p>
+				<h2>어떻게 해결해야 할까?</h2>
+				<p>만약 진단 결과가 '노출락 의심'으로 나왔다면, 당황해서 영상을 삭제하거나 비공개 처리하지 마세요. 삭제 행위 자체가 알고리즘에 악영향을 줍니다. 평소보다 퀄리티 높은 영상을 꾸준히 2~3개 더 업로드하며 알고리즘의 신뢰를 다시 회복하는 것이 유일하고 가장 빠른 해결책입니다. 떡상 키워드 분석이 필요하다면 [Lumen Insights]를 활용해 보세요.</p>
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			function diagnose() {
+				const v1 = parseFloat((document.getElementById('v1') as HTMLInputElement).value) || 0;
+				const v2 = parseFloat((document.getElementById('v2') as HTMLInputElement).value) || 0;
+				const v3 = parseFloat((document.getElementById('v3') as HTMLInputElement).value) || 0;
+				const v4 = parseFloat((document.getElementById('v4') as HTMLInputElement).value) || 0;
+				const v5 = parseFloat((document.getElementById('v5') as HTMLInputElement).value) || 0;
+				
+				const container = document.getElementById('result-container');
+				const title = document.getElementById('result-title');
+				const desc = document.getElementById('result-desc');
+
+				if(!v1 || !v2 || !v3 || !v4 || !v5) {
+					alert("5개의 조회수를 모두 입력해주세요.");
+					return;
+				}
+
+				if(container && title && desc) {
+					container.className = "result-box"; // reset
+					
+					const pastAvg = (v1 + v2 + v3) / 3;
+					const recentAvg = (v4 + v5) / 2;
+					
+					if (pastAvg < 500) {
+						// Base views too low to judge
+						container.classList.add('normal');
+						title.textContent = "알고리즘 적응 중 (정상)";
+						desc.innerHTML = `아직 채널의 기본 트래픽 규모가 작아 노출락을 논하기 이른 단계입니다. 꾸준한 업로드가 정답입니다!`;
+					} else if (recentAvg < pastAvg * 0.1) {
+						container.classList.add('danger');
+						title.textContent = "노출락(섀도우밴) 강력 의심";
+						desc.innerHTML = `최근 2개 영상의 조회수가 과거 대비 <b>90% 이상 폭락</b>했습니다. 커뮤니티 가이드 위반이나 저작권 문제가 없는지 점검하고, 고퀄리티 영상을 업로드하여 신뢰도를 회복해야 합니다.`;
+					} else if (recentAvg < pastAvg * 0.5) {
+						container.classList.add('warning');
+						title.textContent = "알고리즘 타겟 재설정 중 (주의)";
+						desc.innerHTML = `최근 조회수가 절반 이하로 떨어졌습니다. 노출락이라기보다는 유튜브 알고리즘이 귀하의 영상을 다른 성향의 시청자들에게 테스트하며 간을 보는 중일 확률이 높습니다.`;
+					} else {
+						container.classList.add('normal');
+						title.textContent = "정상 노출 중";
+						desc.innerHTML = `조회수 방어가 잘 되고 있습니다. 알고리즘이 채널을 긍정적으로 평가하고 있으니, 지금의 기획 방향을 유지하세요!`;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

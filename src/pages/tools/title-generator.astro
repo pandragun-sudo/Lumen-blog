@@ -1,0 +1,131 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`상위 1% 바이럴 제목 제조기 | ${SITE_TITLE}`} description="유튜브 쇼츠 클릭률을 폭발시키는 어그로성 3초 훅(Hook) 제목을 키워드 기반으로 자동 생성합니다." />
+		<style>
+			main { width: 800px; max-width: calc(100% - 2em); margin: 0 auto; }
+			h1 { display: flex; align-items: center; gap: 0.5rem; }
+			.tool-container { background: var(--bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 3rem; }
+			.input-group { margin-bottom: 1.5rem; }
+			.input-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); }
+			.input-group input { width: 100%; padding: 1rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-alt); color: var(--text-main); font-size: 1.2rem; }
+			.btn-primary { width: 100%; padding: 1rem; background: #8b5cf6; color: #fff; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem; transition: background 0.2s; }
+			.btn-primary:hover { background: #7c3aed; }
+			.result-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+			.result-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-alt); border: 1px solid var(--border-color); border-radius: 6px; font-weight: 600; font-size: 1.1rem; color: var(--text-main); transition: border-color 0.2s; }
+			.result-item:hover { border-color: #8b5cf6; }
+			.btn-copy { background: transparent; border: 1px solid #8b5cf6; color: #8b5cf6; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
+			.btn-copy:hover { background: #8b5cf6; color: #fff; }
+			.seo-content { line-height: 1.8; color: var(--text-main); }
+			.seo-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg> 상위 1% 바이럴 제목 제조기</h1>
+			<p style="color: var(--text-muted); margin-bottom: 2rem;">영상에서 다루고 싶은 핵심 단어 하나만 입력하면, 사람들의 클릭을 유도하는 자극적인 훅(Hook) 제목 10개를 즉시 만들어냅니다.</p>
+			
+			<div class="tool-container">
+				<div class="input-group">
+					<label for="keyword">핵심 키워드 (명사)</label>
+					<input type="text" id="keyword" placeholder="예: 다이어트, 비트코인, 무빙" onkeydown="if(event.key === 'Enter') generate()">
+				</div>
+				
+				<button class="btn-primary" onclick="generate()">마법의 떡상 제목 생성하기</button>
+
+				<div id="result-list" class="result-list">
+					<!-- Results will be injected here -->
+				</div>
+			</div>
+
+			<div class="seo-content">
+				<h2>쇼츠에서 첫 3초 '제목'이 모든 것을 결정하는 이유</h2>
+				<p>유튜브 쇼츠(Shorts) 생태계는 매우 잔인합니다. 시청자가 여러분의 영상을 피드에서 마주했을 때, 판단을 내리는 시간은 단 <strong>3초</strong>에 불과합니다. 영상의 내용이 아무리 훌륭해도 썸네일에 박혀있는 텍스트(제목)가 시청자의 호기심을 찌르지 못하면 가차 없이 스와이프 당하고 맙니다.</p>
+				<h2>어그로성 제목, 어떻게 지어야 할까?</h2>
+				<p>사람의 심리를 자극하는 바이럴 제목에는 몇 가지 불변의 공식이 있습니다.<br/>1. <strong>부정 편향(Negativity Bias):</strong> "~하면 안 되는 이유", "절대 하지 마세요" 처럼 손실에 대한 두려움을 자극합니다.<br/>2. <strong>비밀의 폭로:</strong> "99%가 모르는", "업자들만 아는" 등의 수식어로 궁금증을 극대화합니다.<br/>3. <strong>극단적 대비:</strong> 평범한 단어와 충격적인 단어를 결합해 뇌의 인지 부조화를 유발합니다.</p>
+				<h2>Lumen Insights의 데이터 기반 제목 기획</h2>
+				<p>본 제목 제조기는 최근 1년 동안 유튜브 쇼츠에서 100만 뷰 이상을 달성한 메가 히트 영상들의 제목 텍스트 마이닝 결과를 기반으로 가장 타율이 높은 패턴을 추출해 제작되었습니다. 더 깊이 있는 떡상 키워드 발굴과 실시간 트렌드 분석이 필요하시다면 데이터 분석 플랫폼 [Lumen Insights]를 도입해 보세요.</p>
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			const templates = [
+				"99%가 모르는 {keyword}의 소름돋는 진실 ㄷㄷ",
+				"{keyword}, 제발 당장 멈추세요! (경고)",
+				"한국인들이 {keyword}에 열광하는 진짜 이유",
+				"업자들만 몰래 쓴다는 {keyword} 꿀팁",
+				"{keyword} 했다가 인생 망할 뻔한 썰",
+				"요즘 난리난 {keyword} 근황 ㅋㅋㅋ",
+				"의사들도 입을 다문 {keyword}의 부작용",
+				"단 1초 만에 {keyword} 완벽하게 조지는 법",
+				"부자들이 {keyword}를 절대 안 하는 이유",
+				"{keyword}에게 걸리기 1초 전 역대급 반응",
+				"세상에서 가장 완벽한 {keyword} 방법",
+				"당신이 지금까지 {keyword}를 잘못하고 있었던 증거",
+				"{keyword} 하나로 월 1000만원 번 썰푼다",
+				"외국인들이 {keyword} 보고 충격받은 이유",
+				"솔직히 {keyword} 폼 미쳤다 ㄷㄷ"
+			];
+
+			function generate() {
+				const keywordInput = document.getElementById('keyword') as HTMLInputElement;
+				let keyword = keywordInput.value.trim();
+				
+				if(!keyword) {
+					alert("키워드를 입력해주세요.");
+					keywordInput.focus();
+					return;
+				}
+
+				// Remove trailing particles if any (조사 제거)
+				keyword = keyword.replace(/(은|는|이|가|을|를)$/, '');
+
+				// Shuffle and pick 10
+				const shuffled = templates.sort(() => 0.5 - Math.random());
+				const selected = shuffled.slice(0, 10);
+				
+				const list = document.getElementById('result-list');
+				if(list) {
+					list.innerHTML = '';
+					selected.forEach(t => {
+						const title = t.replace(/{keyword}/g, keyword);
+						
+						const item = document.createElement('div');
+						item.className = 'result-item';
+						
+						const span = document.createElement('span');
+						span.textContent = title;
+						
+						const btn = document.createElement('button');
+						btn.className = 'btn-copy';
+						btn.textContent = '복사';
+						btn.onclick = () => {
+							navigator.clipboard.writeText(title);
+							btn.textContent = '완료!';
+							btn.style.background = '#8b5cf6';
+							btn.style.color = '#fff';
+							setTimeout(() => {
+								btn.textContent = '복사';
+								btn.style.background = 'transparent';
+								btn.style.color = '#8b5cf6';
+							}, 2000);
+						};
+
+						item.appendChild(span);
+						item.appendChild(btn);
+						list.appendChild(item);
+					});
+				}
+			}
+		</script>
+	</body>
+</html>
