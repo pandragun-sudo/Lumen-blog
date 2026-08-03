@@ -63,7 +63,7 @@ import { SITE_TITLE } from '../../consts';
 			
 			<div class="tool-layout">
 				<div class="control-panel">
-					<div class="upload-area" id="drop-zone" onclick="document.getElementById('file-input').click()">
+					<div class="upload-area" id="drop-zone">
 						<div class="upload-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></div>
 						<h3 style="margin: 0; font-size: 1.2rem; color: var(--text-main);">클릭하거나 이미지를 드래그하세요</h3>
 						<p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">(권장 비율 9:16 / JPG, PNG 파일)</p>
@@ -139,8 +139,14 @@ import { SITE_TITLE } from '../../consts';
 			const toggleUi = document.getElementById('toggle-ui') as HTMLInputElement;
 			const uiOverlayBox = document.getElementById('ui-overlay-box');
 
+			if (dropZone && fileInput) {
+				dropZone.addEventListener('click', () => {
+					fileInput.click();
+				});
+			}
+
 			// File Upload Logic
-			fileInput.addEventListener('change', (e) => {
+			fileInput?.addEventListener('change', (e) => {
 				const file = (e.target as HTMLInputElement).files?.[0];
 				if (file) {
 					previewImg.src = URL.createObjectURL(file);

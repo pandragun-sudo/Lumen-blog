@@ -44,15 +44,23 @@ import { SITE_TITLE } from '../../consts';
 					</select>
 				</div>
 				<div class="input-group">
-					<label for="category">콘텐츠 메인 장르</label>
+					<label for="category">콘텐츠 카테고리 (유튜브 공식)</label>
 					<select id="category">
-						<option value="game_comedy">게임 / 유머 / 예능 / 아이돌</option>
-						<option value="knowledge_news">지식 / 정보 / 뉴스 / 재테크</option>
-						<option value="life_cooking">일상 VLOG / 요리 / 인테리어</option>
+						<option value="entertainment">엔터테인먼트 / 코미디 / 영화</option>
+						<option value="gaming">게임 (Gaming)</option>
+						<option value="music">음악 / 댄스 (Music)</option>
+						<option value="education">교육 / 과학기술 (지식, 테크)</option>
+						<option value="howto">노하우 / 스타일 (요리, 뷰티, DIY)</option>
+						<option value="news">뉴스 / 정치 / 경제</option>
+						<option value="people">인물 / 블로그 (Vlog, 일상)</option>
+						<option value="sports">스포츠 / 건강</option>
+						<option value="pets">반려동물 / 동물</option>
+						<option value="travel">여행 / 이벤트</option>
+						<option value="autos">자동차 / 교통</option>
 					</select>
 				</div>
 				
-				<button class="btn-primary" onclick="calculateTime()">최적 업로드 시간 확인</button>
+				<button class="btn-primary" id="calc-btn">최적 업로드 시간 확인</button>
 
 				<div id="result-box" class="result-box">
 					<div class="result-title">예상 황금 업로드 시간대</div>
@@ -87,35 +95,51 @@ import { SITE_TITLE } from '../../consts';
 					let timeStr = "";
 					let descStr = "";
 
+					// Logical mapping based on age and category
 					if (age === '1020') {
-						if (category === 'game_comedy') {
+						if (['gaming', 'entertainment', 'music'].includes(category)) {
 							timeStr = "평일 오후 5시 ~ 8시 / 주말 오후 1시 ~ 4시";
-							descStr = "학생들이 하교하거나 학원에 가기 전 휴식하는 시간대, 그리고 주말 여가 시간에 밈(Meme)과 예능 소비가 극대화됩니다.";
-						} else {
+							descStr = "학생들이 하교하거나 학원에 가기 전 휴식하는 시간대, 그리고 주말 여가 시간에 밈(Meme)과 예능, 게임 콘텐츠 소비가 극대화됩니다.";
+						} else if (['education', 'news'].includes(category)) {
 							timeStr = "평일 밤 10시 ~ 12시";
-							descStr = "학업 일정을 마치고 잠들기 전 누워서 지식이나 흥미로운 정보를 탐색하는 늦은 밤 시간대를 공략해 보세요.";
+							descStr = "학업 일정을 마치고 잠들기 전 누워서 지식이나 시사 정보를 탐색하는 늦은 밤 시간대를 공략해 보세요.";
+						} else {
+							timeStr = "평일 오후 7시 ~ 10시 / 주말 전일";
+							descStr = "전반적으로 여유로운 저녁 시간대나 주말에 가볍게 소비하기 좋은 일상 및 취미 콘텐츠가 유리합니다.";
 						}
 					} else if (age === '2030') {
-						if (category === 'knowledge_news') {
+						if (['education', 'news', 'autos'].includes(category)) {
 							timeStr = "평일 오전 7시 ~ 9시 / 오후 6시 ~ 8시";
-							descStr = "직장인들의 출퇴근 대중교통 이동 시간을 노려야 합니다. 시사, 경제 등 무거운 주제도 이때 가장 잘 소비됩니다.";
+							descStr = "직장인들의 출퇴근 대중교통 이동 시간을 노려야 합니다. 경제, 뉴스, 자기계발 등 무거운 주제도 이때 가장 잘 소비됩니다.";
+						} else if (['howto', 'travel', 'sports'].includes(category)) {
+							timeStr = "평일 오후 8시 ~ 10시 / 주말 오후";
+							descStr = "퇴근 후 자기관리나 취미 활동을 준비하며 시청하기 좋은 타이밍입니다.";
 						} else {
 							timeStr = "평일 오후 9시 ~ 11시 / 주말 저녁";
-							descStr = "퇴근 후 저녁을 먹으며 스트레스를 풀 수 있는 유머나 일상 콘텐츠가 강세를 보이는 시간대입니다.";
+							descStr = "저녁을 먹으며 스트레스를 풀 수 있는 유머, 예능, 반려동물 콘텐츠가 강세를 보이는 시간대입니다.";
 						}
 					} else if (age === '4050') {
-						if (category === 'life_cooking') {
+						if (['howto', 'people', 'pets'].includes(category)) {
 							timeStr = "평일 오전 9시 ~ 11시 / 주말 오전";
-							descStr = "가족들이 출근/등교를 마친 후의 여유로운 오전 시간대에 일상, 리빙, 요리 꿀팁 콘텐츠의 시청 지속 시간이 매우 높습니다.";
-						} else {
+							descStr = "출근/등교를 마친 후의 여유로운 오전 시간대에 일상, 리빙, 요리 꿀팁 콘텐츠의 시청 지속 시간이 매우 높습니다.";
+						} else if (['news', 'education', 'sports'].includes(category)) {
 							timeStr = "평일 오후 8시 ~ 10시";
-							descStr = "저녁 식사 이후 휴식 시간대에 정보성 콘텐츠나 건강, 뉴스 등의 시청 트래픽이 크게 집중됩니다.";
+							descStr = "저녁 식사 이후 휴식 시간대에 정보성 콘텐츠나 건강, 시사/뉴스 등의 시청 트래픽이 크게 집중됩니다.";
+						} else {
+							timeStr = "평일 오후 7시 ~ 9시";
+							descStr = "저녁 메인 시간대에 전반적인 미디어 소비가 활발하므로 이 시간대를 추천합니다.";
 						}
 					}
 
 					timeEl.textContent = timeStr;
 					descEl.textContent = descStr;
 				}
+			}
+
+			// Add event listener (Astro script modules scope fix)
+			const calcBtn = document.getElementById('calc-btn');
+			if (calcBtn) {
+				calcBtn.addEventListener('click', calculateTime);
 			}
 		</script>
 	</body>

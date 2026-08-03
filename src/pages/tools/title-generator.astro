@@ -36,10 +36,10 @@ import { SITE_TITLE } from '../../consts';
 			<div class="tool-container">
 				<div class="input-group">
 					<label for="keyword">핵심 키워드 (명사)</label>
-					<input type="text" id="keyword" placeholder="예: 다이어트, 비트코인, 무빙" onkeydown="if(event.key === 'Enter') generate()">
+					<input type="text" id="keyword" placeholder="예: 다이어트, 비트코인, 무빙">
 				</div>
 				
-				<button class="btn-primary" onclick="generate()">마법의 떡상 제목 생성하기</button>
+				<button class="btn-primary" id="generate-btn">마법의 떡상 제목 생성하기</button>
 
 				<div id="result-list" class="result-list">
 					<!-- Results will be injected here -->
@@ -125,6 +125,22 @@ import { SITE_TITLE } from '../../consts';
 						list.appendChild(item);
 					});
 				}
+			}
+
+			// Attach events
+			const generateBtn = document.getElementById('generate-btn');
+			const keywordInput = document.getElementById('keyword');
+
+			if (generateBtn) {
+				generateBtn.addEventListener('click', generate);
+			}
+
+			if (keywordInput) {
+				keywordInput.addEventListener('keydown', (event) => {
+					if (event.key === 'Enter') {
+						generate();
+					}
+				});
 			}
 		</script>
 	</body>
