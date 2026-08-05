@@ -169,6 +169,16 @@ const posts = (await getCollection('blog')).sort(
 					});
 				});
 			});
+
+			// 쿼리 파라미터 기반 자동 필터링 (헤더 메뉴 연동)
+			const params = new URLSearchParams(window.location.search);
+			const categoryParam = params.get('category');
+			if (categoryParam) {
+				const targetBtn = document.querySelector(`.category-filter button[data-filter="${categoryParam}"]`);
+				if (targetBtn) {
+					(targetBtn as HTMLButtonElement).click();
+				}
+			}
 		</script>
 	</body>
 </html>
