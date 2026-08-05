@@ -9,7 +9,7 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 ## 1인 기업가에게 닥쳐오는 혼돈의 엔트로피
 
 모든 것을 홀로 감당해야 하는 1인 창업의 길은 본질적으로 무질서도가 끝없이 증가하는 거대한 엔트로피와의 치열한 싸움과도 같습니다.  
-본 블로그에서 직접 기획하고 개발 중인 [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post) 프로젝트 역시 매일 수십 가지의 복잡한 선택지와 쏟아지는 업무의 홍수 속에서 길을 잃을 뻔한 위기가 셀 수 없이 많았습니다.  
+본 블로그에서 직접 기획하고 개발 중인 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post) 프로젝트 역시 매일 수십 가지의 복잡한 선택지와 쏟아지는 업무의 홍수 속에서 길을 잃을 뻔한 위기가 셀 수 없이 많았습니다.  
 누군가 정답을 알려주거나 방향을 대신 잡아줄 사수가 없는 고립된 환경에서 가장 두려운 적은 바로 불확실성과 그로 인한 멘탈 붕괴입니다.  
 이러한 혼돈의 한가운데서 제가 발견한 뜻밖의 훌륭한 멘토는 다름 아닌 가장 뛰어난 언어 모델 중 하나인 앤스로픽(Anthropic)의 인공지능이었습니다.  
 저는 단순하게 인공지능에게 코드를 짜달라거나 글을 대신 써달라고 부탁하는 일차원적인 활용 방식을 뛰어넘어보기로 결심했습니다.  

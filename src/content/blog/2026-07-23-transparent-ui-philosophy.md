@@ -12,7 +12,7 @@ heroImage: "../../assets/transparent_ui_philosophy.jpg"
 아직 유입된 트래픽이나 축적된 유의미한 데이터가 부족할 때, 개발자는 종종 달콤한 유혹에 빠지곤 합니다.  
 바로 난수 생성 함수나 임의의 더미(Dummy) 데이터를 활용해 화면을 꽉 차 보이게 만들고 싶은 충동입니다.  
 겉보기에는 그럴싸한 그래프와 쉴 새 없이 돌아가는 숫자들이 유저에게 서비스가 활성화되어 있다는 착각을 줄 수 있기 때문입니다.  
-제가 [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 초기 버전을 기획할 때도 비슷한 고민의 순간이 찾아왔습니다.  
+제가 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 초기 버전을 기획할 때도 비슷한 고민의 순간이 찾아왔습니다.  
 유튜브 쇼츠 채널의 잠재 수익이나 조회수를 분석하여 보여주어야 하지만, API의 한계나 데이터 부족으로 인해 완벽한 실측값을 도출할 수 없는 구간이 분명 존재했기 때문입니다.  
 하지만 저는 빈 화면을 가짜 데이터를 거부하는 대신, 있는 그대로의 현실을 직시하는 정공법을 택했습니다.  
 당장의 화려함보다는 사용자와의 신뢰를 쌓는 것이 SaaS(서비스형 소프트웨어) 비즈니스의 유일한 생존 전략이라고 믿었기 때문입니다.  

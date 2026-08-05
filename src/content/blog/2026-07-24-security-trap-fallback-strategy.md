@@ -11,7 +11,7 @@ heroImage: "../../assets/security_trap_thumbnail.jpg"
 소프트웨어 개발을 하다 보면 시스템을 더욱 안전하게 만들겠다는 선량한 의도가 오히려 치명적인 독이 되어 돌아오는 순간을 경험하게 됩니다.  
 본 블로그에서 운영 중인 서비스에서 최근 발생했던 아찔한 서버 마비 사태는 **보안과 기능성** 사이의 아슬아슬한 줄타기에 대해 깊이 고찰하게 된 중요한 계기였습니다.  
 사건의 발단은 이른 아침 데이터베이스의 보안 수준을 한 단계 더 끌어올리기 위해 선제적으로 단행했던 작은 개인정보 보호 조치에서 시작되었습니다.  
-[Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 안전한 데이터 생태계를 구축하려는 목적으로 사용자 테이블에서 불필요하게 남아있던 식별 가능 개인정보 컬럼들을 과감하게 삭제해 버렸습니다.  
+[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 안전한 데이터 생태계를 구축하려는 목적으로 사용자 테이블에서 불필요하게 남아있던 식별 가능 개인정보 컬럼들을 과감하게 삭제해 버렸습니다.  
 이는 보안 감사 관점에서는 완벽하게 올바르고 칭찬받아 마땅한 훌륭한 결정이었습니다.  
 하지만 문제는 눈에 보이지 않는 백엔드 깊숙한 곳에서 조용히 숨 쉬고 있던 아주 오래된 레거시 조회 쿼리 코드들이었습니다.  
 이 낡은 코드들은 여전히 과거의 영광을 잊지 못한 채 방금 삭제되어 사라진 옛날 컬럼의 이름을 습관적으로 호출하려고 시도하고 있었습니다.  

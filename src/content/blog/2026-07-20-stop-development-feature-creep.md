@@ -23,7 +23,7 @@ category: guide
 영상을 폴더별로 카테고리화하는 기능을 추가하면 편의성이 극대화될 것이라는 논의가 진행되었고, 개발에 착수하려는 찰나였습니다.  
 하지만 "지금도 영상을 저장하고 확인하는 본질적인 기능은 충분히 편하다"는 현실적인 피드백을 통해 스스로 브레이크를 걸었습니다.  
 지금 당장 굳이 무언가를 더 바꾸려고 에너지를 소모하기보다는, 개발을 잠시 보류하고 <span style="color: #2563eb;">일시 정지(Freeze)</span>하는 과감한 결단이 필요했습니다.  
-우리가 본 블로그에서 소개하는 [Lumen Insights](https://lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 철학은, 툴이 80%의 성능으로 제 기능을 발휘한다면 불필요한 고도화를 멈춘다는 것입니다.  
+우리가 본 블로그에서 소개하는 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 철학은, 툴이 80%의 성능으로 제 기능을 발휘한다면 불필요한 고도화를 멈춘다는 것입니다.  
 완벽한 도구를 만드는 데 집착하기보다는, 기획의 군더더기를 덜어내고 사용자가 정말 필요로 하는 하나의 핵심 가치만 날카롭게 다듬어야 합니다.  
 물론 너무 빨리 타협하는 태도가 제품의 전반적인 완성도를 떨어뜨릴 수 있다는 비판적 시각도 존재하며 이는 항상 주의해야 할 지점입니다.  
 버릴 줄 아는 창업가만이 더 크고 중요한 비즈니스 캐시카우(Cash Cow)를 향해 다음 스텝을 밟을 수 있다는 귀중한 교훈을 얻었습니다.  
