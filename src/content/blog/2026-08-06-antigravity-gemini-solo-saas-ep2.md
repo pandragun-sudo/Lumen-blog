@@ -1,7 +1,7 @@
 ---
 title: "에피소드 2: AI에게 '기억'과 '성격'을 부여하는 법 (룰 세팅 편)"
 description: "AI 에이전트가 긴 개발 세션에서도 프로젝트의 뼈대와 규칙을 잊지 않게 만드는 치트키, AGENTS.md 설정 노하우 및 템플릿 대공개."
-category: "guide"
+category: "devlog"
 pubDate: "2026-08-06T16:23:00+09:00"
 heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 ---

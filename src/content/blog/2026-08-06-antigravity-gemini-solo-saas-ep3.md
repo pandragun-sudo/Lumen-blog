@@ -1,7 +1,7 @@
 ---
 title: "에피소드 3: 실수율 0%에 도전하는 커스텀 스킬 만들기 (자동화 편)"
 description: "안티그라비티의 확장성 끝판왕. 깃허브 푸시, 아침 데이터 브리핑까지 AI가 알아서 처리하게 만드는 커스텀 스킬(Skill) 생존기."
-category: "guide"
+category: "devlog"
 pubDate: "2026-08-06T22:25:45Z"
 heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
 ---
