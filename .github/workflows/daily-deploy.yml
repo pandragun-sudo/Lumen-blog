@@ -1,0 +1,20 @@
+name: Daily Cloudflare Deploy
+
+on:
+  schedule:
+    # 매일 한국 시간(KST) 오전 9시 정각에 실행 (UTC 기준 00:00)
+    - cron: '0 0 * * *'
+  # 수동으로 실행할 수 있는 옵션
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages Deploy Hook
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" ]; then
+            echo "Error: CLOUDFLARE_DEPLOY_HOOK secret is not set."
+            exit 1
+          fi
+          curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
