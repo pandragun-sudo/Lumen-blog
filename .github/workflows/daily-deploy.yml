@@ -2,9 +2,11 @@ name: Daily Cloudflare Deploy
 
 on:
   schedule:
-    # 매일 한국 시간(KST) 오전 9시 정각에 실행 (UTC 기준 00:00)
+    # 한국 시간 기준 오전 9시, 오후 1시, 오후 6시, 밤 11시 (다양한 예약 포스팅 시간을 맞추기 위해 하루 4번 빌드)
     - cron: '0 0 * * *'
-  # 수동으로 실행할 수 있는 옵션
+    - cron: '0 4 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 jobs:
