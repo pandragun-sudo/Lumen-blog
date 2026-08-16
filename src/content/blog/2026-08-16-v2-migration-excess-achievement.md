@@ -1,8 +1,8 @@
 ---
 title: "레거시 마이그레이션을 넘어: V2 시스템이 '예상치 못한 초과 달성'을 이룬 3가지 기술적 비결"
 description: "Lumen Insights V2가 단순한 시스템 전환을 넘어 '초과 달성'을 이룬 핵심 기술적 전략과 단일 개발자로서의 구현 노하우를 공유합니다. 기술 부채 해결을 넘어 새로운 가치를 창출하는 전환 전략에 대한 심층적 인사이트를 제공합니다."
-pubDate: "2026-08-16T08:30:22.806Z"
-heroImage: "AI_GENERATED"
+pubDate: "2026-08-16T15:00:00.000Z"
+heroImage: "../../assets/v2_migration_1786874824692.jpg"
 ---
 ![커버 이미지](AI_GENERATED)
 

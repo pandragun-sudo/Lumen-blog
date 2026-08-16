@@ -1,8 +1,8 @@
 ---
 title: "유튜브 알고리즘의 진실과 플랫폼의 미래: CEO 닐 모한 인터뷰 분석"
 description: "유튜브 CEO 닐 모한의 인터뷰를 통해 추천 알고리즘의 실제 작동 방식, 안전 정책, 그리고 크리에이터 수익 창출 생태계의 장기적인 비전과 변화 방향을 심층적으로 분석합니다."
-pubDate: "2026-08-27T00:00:00.000Z"
-heroImage: ""
+pubDate: "2026-08-28T00:00:00.000Z"
+heroImage: "../../assets/neal_mohan_interview_1786875656586.jpg"
 category: "trend"
 ---
 
