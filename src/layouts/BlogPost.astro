@@ -212,7 +212,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<slot />
 					<div id="lumen-access-code-container" style="margin-top: 3rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
 						<p style="color: #475569; font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">오늘의 루멘 인사이트 액세스 코드</p>
-						<div id="lumen-access-code" style="font-size: 1.75rem; font-family: monospace; font-weight: 700; color: #2563eb; letter-spacing: 0.1em;">로딩중...</div>
+						<div id="lumen-access-code-wrapper" style="margin: 1rem 0;">
+							<button id="lumen-reveal-btn" style="background-color: #2563eb; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background-color 0.2s;">코드 확인하기</button>
+							<div id="lumen-access-code" style="display: none; font-size: 1.75rem; font-family: monospace; font-weight: 700; color: #2563eb; letter-spacing: 0.1em;">로딩중...</div>
+						</div>
 						<p style="color: #64748b; font-size: 0.95rem; margin-top: 0.75rem; line-height: 1.5;">루멘 인사이트 앱에 접속하여 위 코드를 입력하면<br>프리미엄 분석 기능이 24시간 동안 잠금 해제됩니다.</p>
 					</div>
 				</div>
@@ -230,10 +233,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				a.setAttribute('rel', 'noopener noreferrer');
 			});
 
-			// 동적 액세스 코드 로딩
+			// 동적 액세스 코드 로딩 (체류 시간 60초 제한)
+			const enterTime = Date.now();
+			const REQUIRED_SECONDS = 60; // 60초
+
 			async function loadAccessCode() {
 				const codeEl = document.getElementById('lumen-access-code');
-				if (!codeEl) return;
+				const btnEl = document.getElementById('lumen-reveal-btn');
+				if (!codeEl || !btnEl) return;
+				
+				const timeSpent = Math.floor((Date.now() - enterTime) / 1000);
+				const timeRemaining = REQUIRED_SECONDS - timeSpent;
+				
+				if (timeRemaining > 0) {
+					alert(`본문을 충분히 읽고 코드를 확인해 주세요. (${timeRemaining}초 후 확인 가능)`);
+					return;
+				}
+				
+				btnEl.style.display = 'none';
+				codeEl.style.display = 'block';
 				
 				try {
 					// 개발 환경에서는 localhost, 운영 환경에서는 실제 도메인
@@ -255,7 +273,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					codeEl.textContent = '로딩 실패';
 				}
 			}
-			loadAccessCode();
+
+			const revealBtn = document.getElementById('lumen-reveal-btn');
+			if (revealBtn) {
+				revealBtn.addEventListener('click', loadAccessCode);
+			}
 		</script>
 	</body>
 </html>
