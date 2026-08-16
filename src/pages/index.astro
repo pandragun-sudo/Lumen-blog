@@ -203,8 +203,10 @@ const posts = (await getCollection('blog'))
 					posts.map((post) => (
 						<li>
 							<a href={`/blog/${post.id}/`}>
-								{post.data.heroImage && (
-									<Image width={800} height={450} src={post.data.heroImage} alt="" />
+								{post.data.heroImage && post.data.heroImage !== 'AI_GENERATED' && (
+									typeof post.data.heroImage === 'string' && post.data.heroImage.startsWith('http')
+										? <img width={800} height={450} src={post.data.heroImage} alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;" />
+										: <Image width={800} height={450} src={post.data.heroImage} alt="" />
 								)}
 								<div class="post-content">
 									<h4 class="title">{post.data.title}</h4>
