@@ -187,7 +187,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<article>
 				<div class="hero-image">
 				{heroImage && heroImage !== 'AI_GENERATED' && heroImage !== '' && (
-					heroImage.startsWith('http')
+					typeof heroImage === 'string' && heroImage.startsWith('http')
 						? <img width={1200} height={600} src={heroImage} alt="" loading="lazy" decoding="async" style="width:100%;border-radius:20px;box-shadow:0 12px 32px rgba(0,0,0,0.08);max-height:600px;object-fit:cover;" />
 						: <Image width={1200} height={600} src={heroImage} alt="" />
 				)}
