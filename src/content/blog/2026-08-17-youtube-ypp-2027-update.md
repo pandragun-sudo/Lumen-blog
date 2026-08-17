@@ -2,7 +2,7 @@
 title: "유튜브 수익 조건 2027년 전격 개편: YPP 기준 상향의 진짜 의미"
 description: "2027년 도입되는 유튜브 파트너 프로그램(YPP)의 두 배 높아진 수익 창출 조건과 프리미엄 라이트 개편. 무분별한 숏폼을 쳐내려는 유튜브의 속내를 분석합니다."
 category: "trend"
-pubDate: "2026-08-17T20:18:00Z"
+pubDate: "2026-08-17T11:00:00.000Z"
 heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 ---
 
