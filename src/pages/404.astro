@@ -1,0 +1,87 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`페이지를 찾을 수 없습니다 | ${SITE_TITLE}`} description="요청하신 페이지가 존재하지 않거나 새로운 주소로 이동되었습니다." />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 4em auto;
+				text-align: center;
+				padding: 2em 1em;
+			}
+			.error-code {
+				font-size: 6rem;
+				font-weight: 800;
+				color: #3b82f6;
+				line-height: 1;
+				margin-bottom: 0.5rem;
+			}
+			h1 {
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+			}
+			p {
+				color: var(--text-muted);
+				font-size: 1.1rem;
+				line-height: 1.6;
+				margin-bottom: 2rem;
+			}
+			.action-buttons {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				padding: 12px 24px;
+				border-radius: 8px;
+				font-weight: 600;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+			.btn-primary {
+				background: #3b82f6;
+				color: white !important;
+			}
+			.btn-primary:hover {
+				background: #2563eb;
+				transform: translateY(-2px);
+			}
+			.btn-secondary {
+				background: var(--bg);
+				border: 1px solid var(--border-color);
+				color: var(--text-main) !important;
+			}
+			.btn-secondary:hover {
+				border-color: #3b82f6;
+				transform: translateY(-2px);
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="error-code">404</div>
+			<h1>요청하신 페이지를 찾을 수 없습니다</h1>
+			<p>
+				입력하신 주소가 잘못되었거나, 글의 내용이 최신 콘텐츠로 업데이트되어 이동되었을 수 있습니다.<br>
+				아래 버튼을 통해 최신 분석 글과 무료 툴을 확인해 보세요.
+			</p>
+			<div class="action-buttons">
+				<a href="/blog" class="btn btn-primary">블로그 최신 글 보기</a>
+				<a href="/tools" class="btn btn-secondary">유튜브 무료 툴 둘러보기</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

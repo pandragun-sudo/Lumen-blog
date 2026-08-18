@@ -1,0 +1,9 @@
+# Cloudflare Pages 301 Redirects
+
+# Renamed Blog Posts
+/blog/2026-08-02-adsense-rejection-loop-saas-vs-blog/ /blog/2026-08-02-saas-dashboard-vs-seo-blog/ 301
+/blog/2026-08-02-adsense-rejection-loop-saas-vs-blog /blog/2026-08-02-saas-dashboard-vs-seo-blog/ 301
+
+# Fallback for deleted or legacy paths to blog index
+/blog/introducing-lumen-insights/ /blog/2026-07-17-introducing-lumen-insights/ 301
+/blog/introducing-lumen-insights /blog/2026-07-17-introducing-lumen-insights/ 301
