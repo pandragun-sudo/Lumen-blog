@@ -1,8 +1,8 @@
 ---
 title: "유튜브 성장의 3대 공식: 파도를 타는 채널 전략과 구조 전이"
 description: "유튜브 성장을 결정하는 플랫폼, 카테고리, 채널 퍼포먼스 3대 요인과 타 분야의 성공 공식을 내 채널로 이식하는 구조 전이 전략을 심층 분석합니다."
-pubDate: "2026-08-20T03:20:00.000Z"
-heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+pubDate: "2026-08-19T18:00:00.000Z"
+heroImage: "../../assets/growth_three_pillars_1787164233126.jpg"
 category: "guide"
 tags:
   - YouTube

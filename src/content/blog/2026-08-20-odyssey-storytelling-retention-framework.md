@@ -1,8 +1,8 @@
 ---
 title: "유튜브 스토리텔링 공식: 오디세이아 서사 구조로 시청 지속 시간 80% 달성하기"
 description: "호메로스의 고전 오디세이아의 서사 구조를 현대 유튜브 콘텐츠 기획에 적용하여 초반 후킹과 시청 지속 시간(AVD)을 극대화하는 4단계 스토리텔링 프레임워크를 분석합니다."
-pubDate: "2026-08-20T03:30:00.000Z"
-heroImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1000&auto=format&fit=crop"
+pubDate: "2026-08-19T18:15:00.000Z"
+heroImage: "../../assets/odyssey_storytelling_1787164251026.jpg"
 category: "guide"
 tags:
   - YouTube
