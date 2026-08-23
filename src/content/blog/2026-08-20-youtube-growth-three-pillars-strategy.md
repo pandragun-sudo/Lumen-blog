@@ -70,7 +70,7 @@ tags:
 성장하는 플랫폼 위에 올라타고, 상승하는 카테고리 트래픽에 노출되며, 다른 분야에서 검증된 세련된 구조를 차용하여 나만의 가치를 채워 넣는 것이 성장 공식의 요체입니다.  
 
 하지만 개인이 혼자서 수많은 유튜브 영상 중 어떤 카테고리가 지금 파도를 타고 있는지, 타 분야에서 어떤 구조가 유행하는지 매일 추적하기는 쉽지 않습니다.  
-이러한 비효율을 해결하기 위해 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 실시간 카테고리 트렌드 탐색기와 스크랩북 벤치마크 시스템을 제공합니다.  
+이러한 비효율을 해결하기 위해 Lumen Insights는 실시간 카테고리 트렌드 탐색기와 스크랩북 벤치마크 시스템을 제공합니다.  
 
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 3단계 스크랩북 기능을 활용하면 타 분야의 급상승 숏폼과 롱폼 영상을 체계적으로 수집하고, 초반 후킹과 조회수 가속도 데이터를 한눈에 대조 분석할 수 있습니다.  
+Lumen Insights의 3단계 스크랩북 기능을 활용하면 타 분야의 급상승 숏폼과 롱폼 영상을 체계적으로 수집하고, 초반 후킹과 조회수 가속도 데이터를 한눈에 대조 분석할 수 있습니다.  
 시장의 파도가 어디로 흐르는지 데이터로 먼저 확인한 후, 검증된 구조를 내 채널에 이식하여 알고리즘의 상승기류에 올라타 보시기 바랍니다.

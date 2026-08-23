@@ -72,6 +72,6 @@ tags:
 결국 위대한 서사는 감에만 의존하는 영감이 아니라, 시청자의 심리적 호흡을 철저히 계산한 구조적 설계도 위에서 탄생합니다.  
 영상의 어느 지점에서 시청자가 호기심을 느끼고, 어느 구간에서 지루함을 느껴 이탈하는지 데이터로 정확히 추적해야만 서사의 약점을 보완할 수 있습니다.  
 
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 크리에이터가 직관에만 의존하지 않고 객관적인 수치로 스토리텔링을 검증할 수 있도록 돕습니다.  
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 스크랩북과 채널 모니터링 엔진을 통해 급상승 영상들의 초반 후킹 패턴과 시청 지속 시간 변곡점을 분석해 보십시오.  
+Lumen Insights는 크리에이터가 직관에만 의존하지 않고 객관적인 수치로 스토리텔링을 검증할 수 있도록 돕습니다.  
+Lumen Insights의 스크랩북과 채널 모니터링 엔진을 통해 급상승 영상들의 초반 후킹 패턴과 시청 지속 시간 변곡점을 분석해 보십시오.  
 3,000년을 관통해 온 영웅의 서사 공식과 현대의 정밀한 데이터 분석을 결합하여, 여러분의 콘텐츠를 단단한 성공 궤도에 올려놓으시기 바랍니다.

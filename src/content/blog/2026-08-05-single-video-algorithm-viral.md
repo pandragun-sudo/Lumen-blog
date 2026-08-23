@@ -12,7 +12,7 @@ heroImage: "https://img.youtube.com/vi/kFeoFxc-DJE/hqdefault.jpg"
 해당 영상의 제목은 '나화진에겐 너무 어려운 시적 감각ㅋㅋㅋ'으로, 무려 <span style="color: #2563eb;">2만 9천 개가 넘는 좋아요와 800개가 넘는 댓글</span>을 기록했습니다.  
 이러한 극단적인 성장은 결코 우연이 아니며, 유튜브 알고리즘이 정확하게 선호하는 어떤 '바이럴 공식'을 충족시켰기 때문에 발생한 현상입니다.  
 과연 360만 뷰를 만들어낸 그 단 하나의 트리거는 무엇이었을까요?  
-우리는 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 정밀한 데이터 추적 기능을 통해 이 현상 이면에 숨겨진 진짜 이유를 파헤쳐 보기로 했습니다.  
+우리는 Lumen Insights의 정밀한 데이터 추적 기능을 통해 이 현상 이면에 숨겨진 진짜 이유를 파헤쳐 보기로 했습니다.  
 숫자 뒤에 가려진 시청자들의 심리와 행동 패턴을 이해하는 것은 크리에이터에게 가장 중요한 덕목 중 하나이기 때문입니다.  
 
 ## 왜 다른 영상들은 선택받지 못했을까?
@@ -33,7 +33,7 @@ heroImage: "https://img.youtube.com/vi/kFeoFxc-DJE/hqdefault.jpg"
 이 영상은 무려 807개의 댓글을 기록했는데, 이는 단순히 영상을 소비하는 것을 넘어 시청자들이 자신의 생각이나 웃음 포인트를 적극적으로 타인과 공유하게 만들었다는 증거입니다.  
 유튜브 알고리즘은 이렇게 자발적인 상호작용이 일어나는 콘텐츠를 가장 가치 있는 콘텐츠로 판단하고 노출 빈도를 폭발적으로 증가시킵니다.  
 우리는 이러한 통찰을 바탕으로, 앞으로 콘텐츠를 기획할 때 단순히 웃긴 장면을 나열하는 것이 아니라 시청자가 참여할 수 있는 여백을 남겨두는 방식으로 전략을 수정하고 있습니다.  
-이러한 데이터 기반의 콘텐츠 기획은 [Lumen Insights 솔루션](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)을 활용하면 누구나 쉽게 자신의 채널에 적용하고 시도해 볼 수 있습니다.  
+이러한 데이터 기반의 콘텐츠 기획은 Lumen Insights 솔루션을 활용하면 누구나 쉽게 자신의 채널에 적용하고 시도해 볼 수 있습니다.  
 데이터를 분석하여 약점을 보완하고 강점을 극대화하는 전략이야말로 지속 가능한 성장의 핵심입니다.  
 
 ## 우연을 필연으로 바꾸는 데이터 분석의 힘

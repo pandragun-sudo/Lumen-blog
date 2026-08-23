@@ -71,7 +71,7 @@ V1이 없었다면 어떤 아키텍처가 문제를 일으키는지, 어떤 수�
 스타트업 세계에서 "빠른 실패(Fail Fast)"는 전략입니다.  
 V1의 실패를 빨리 인정하고 V2로 전진하는 것이, 실패를 인정하지 못하고 잘못된 서비스를 계속 끌고 가는 것보다 훨씬 나은 선택입니다.  
 
-[Lumen Insights V2](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 V1의 모든 실패를 교훈으로 삼아 만들어진 서비스입니다.  
+Lumen Insights V2는 V1의 모든 실패를 교훈으로 삼아 만들어진 서비스입니다.  
 아직 완벽하지 않습니다. 여전히 매일 버그를 발견하고 고칩니다.  
 하지만 이번에는 올바른 기반 위에 서 있습니다.  
 그것이 가장 중요한 차이입니다.  

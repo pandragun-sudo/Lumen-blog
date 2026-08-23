@@ -87,6 +87,6 @@ Lumen Insights에서는 이 사고 이후 다음 폴백 전략들을 추가했�
 이후 저는 모든 보안 패치를 적용하기 전에 반드시 이 질문을 먼저 합니다.  
 "이 변경이 핵심 사용자 여정(Login → Dashboard → 핵심 기능)을 방해하지는 않는가?"  
 
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 이 장애를 통해 더 단단해졌습니다.  
+Lumen Insights는 이 장애를 통해 더 단단해졌습니다.  
 완벽한 보안이란 없지만, 장애가 발생했을 때 빠르게 감지하고 폴백으로 전환하는 시스템은 만들 수 있습니다.  
 선의로 시작한 패치가 예상치 못한 방식으로 돌아오는 경험 — 이것이 1인 개발자가 혼자 감당해야 하는 가장 힘든 종류의 배움입니다.  

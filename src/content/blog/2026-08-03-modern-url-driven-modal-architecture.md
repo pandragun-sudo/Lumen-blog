@@ -90,7 +90,7 @@ Tier 시스템에 따라 ShortsPlayer(Tier 1)가 열리면 GlobalSearchModal(Tie
 이 경험을 통해 하나의 원칙이 확립되었습니다.  
 **아키텍처는 완성되는 순간이 아니라, 엣지 케이스를 하나씩 해결하면서 진화한다.**  
 
-URL 기반 모달 시스템은 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)의 핵심 UX 자산이 되었습니다.  
+URL 기반 모달 시스템은 Lumen Insights의 핵심 UX 자산이 되었습니다.  
 어느 화면에서든 현재 보고 있는 영상이나 채널의 URL을 복사해서 누군가에게 보내면, 그 사람도 정확히 동일한 화면을 바로 볼 수 있습니다.  
 이것은 추가 개발 비용 없이 아키텍처 설계에서 자연스럽게 얻어진 딥링킹(Deep Linking) 기능입니다.  
 뼈대를 바르게 세우면, 원하지 않았던 혜택까지 따라옵니다.  

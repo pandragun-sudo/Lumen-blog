@@ -62,4 +62,4 @@ heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 
 자신의 유튜브 채널이 지금 올바른 방향으로 성장하고 있는지, 2027년 바뀔 알고리즘의 파도를 탈 준비가 되었는지 정확한 진단이 필요하신가요?  
 단순한 뇌피셜이 아닌, 객관적인 실시간 트렌드 데이터와 키워드 랭킹 분석으로 다음 영상을 기획해 보세요.  
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)에서 제공하는 데이터 기반 통찰력으로, 막연한 불안감을 확신으로 바꾸시길 바랍니다.  
+Lumen Insights에서 제공하는 데이터 기반 통찰력으로, 막연한 불안감을 확신으로 바꾸시길 바랍니다.  

@@ -38,4 +38,4 @@ Lumen Insights 초기 버전 개발 당시, 저는 기능 구현에만 눈이 �
 결과적으로 문서화(Documentation)는 코딩의 부차적인 작업이 아니라, 1인 개발의 속도를 배가시키는 가장 강력한 가속 페달이었습니다.  
 이러한 탄탄한 기반 위에서, 다음 마지막 에피소드에서는 1인 기업의 궁극적인 로망인 **'멀티 에이전트(Multi-agent)'** 아키텍처와 새벽 3시에도 돌아가는 **인프라 자동화 시스템**을 전격 해부해 보겠습니다.  
 
-[Lumen Insights 솔루션 직접 경험해보기](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post_ep4)
+Lumen Insights 솔루션 직접 경험해보기

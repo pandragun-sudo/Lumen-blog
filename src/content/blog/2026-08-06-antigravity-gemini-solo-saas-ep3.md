@@ -43,4 +43,4 @@ heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4
 규칙으로 AI의 성격을 잡고, 스킬로 손과 발을 달아주었다면, 이제 마지막으로 남은 것은 이 거대한 시스템이 표류하지 않도록 잡아주는 **프로젝트의 나침반**입니다.  
 다음 포스팅에서는 수십 개의 채팅 세션이 바뀌어도 AI가 전체 맥락을 잊지 않게 만드는 **`PROJECT_PLAN.md`** 템플릿과 문서화의 비밀을 다루어 보겠습니다.  
 
-[Lumen Insights 솔루션 직접 경험해보기](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post_ep3)
+Lumen Insights 솔루션 직접 경험해보기

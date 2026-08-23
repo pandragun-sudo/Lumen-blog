@@ -79,4 +79,4 @@ Supabase 무료 플랜의 500MB 한도를 모르는 사이에 잠식하고 있�
 
 혼자 개발하는 1인 창업가일수록 이 법칙이 더 중요합니다.  
 나의 코드를 검토해줄 동료가 없기 때문에, 내가 스스로 공격자가 되어 내 시스템을 흔들어 봐야 합니다.  
-그 불편한 과정이 [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)를 더 단단하게 만들어가고 있습니다.  
+그 불편한 과정이 Lumen Insights를 더 단단하게 만들어가고 있습니다.  
