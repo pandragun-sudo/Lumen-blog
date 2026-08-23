@@ -96,6 +96,6 @@ API 쿼터, DB 연결 수, 서버 메모리 — 모든 외부 의존성의 한�
 **Q3. 이 자동화가 다른 기능에 영향을 주지는 않는가?**  
 자동화는 서로 격리되어야 합니다. 한 파이프라인의 과부하가 다른 기능을 마비시켜서는 안 됩니다.  
 
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 지금도 매일 새벽 이 파이프라인을 돌리며 진화하고 있습니다.  
+Lumen Insights는 지금도 매일 새벽 이 파이프라인을 돌리며 진화하고 있습니다.  
 여전히 완벽하지 않지만, 매일 조금씩 더 안정적인 시스템으로 성장하고 있습니다.  
 자동화는 목적지가 아니라 끝없이 개선하는 여정입니다.  

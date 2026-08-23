@@ -43,4 +43,4 @@ AI 특유의 "네, 알겠습니다! 훌륭한 질문입니다!" 식의 과도한
 규칙이 명확할수록 AI는 더 넓은 자유도를 획득합니다.  
 다음 에피소드에서는 "푸시해"라는 한마디로 보안 검사부터 깃허브 배포, 데이터 수집까지 끝내는 자동화의 끝판왕, **커스텀 스킬(Skill)** 파일들의 비밀을 파헤쳐 보겠습니다.  
 
-[Lumen Insights 솔루션 직접 경험해보기](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post_ep2)
+Lumen Insights 솔루션 직접 경험해보기

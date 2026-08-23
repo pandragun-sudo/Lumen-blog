@@ -75,4 +75,4 @@ Lumen Insights의 백엔드는 매일 수백 개 채널의 데이터를 수집�
 자동화가 만들어내는 글 위에, 실제 창업가의 고유한 경험과 시행착오를 담은 롱폼 칼럼을 더하는 것이 가장 탄탄한 SEO 전략이라는 것을 깨달았기 때문입니다.  
 
 유료화를 포기했다고 해서 수익을 포기한 것은 아닙니다.  
-트래픽을 자산으로 전환하는 이 구조가 완전히 작동하는 날, [Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 저를 대신해 수익을 만드는 진정한 의미의 패시브 인컴 엔진이 될 것입니다.  
+트래픽을 자산으로 전환하는 이 구조가 완전히 작동하는 날, Lumen Insights는 저를 대신해 수익을 만드는 진정한 의미의 패시브 인컴 엔진이 될 것입니다.  

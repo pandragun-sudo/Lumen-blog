@@ -81,6 +81,6 @@ Lumen Shorts Swipe-File 크롬 확장 프로그램을 만들 때, 폴더 분류 
 
 완벽한 도구는 존재하지 않습니다.  
 80%의 완성도로 세상에 내놓고 사용자의 반응을 보며 진화하는 것이, 완벽을 추구하다 결코 세상에 나오지 못하는 것보다 압도적으로 낫습니다.  
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)도 그렇게 지금 여기까지 왔습니다.  
+Lumen Insights도 그렇게 지금 여기까지 왔습니다.  
 다음에 기능을 추가하고 싶다는 생각이 들 때, 한 번만 멈추고 물어보세요.  
 "지금 이것 없이도 되는가?"  

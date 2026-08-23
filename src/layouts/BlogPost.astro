@@ -210,17 +210,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1 set:html={title} />
 					</div>
 					<slot />
-					<div id="lumen-access-code-container" style="margin-top: 3rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center;">
-						<p style="color: #475569; font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">오늘의 루멘 인사이트 액세스 코드</p>
-						<div id="lumen-access-code-wrapper" style="margin: 1rem 0;">
-							<button id="lumen-reveal-btn" style="background-color: #2563eb; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background-color 0.2s;">코드 확인하기</button>
-							<div id="lumen-access-code" style="display: none; font-size: 1.75rem; font-family: monospace; font-weight: 700; color: #2563eb; letter-spacing: 0.1em;">로딩중...</div>
-						</div>
-						<p style="color: #64748b; font-size: 0.95rem; margin-top: 0.75rem; line-height: 1.5;">루멘 인사이트 앱에 접속하여 위 코드를 입력하면<br>프리미엄 분석 기능이 24시간 동안 잠금 해제됩니다.</p>
-					</div>
 				</div>
 				<div class="components-container">
-					<CtaBanner />
+					<!-- <CtaBanner /> -->
 					<RelatedPosts currentTitle={title} />
 				</div>
 			</article>

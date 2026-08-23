@@ -71,5 +71,5 @@ Lumen Insights의 백엔드는 매일 수백 개 채널의 데이터를 수집�
 그래서 지금 이 블로그는 단순히 트렌드 지표만 보여주는 것을 넘어, 실제 창업가의 고유한 경험과 심층적인 원인 분석을 더하는 방향으로 진화하고 있습니다.  
 
 객관적인 원시 데이터(Raw Data)는 양을 만들고, 창업가의 고유한 경험과 통찰은 질을 만듭니다.  
-이 둘의 결합이 [Lumen Insights 블로그](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)가 지향하는 최종 형태입니다.  
+이 둘의 결합이 Lumen Insights 블로그가 지향하는 최종 형태입니다.  
 SaaS 프로덕트와 콘텐츠 사이트를 물리적으로 분리하는 것이 처음에는 번거롭게 느껴질 수 있지만, 구글 생태계에서 살아남으려면 결국 구글 봇의 언어(Text)를 완벽하게 구사할 수 있는 별도의 채널이 반드시 필요합니다.  

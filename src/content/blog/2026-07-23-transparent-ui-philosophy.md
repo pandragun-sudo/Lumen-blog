@@ -83,4 +83,4 @@ Lumen Insights는 처음부터 이 경쟁에서 이탈하기로 했습니다.
 데이터를 다루는 서비스를 만든다면, 가장 먼저 스스로에게 물어보세요.  
 지금 화면에 표시된 숫자 중 100% 실측값이 아닌 것이 하나라도 있는가?  
 만약 있다면, 사용자는 그것을 알고 있는가?  
-[Lumen Insights](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)는 그 질문에 항상 "예스"라고 답할 수 있는 서비스를 만들고 있습니다.  
+Lumen Insights는 그 질문에 항상 "예스"라고 답할 수 있는 서비스를 만들고 있습니다.  

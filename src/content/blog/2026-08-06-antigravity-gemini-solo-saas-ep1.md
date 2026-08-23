@@ -82,4 +82,4 @@ graph TD
 제가 이러한 에이전틱 AI의 힘을 빌려 실제 시장의 데이터를 가공하고 서비스화한 결과물이 궁금하시다면, 아래 링크를 통해 확인해 보시기 바랍니다.  
 복잡한 유튜브 데이터와 급상승 트렌드를 누구나 쉽게 분석할 수 있도록, AI와 함께 밤을 새워가며 깎아낸 저의 첫 번째 SaaS 프로덕트입니다.  
 
-[Lumen Insights 솔루션 직접 경험해보기](https://app.lumeninsights.kr/?utm_source=lumen_blog&utm_medium=blog_post&utm_campaign=auto_generated_post)
+Lumen Insights 솔루션 직접 경험해보기
