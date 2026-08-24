@@ -7,3 +7,11 @@
 # Fallback for deleted or legacy paths to blog index
 /blog/introducing-lumen-insights/ /blog/2026-07-17-introducing-lumen-insights/ 301
 /blog/introducing-lumen-insights /blog/2026-07-17-introducing-lumen-insights/ 301
+
+# Deleted Low-Quality Posts Fallback
+/blog/2026-08-01-lumen-insights-v1-closure-notice/ /blog/ 301
+/blog/2026-08-01-lumen-insights-v1-closure-notice /blog/ 301
+/blog/2026-07-27-why-you-must-build-your-own-ai-assistant/ /blog/ 301
+/blog/2026-07-27-why-you-must-build-your-own-ai-assistant /blog/ 301
+/blog/2026-08-16-v2-migration-excess-achievement/ /blog/ 301
+/blog/2026-08-16-v2-migration-excess-achievement /blog/ 301

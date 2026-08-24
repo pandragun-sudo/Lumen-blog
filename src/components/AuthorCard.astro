@@ -1,0 +1,167 @@
+---
+---
+
+<div class="author-card">
+	<div class="author-header">
+		<div class="author-avatar">
+			<span class="avatar-text">LAB</span>
+		</div>
+		<div class="author-meta">
+			<div class="author-name">Lumen Insights Lab</div>
+			<div class="author-role">1인 미디어 크리에이터 & 풀스택 데이터 엔지니어</div>
+		</div>
+	</div>
+	<p class="author-bio">
+		드라마/스토리 숏폼 채널(1MIN DRAMA)을 직접 기획·운영하며 얻은 실측 통계와, 1인 SaaS(Lumen Insights)를 개발하며 겪은 기술적 시행착오를 솔직하게 기록합니다. 막연한 성공 공식 대신, 실제 유튜브 스튜디오 지표와 데이터베이스 엔지니어링의 본질을 탐구합니다.
+	</p>
+	<div class="author-footer">
+		<div class="author-links">
+			<a href="https://youtube.com/@onemindrama" target="_blank" rel="noopener noreferrer" class="author-link youtube">
+				YouTube @onemindrama
+			</a>
+			<a href="/about" class="author-link about">
+				연구소 소개
+			</a>
+		</div>
+		<div class="author-tags">
+			<span class="tag">Shorts AVD Modeling</span>
+			<span class="tag">Algorithm Time-Series</span>
+			<span class="tag">Build in Public</span>
+		</div>
+	</div>
+</div>
+
+<style>
+	.author-card {
+		margin: 3.5rem 0 2rem;
+		padding: 2rem;
+		background: rgba(59, 130, 246, 0.03);
+		border: 1px solid rgba(59, 130, 246, 0.15);
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+	}
+
+	.author-header {
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+		margin-bottom: 1.2rem;
+	}
+
+	.author-avatar {
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #2563eb, #7c3aed);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #ffffff;
+		font-weight: 800;
+		font-size: 0.95rem;
+		letter-spacing: 0.05em;
+		box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+		flex-shrink: 0;
+	}
+
+	.author-meta {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+
+	.author-name {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-main, #0f172a);
+		letter-spacing: -0.02em;
+	}
+
+	.author-role {
+		font-size: 0.9rem;
+		color: var(--text-muted, #64748b);
+		font-weight: 500;
+	}
+
+	.author-bio {
+		font-size: 1rem;
+		line-height: 1.7;
+		color: var(--text-main, #334155);
+		margin-bottom: 1.5rem;
+		word-break: keep-all;
+	}
+
+	.author-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
+		padding-top: 1.2rem;
+		border-top: 1px solid rgba(59, 130, 246, 0.1);
+	}
+
+	.author-links {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		flex-wrap: wrap;
+	}
+
+	.author-link {
+		font-size: 0.88rem;
+		font-weight: 600;
+		text-decoration: none !important;
+		padding: 0.4rem 0.9rem;
+		border-radius: 8px;
+		transition: all 0.2s ease;
+	}
+
+	.author-link.youtube {
+		background: rgba(239, 68, 68, 0.1);
+		color: #dc2626 !important;
+		border: 1px solid rgba(239, 68, 68, 0.2);
+	}
+
+	.author-link.youtube:hover {
+		background: #dc2626;
+		color: #ffffff !important;
+	}
+
+	.author-link.about {
+		background: rgba(59, 130, 246, 0.1);
+		color: #2563eb !important;
+		border: 1px solid rgba(59, 130, 246, 0.2);
+	}
+
+	.author-link.about:hover {
+		background: #2563eb;
+		color: #ffffff !important;
+	}
+
+	.author-tags {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.tag {
+		font-size: 0.75rem;
+		padding: 0.25rem 0.6rem;
+		background: rgba(100, 116, 139, 0.08);
+		color: var(--text-muted, #64748b);
+		border-radius: 6px;
+		font-weight: 500;
+	}
+
+	@media (max-width: 640px) {
+		.author-card {
+			padding: 1.5rem;
+		}
+		.author-footer {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>
