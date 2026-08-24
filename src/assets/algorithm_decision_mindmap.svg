@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="100%" height="100%" style="background: transparent; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Container -->
+  <rect width="960" height="460" rx="20" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1" filter="url(#card-shadow)"/>
+  
+  <!-- Header Badge & Title -->
+  <g transform="translate(36, 32)">
+    <rect width="156" height="26" rx="13" fill="rgba(99, 102, 241, 0.18)" stroke="rgba(99, 102, 241, 0.35)" stroke-width="1"/>
+    <text x="78" y="17" fill="#a5b4fc" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">ALGORITHM MINDMAP</text>
+  </g>
+
+  <!-- Root Node (Left Rounded Pill) -->
+  <g transform="translate(36, 204)">
+    <rect width="175" height="54" rx="27" fill="#1e293b" stroke="#818cf8" stroke-width="3.5"/>
+    <text x="87" y="29" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">쇼츠 알고리즘 엔진</text>
+  </g>
+
+  <!-- Branch 1 (Coral/Red - 1단계) -->
+  <path d="M 211 231 C 255 231, 260 115, 305 115" fill="none" stroke="#f87171" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Sub-branch 1.1 -->
+  <path d="M 485 115 C 520 115, 525 80, 560 80" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sub-branch 1.2 -->
+  <path d="M 485 115 C 520 115, 525 150, 560 150" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Level 1 Node: 1단계 피드 진입 -->
+  <text x="310" y="120" fill="#fca5a5" font-size="14" font-weight="700">1단계: 피드 진입 (첫 3초)</text>
+  <!-- Level 2 Nodes -->
+  <text x="570" y="85" fill="#4ade80" font-size="13" font-weight="600">피드 유지율 60% 이상 <tspan fill="#94a3b8" font-weight="400">(사례1: 73.7%) → 2단계 승인</tspan></text>
+  <text x="570" y="155" fill="#f87171" font-size="13" font-weight="600">스와이프 이탈 40% 초과 <tspan fill="#94a3b8" font-weight="400">→ 추천 즉시 종료</tspan></text>
+
+  <!-- Branch 2 (Purple/Violet - 2단계) -->
+  <path d="M 211 231 C 255 231, 265 231, 305 231" fill="none" stroke="#c084fc" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Sub-branch 2.1 -->
+  <path d="M 485 231 C 520 231, 525 198, 560 198" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sub-branch 2.2 -->
+  <path d="M 485 231 C 520 231, 525 264, 560 264" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Level 1 Node: 2단계 완주율 -->
+  <text x="310" y="236" fill="#e9d5ff" font-size="14" font-weight="700">2단계: 구간 유지율 &amp; AVD</text>
+  <!-- Level 2 Nodes -->
+  <text x="570" y="203" fill="#4ade80" font-size="13" font-weight="600">중간 유지율 70% 이상 <tspan fill="#94a3b8" font-weight="400">(사례2: 95%) → 3단계 진입</tspan></text>
+  <text x="570" y="269" fill="#fbbf24" font-size="13" font-weight="600">중간 구간 급격한 이탈 <tspan fill="#94a3b8" font-weight="400">→ 구독자 피드 한정 배포</tspan></text>
+
+  <!-- Branch 3 (Cyan/Blue - 3단계) -->
+  <path d="M 211 231 C 255 231, 260 348, 305 348" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Sub-branch 3.1 -->
+  <path d="M 485 348 C 520 348, 525 315, 560 315" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sub-branch 3.2 -->
+  <path d="M 485 348 C 520 348, 525 382, 560 382" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Level 1 Node: 3단계 체류시간 -->
+  <text x="310" y="353" fill="#bae6fd" font-size="14" font-weight="700">3단계: 절대 체류 시간</text>
+  <!-- Level 2 Nodes -->
+  <text x="570" y="320" fill="#60a5fa" font-size="13" font-weight="700">체류 시간 30~60초 <tspan fill="#e2e8f0" font-weight="500">(사례1: 43초, 사례2: 58초) → 수백만 뷰 바이럴</tspan></text>
+  <text x="570" y="387" fill="#f87171" font-size="13" font-weight="600">체류 시간 10~12초 <tspan fill="#94a3b8" font-weight="400">(사례3: 12초 초단편) → 3만 뷰 조기 정체</tspan></text>
+
+</svg>
