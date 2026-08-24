@@ -240,6 +240,42 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				a.setAttribute('target', '_blank');
 				a.setAttribute('rel', 'noopener noreferrer');
 			});
+
+			// Mermaid 다이어그램 자동 렌더링
+			const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+			if (mermaidBlocks.length > 0) {
+				import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs').then(({ default: mermaid }) => {
+					mermaid.initialize({
+						startOnLoad: false,
+						theme: 'dark',
+						themeVariables: {
+							darkMode: true,
+							background: '#0f172a',
+							primaryColor: '#3b82f6',
+							primaryTextColor: '#f8fafc',
+							primaryBorderColor: '#60a5fa',
+							lineColor: '#94a3b8',
+							secondaryColor: '#1e293b',
+							tertiaryColor: '#1e293b'
+						}
+					});
+					mermaidBlocks.forEach(async (block, i) => {
+						const pre = block.closest('pre');
+						const code = block.textContent || '';
+						const container = document.createElement('div');
+						container.className = 'mermaid-container';
+						container.style.cssText = 'display:flex;justify-content:center;margin:2.5em 0;padding:1.5em;background:#0f172a;border-radius:16px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 10px 30px rgba(0,0,0,0.2);overflow-x:auto;';
+						
+						try {
+							const { svg } = await mermaid.render('mermaid-svg-' + i, code);
+							container.innerHTML = svg;
+							pre?.replaceWith(container);
+						} catch (e) {
+							console.error('Mermaid render error:', e);
+						}
+					});
+				}).catch(err => console.error('Failed to load mermaid:', err));
+			}
 		</script>
 	</body>
 </html>
