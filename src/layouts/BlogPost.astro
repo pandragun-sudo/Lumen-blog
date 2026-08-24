@@ -5,7 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import CtaBanner from '../components/CtaBanner.astro';
+import AuthorCard from '../components/AuthorCard.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -29,6 +29,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			"datePublished": pubDate.toISOString(),
 			"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
 			"author": {
+				"@type": "Person",
+				"name": "Lumen Insights Lab",
+				"jobTitle": "Shorts Data Analyst & Software Engineer",
+				"url": "https://lumeninsights.kr/about",
+				"sameAs": [
+					"https://youtube.com/@onemindrama"
+				]
+			},
+			"publisher": {
 				"@type": "Organization",
 				"name": "Lumen Insights",
 				"url": "https://lumeninsights.kr/"
@@ -91,7 +100,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				flex-wrap: wrap;
 				gap: 0.5rem;
+			}
+			.author-byline {
+				color: #2563eb;
+				font-weight: 600;
 			}
 			.last-updated-on {
 				font-style: italic;
@@ -196,6 +210,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
+							<span>•</span>
+							<span class="author-byline">작성: Lumen Insights Lab</span>
 							{
 								updatedDate && (
 									<>
@@ -210,9 +226,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1 set:html={title} />
 					</div>
 					<slot />
+					<AuthorCard />
 				</div>
 				<div class="components-container">
-					<!-- <CtaBanner /> -->
 					<RelatedPosts currentTitle={title} />
 				</div>
 			</article>
@@ -224,52 +240,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				a.setAttribute('target', '_blank');
 				a.setAttribute('rel', 'noopener noreferrer');
 			});
-
-			// 동적 액세스 코드 로딩 (체류 시간 60초 제한)
-			const enterTime = Date.now();
-			const REQUIRED_SECONDS = 60; // 60초
-
-			async function loadAccessCode() {
-				const codeEl = document.getElementById('lumen-access-code');
-				const btnEl = document.getElementById('lumen-reveal-btn');
-				if (!codeEl || !btnEl) return;
-				
-				const timeSpent = Math.floor((Date.now() - enterTime) / 1000);
-				const timeRemaining = REQUIRED_SECONDS - timeSpent;
-				
-				if (timeRemaining > 0) {
-					alert(`본문을 충분히 읽고 코드를 확인해 주세요. (${timeRemaining}초 후 확인 가능)`);
-					return;
-				}
-				
-				btnEl.style.display = 'none';
-				codeEl.style.display = 'block';
-				
-				try {
-					// 개발 환경에서는 localhost, 운영 환경에서는 실제 도메인
-					const isLocal = window.location.hostname === 'localhost';
-					const apiUrl = isLocal 
-						? 'http://localhost:3001/api/public/daily-code'
-						: 'https://app.lumeninsights.kr/api/public/daily-code';
-						
-					const response = await fetch(apiUrl, { credentials: 'omit' });
-					const data = await response.json();
-					
-					if (data.success && data.code) {
-						codeEl.textContent = data.code;
-					} else {
-						codeEl.textContent = '발급 대기중';
-					}
-				} catch (err) {
-					console.error('Failed to load access code:', err);
-					codeEl.textContent = '로딩 실패';
-				}
-			}
-
-			const revealBtn = document.getElementById('lumen-reveal-btn');
-			if (revealBtn) {
-				revealBtn.addEventListener('click', loadAccessCode);
-			}
 		</script>
 	</body>
 </html>
