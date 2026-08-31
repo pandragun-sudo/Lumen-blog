@@ -86,4 +86,11 @@ Lumen Insights는 "100만 뷰 이상, 90일 생존"이라는 실측 데이터만
 
 Lumen Insights는 지금도 매일 수백 개 채널의 데이터를 자동으로 수집하고 분석하며 진화하고 있습니다.  
 코드를 짜고, 에러를 고치고, 다시 짜는 이 지난한 과정을 통해 언젠가 대한민국 모든 드라마/예능 크리에이터의 필수 분석 툴이 되는 것이 목표입니다.  
-감이 아닌 데이터로 채널을 성장시키고 싶은 분이라면, 이 여정을 함께 지켜봐 주시기를 진심으로 부탁드립니다.  
+감이 아닌 데이터로 채널을 성장시키고 싶은 분이라면, 이 여정을 함께 지켜봐 주시기를 진심으로 부탁드립니다.
+
+---
+
+**참고 자료:**
+- [YouTube Data API v3 — Official Overview and Quota Guidelines](https://developers.google.com/youtube/v3/getting-started)
+- [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [YouTube Help Center — Understand YouTube Analytics Metrics](https://support.google.com/youtube/answer/141805)

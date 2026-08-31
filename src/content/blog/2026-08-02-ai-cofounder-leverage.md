@@ -77,4 +77,11 @@ Lumen Insights가 V2까지 도달할 수 있었던 것은 기술력 때문이 �
 컨텍스트를 설계하고, 스킬을 모듈화하고, 에이전트를 병렬로 운영하는 이 레버리지 구조 덕분이었습니다.  
 AI를 단순한 도구로 대하는 동안, 경쟁자들은 그 AI를 비즈니스 파트너로 격상시키고 있습니다.  
 지금 당장 여러분의 업무 철학을 문서화하고, 그것을 AI에게 읽혀보세요.  
-Lumen Insights의 진짜 경쟁력은 코드가 아니라 이 문서들에 있습니다.  
+Lumen Insights의 진짜 경쟁력은 코드가 아니라 이 문서들에 있습니다.
+
+---
+
+**참고 자료:**
+- [Google for Developers — Multi-Turn Agentic Pair Programming Patterns](https://developers.googleblog.com/)
+- [GitHub Docs — Managing Code Architecture and Project SSOT](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features)
+- [Google Search Central — Originality and Value in Technical Publishing](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

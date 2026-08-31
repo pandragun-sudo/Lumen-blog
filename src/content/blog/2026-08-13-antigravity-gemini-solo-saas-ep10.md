@@ -48,3 +48,10 @@ heroImage: "../../assets/images/blog/ep10_halloffame.jpg"
 > 엔지니어링의 목표는 단순히 리소스 절약에 그치지 않고, 비즈니스 가치 극대화를 위한 데이터 자산 보존에 있음을 명확히 인식해야 합니다. 데이터는 과거의 흔적이 아닌 미래 성장의 연료입니다.  
 
 데이터는 시간이 지날수록 가치를 잃는 소모품이 아니라, 축적될수록 새로운 인사이트를 제공하고 비즈니스 성장을 촉진하는 귀중한 자산입니다.  이러한 인식의 전환이야말로 모든 창업가와 개발자가 가져야 할 중요한 태도라고 생각합니다.  저는 앞으로도 데이터의 진정한 가치를 발굴하고 이를 비즈니스 혁신으로 연결하는 데 최선을 다할 것입니다.
+
+---
+
+**참고 자료:**
+- [YouTube Help Center — Measuring Long-Term Video Performance and Evergreen Traffic](https://support.google.com/youtube/answer/141805)
+- [Supabase Documentation — Postgres Database Indexing for High-Volume Analytics](https://supabase.com/docs/guides/database/indexes)
+- [Think with Google — Evergreen Short-Form Video Strategy](https://www.thinkwithgoogle.com/marketing-strategies/video/youtube-shorts-trends/)

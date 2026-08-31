@@ -1,6 +1,6 @@
 ---
 title: "유튜브 쇼츠 맞춤 썸네일과 대표 프레임 설정: 모바일과 PC 스튜디오 실측 분석"
-description: "1MIN DRAMA 채널의 실측 캡처를 바탕으로 모바일 앱과 PC 유튜브 스튜디오의 쇼츠 썸네일(대표 프레임) 설정 방식, 0.1초 킬러 프레임 선정 기법, 피드 및 검색 유입 클릭률(CTR) 극대화 전략을 심층 분석합니다."
+description: "1MIN DRAMA 채널의 실제 스튜디오 캡처를 바탕으로 모바일 앱과 PC 유튜브 스튜디오의 쇼츠 썸네일(대표 프레임) 설정 방식, 0.1초 킬러 프레임 선정 기법, 피드 및 검색 유입 클릭률(CTR) 극대화 전략을 심층 분석합니다."
 category: "guide"
 pubDate: "2026-08-18T21:00:00+09:00"
 heroImage: "../../assets/youtube_shorts_custom_thumbnail.png"
@@ -34,7 +34,7 @@ heroImage: "../../assets/youtube_shorts_custom_thumbnail.png"
 
 스마트폰 유튜브 앱에서 쇼츠를 업로드하거나 기존 게시물의 세부정보를 수정할 때의 실제 화면입니다.
 
-![유튜브 모바일 앱 세부정보 수정 화면 및 썸네일 연필 아이콘 실측 화면](../../assets/blog/shorts_thumbnail_iphone_edit_details.png)
+![유튜브 모바일 앱 세부정보 수정 화면 및 썸네일 연필 아이콘 스크린샷](../../assets/blog/shorts_thumbnail_iphone_edit_details.png)
 
 1MIN DRAMA 채널의 실제 쇼츠 영상(`대한민국을 삼켜버릴 역대급 전쟁의 시작 #메이드인코리아2 #드라마 #디즈니플러스`, 러닝타임 1분 21초) 세부정보 화면입니다.
 
@@ -44,9 +44,9 @@ heroImage: "../../assets/youtube_shorts_custom_thumbnail.png"
 
 연필 아이콘을 누르면 나타나는 프레임 지정 전용 편집 인터페이스입니다.
 
-![유튜브 모바일 앱 타임라인 필름스트립에서 0.1초 대표 프레임을 지정하는 실측 화면](../../assets/blog/shorts_thumbnail_iphone_frame_selector.png)
+![유튜브 모바일 앱 타임라인 필름스트립에서 0.1초 대표 프레임을 지정하는 스크린샷](../../assets/blog/shorts_thumbnail_iphone_frame_selector.png)
 
-위 실측 화면에서 확인할 수 있듯, 하단 타임라인에는 영상의 시작부터 끝까지 수십 장의 연속 프레임이 필름스트립 형태로 배열됩니다.
+위 스크린샷에서 확인할 수 있듯, 하단 타임라인에는 영상의 시작부터 끝까지 수십 장의 연속 프레임이 필름스트립 형태로 배열됩니다.
 
 크리에이터는 슬라이더를 좌우로 미세하게 드래그하여 다음과 같은 조건을 만족하는 킬러 프레임을 직접 선택할 수 있습니다:
 - **상단 채널 프로필 및 헤드라인 카피**: 상단의 `1MIN DRAMA` 표식과 `대한민국을 삼켜버릴 역대급 전쟁의 시작` 후킹 문구가 가장 선명하게 결합된 프레임.
@@ -59,9 +59,9 @@ heroImage: "../../assets/youtube_shorts_custom_thumbnail.png"
 
 과거에는 PC 웹 브라우저의 유튜브 스튜디오(YouTube Studio)에서 쇼츠 썸네일을 확인하거나 변경하는 것이 불가능하여, 알고리즘이 임의로 지정한 흐릿한 장면이 노출되는 문제가 있었습니다. 그러나 최근 스튜디오 업데이트를 통해 PC 환경에서도 쇼츠의 대표 썸네일을 시각적으로 확인하고 관리할 수 있는 전용 인터페이스가 신설되었습니다.
 
-![PC 웹 유튜브 스튜디오 동영상 세부정보 내 쇼츠 썸네일 섹션 실측 화면](../../assets/blog/shorts_thumbnail_pc_studio_editor.png)
+![PC 웹 유튜브 스튜디오 동영상 세부정보 내 쇼츠 썸네일 섹션 스크린샷](../../assets/blog/shorts_thumbnail_pc_studio_editor.png)
 
-위 화면은 PC 웹 브라우저에서 유튜브 스튜디오의 **동영상 세부정보(Video Details)** 페이지에 진입한 실측 모습입니다.
+위 화면은 PC 웹 브라우저에서 유튜브 스튜디오의 **동영상 세부정보(Video Details)** 페이지에 진입한 실제 화면입니다.
 
 ### 1. 동영상 세부정보 내 9:16 전용 썸네일 카드 렌더링
 좌측 하단의 붉은색 박스 영역에 **'썸네일 (눈에 띄고 시청자의 관심을 끄는 썸네일을 설정하세요)'** 섹션이 활성화되어 있으며, 모바일에서 지정했던 9:16 세로형 대표 프레임이 선명하게 표시됩니다.

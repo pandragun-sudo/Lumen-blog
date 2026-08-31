@@ -43,4 +43,11 @@ heroImage: "https://img.youtube.com/vi/kFeoFxc-DJE/hqdefault.jpg"
 조회수 5만 회의 영상과 360만 회의 영상을 가르는 결정적인 차이는 시청자의 감정을 얼마나 깊게 건드리고 참여를 이끌어냈느냐에 달려 있습니다.  
 이 글을 읽으시는 크리에이터 분들께서도 자신의 채널에서 유독 튀는 성과를 낸 영상이 있다면, 그 이면에 숨겨진 시청자의 행동 패턴을 반드시 분석해 보시기 바랍니다.  
 데이터는 결코 거짓말을 하지 않으며, 알고리즘의 선택을 받는 바이럴 공식은 철저한 분석과 기민한 실행을 통해 완성됩니다.  
-여러분의 채널에도 360만 뷰의 기적이 일상적인 성과로 자리 잡기를 응원합니다.  
+여러분의 채널에도 360만 뷰의 기적이 일상적인 성과로 자리 잡기를 응원합니다.
+
+---
+
+**참고 자료:**
+- [YouTube Help Center — How the YouTube Algorithm Recommends Videos](https://support.google.com/youtube/answer/141805)
+- [YouTube Official Creator Insider — Understanding Shorts Feed Metrics](https://blog.youtube/creator-and-artist-stories/)
+- [Think with Google — Short-Form Video Consumer Behavior Trends](https://www.thinkwithgoogle.com/marketing-strategies/video/youtube-shorts-trends/)

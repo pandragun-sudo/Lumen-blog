@@ -70,3 +70,10 @@ Lumen Insights는 앞으로도 이러한 섬세한 사용자 경험 설계에 �
 > 사용자 경험의 완성도는 작은 디테일에서 결정됩니다. 스크롤 락 문제 해결은 단순한 버그 픽스를 넘어, Lumen Insights의 견고한 사용자 경험 철학을 구축하는 중요한 이정표가 되었습니다.
 
 이러한 깊이 있는 기술적 문제 해결은 단순히 기능을 추가하는 것을 넘어, 서비스의 본질적인 가치를 높이고 사용자에게 신뢰를 주는 가장 확실한 방법임을 확신합니다.
+
+---
+
+**참고 자료:**
+- [W3C WAI-ARIA — Modal Dialog Accessible Body Scroll Locking Guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+- [MDN Web Docs — CSS Overflow and Viewport Stacking Contexts](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+- [React Documentation — Portals and Layered UI Component Stacking](https://react.dev/reference/react-dom/createPortal)

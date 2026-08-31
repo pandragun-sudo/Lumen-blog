@@ -17,4 +17,10 @@
 /blog/2026-08-16-v2-migration-excess-achievement /blog/ 301
 /blog/2026-07-19-youtube-shorts-automation-pipeline/ /blog/ 301
 /blog/2026-07-19-youtube-shorts-automation-pipeline /blog/ 301
+/blog/2026-07-19-risk-zero-business-model/ /blog/ 301
+/blog/2026-07-19-risk-zero-business-model /blog/ 301
+
+# Tools Fallback Redirects
+/tools/* /blog/ 301
+/tools /blog/ 301
 

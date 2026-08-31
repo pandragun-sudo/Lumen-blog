@@ -85,4 +85,11 @@ PM이 Scope를 정하고, 데이터팀이 Evidence를 수집하고, 개발팀이
 
 Lumen Insights의 모든 기능 기획과 버그 수정은 이 5단계 프레임워크를 통해 처리됩니다.  
 복잡해 보이는 문제도 이 순서를 지키면 반드시 실마리가 보입니다.  
-혼란스러운 상황에서 가장 먼저 할 일은 해결책을 찾는 것이 아니라, 정확히 무엇이 문제인지 정의하는 것임을 잊지 마세요.  
+혼란스러운 상황에서 가장 먼저 할 일은 해결책을 찾는 것이 아니라, 정확히 무엇이 문제인지 정의하는 것임을 잊지 마세요.
+
+---
+
+**참고 자료:**
+- [Martin Fowler — Continuous Architecture and Reducing Technical Debt](https://martinfowler.com/articles/continuousIntegration.html)
+- [MDN Web Docs — Modern Engineering Workflows and Quality Control](https://developer.mozilla.org/en-US/docs/Glossary/Workflow)
+- [Google Search Central — E-E-A-T Principles for Technical Creators](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

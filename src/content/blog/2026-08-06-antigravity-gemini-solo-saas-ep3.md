@@ -44,3 +44,10 @@ heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4
 다음 포스팅에서는 수십 개의 채팅 세션이 바뀌어도 AI가 전체 맥락을 잊지 않게 만드는 **`PROJECT_PLAN.md`** 템플릿과 문서화의 비밀을 다루어 보겠습니다.  
 
 Lumen Insights 솔루션 직접 경험해보기
+
+---
+
+**참고 자료:**
+- [GitHub Docs — Creating Custom Automated Actions and Skills](https://docs.github.com/en/actions/creating-actions)
+- [MDN Web Docs — Automation Best Practices in Modern Web Engineering](https://developer.mozilla.org/en-US/docs/Glossary/Automation)
+- [Google Search Central — Quality Standards for Developer Tooling Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

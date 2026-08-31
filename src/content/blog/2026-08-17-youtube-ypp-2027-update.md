@@ -8,7 +8,7 @@ heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 
 최근 유튜브가 2018년 이후 가장 큰 폭의 **유튜브 파트너 프로그램(YPP) 개편안**을 공식 블로그를 통해 기습적으로 발표했습니다.  
 제가 그동안 1MIN DRAMA 채널을 운영하며 뼈저리게 느꼈던 알고리즘의 깐깐함이 이제는 명문화된 규정으로 다가왔다는 생각이 듭니다.  
-이번 2027년 개편은 기존의 단순 광고 수익 배분 구조에서 벗어나, 쇼츠(Shorts)의 비정상적인 성장세와 <span style="color: #2563eb;">크리에이터 옥석 가리기</span>를 동시에 노리는 치밀한 계산이 깔려 있습니다.  
+이번 2027년 개편은 기존의 단순 플랫폼 트래픽 배분 구조에서 벗어나, 쇼츠(Shorts)의 비정상적인 성장세와 <span style="color: #2563eb;">크리에이터 옥석 가리기</span>를 동시에 노리는 치밀한 계산이 깔려 있습니다.  
 당장 2027년 2월 1일부터 공식 적용될 이번 수익 창출 조건 및 보상 체계의 주요 변경점을 솔직한 1인 창업가의 시선으로 파헤쳐 보겠습니다.  
 
 ## 1. YPP 수익 창출 조건: 2026년 vs 2027년의 충격적 갭
@@ -53,7 +53,7 @@ heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 
 이제 90일 안에 2,000만 뷰를 찍어야 하는 상황에서 숏폼 크리에이터들은 어떻게 살아남아야 할까요?  
 유튜브는 기존 YPP에 가입되어 있더라도 2027년 2월 이후 쇼츠 조회수가 1,000만 회 아래로 떨어지면 쇼츠 수익 쉐어를 일시적으로 중단하겠다고 밝혔습니다.  
-대신 조회수 기반의 광고 수익을 대체할 **신규 인센티브 프로그램**을 준비 중입니다.  
+대신 조회수 기반의 단순 정산을 대체할 **신규 인센티브 프로그램**을 준비 중입니다.  
 유튜브 쇼핑 기능 활성화 보너스, 브랜드 딜(Sponsorship) 연계, 새로운 밈(Meme)을 창조한 크리에이터를 위한 트렌드 부스트 상금 등이 그것입니다.  
 
 결국 단순한 조회수 단가 싸움의 시대는 저물고 있습니다.  
@@ -62,4 +62,11 @@ heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 
 자신의 유튜브 채널이 지금 올바른 방향으로 성장하고 있는지, 2027년 바뀔 알고리즘의 파도를 탈 준비가 되었는지 정확한 진단이 필요하신가요?  
 단순한 뇌피셜이 아닌, 객관적인 실시간 트렌드 데이터와 키워드 랭킹 분석으로 다음 영상을 기획해 보세요.  
-Lumen Insights에서 제공하는 데이터 기반 통찰력으로, 막연한 불안감을 확신으로 바꾸시길 바랍니다.  
+Lumen Insights에서 제공하는 데이터 기반 통찰력으로, 막연한 불안감을 확신으로 바꾸시길 바랍니다.
+
+---
+
+**참고 자료:**
+- [YouTube Help — YouTube Partner Program Overview & Eligibility Requirements](https://support.google.com/youtube/answer/72851)
+- [YouTube Official Blog — Empowering Creators with Multi-Tiered Monetization](https://blog.youtube/news-and-events/)
+- [Google Search Central — E-E-A-T and Originality for Monetized Creators](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
