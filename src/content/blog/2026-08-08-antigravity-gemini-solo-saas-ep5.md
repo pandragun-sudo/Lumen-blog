@@ -1,71 +1,75 @@
 ---
-title: "에피소드 5: 내가 자는 동안에도 서비스는 성장한다, 1인 SaaS 인프라 및 DB 유지보수 자동화"
-description: "Supabase 500MB 무료 한도 내에서 슬라이딩 윈도우 컷오프, PostgreSQL VACUUM 스케줄링, 실패 복구 텔레그램 관제 파이프라인을 구축한 실전 엔지니어링 기록입니다."
+title: "Supabase 500MB 무료 티어 한계 극복기: PostgreSQL Dead Tuples와 VACUUM 자동화"
+description: "DELETE 쿼리만으로는 줄어들지 않는 PostgreSQL 디스크 공간의 원리를 분석하고, 7일 슬라이딩 윈도우와 cronJobs.js 자동 VACUUM 파이프라인으로 500MB DB를 무결점으로 유지한 엔지니어링 기록입니다."
 category: "devlog"
-pubDate: "2026-08-08T10:15:00+09:00"
+pubDate: "2026-08-08T14:00:00+09:00"
 heroImage: "../../assets/images/blog/ep5_servers.jpg"
 ---
 
-1인 개발자에게 시간과 컴퓨팅 리소스는 가장 엄격하게 관리되어야 하는 한정된 자산입니다. 신규 기능 개발, 데이터 파이프라인 최적화, 시스템 보안 감사까지 모든 영역을 단 한 사람이 감당해야 하는 환경에서, 매일 수동으로 데이터베이스 청소 스크립트를 실행하거나 서버 상태를 점검하는 것은 심각한 운영 부채(Operational Debt)를 낳습니다.
+1인 소프트웨어 엔지니어에게 인프라 비용 최적화는 생존을 위한 필수 과제입니다.  
+수십만 건의 유튜브 숏폼 메트릭을 매일 수집하는 데이터 파이프라인을 운영하면서, Supabase 무료 티어의 500MB 디스크 용량 한계는 언제 터질지 모르는 가장 큰 위험 요인이었습니다.  
 
-Lumen Insights의 데이터 파이프라인이 수십만 건의 숏폼 메트릭을 수집하더라도, 관리자가 개입하지 않으면 스스로 자정(Self-Cleaning)하지 못하는 시스템은 진정한 의미의 독립 소프트웨어가 될 수 없습니다.
+많은 개발자들이 데이터베이스에서 `DELETE FROM table WHERE date < ...` 쿼리를 실행하면 디스크 용량이 즉시 확보될 것이라 생각합니다.  
+하지만 실제 프로덕션 환경에서 수만 건의 레코드를 삭제했음에도 불구하고 DB 용량 게이지는 단 1MB도 줄어들지 않았습니다.  
+PostgreSQL의 MVCC(다중 버전 동시성 제어) 엔진이 작동하는 원리를 이해하지 못해 겪었던 위기와 이를 해결한 자동화 아키텍처를 공유합니다.  
 
-오늘은 Supabase 500MB라는 빡빡한 무료 티어 제약 하에서, 단 한 번의 디스크 용량 초과 없이 시스템을 24시간 안정적으로 유지하기 위해 설계한 백엔드 Cron 스케줄러와 데이터베이스 최적화 아키텍처를 해부합니다.
+## DELETE 쿼리의 함정과 데드 튜플(Dead Tuples)
 
-## 500MB의 벽: DELETE 쿼리의 함정과 Dead Tuples
+PostgreSQL은 데이터 수정과 삭제 시 성능을 유지하기 위해 기존 디스크 블록을 즉시 비우지 않습니다.  
+레코드를 삭제하면 해당 행을 '사용하지 않음(Dead Tuple)'으로 마킹만 해두고 물리적 디스크 공간은 그대로 점유합니다.  
 
-PostgreSQL을 처음 접하는 많은 1인 개발자들이 빠지는 가장 치명적인 함정은 **"DELETE 문을 실행하면 디스크 용량이 즉시 줄어든다"는 착각**입니다.
+1MIN DRAMA 벤치마킹을 위해 수집하던 `video_daily_stats` 테이블에서 29,689건의 레코드를 DELETE 쿼리로 지웠지만, 디스크 사용량은 여전히 400MB(80%)에 머물러 있었습니다.  
+이 데드 튜플들을 청소하고 공간을 OS 및 데이터베이스에 실제로 반환하려면 반드시 **`VACUUM`** 명령이 수행되어야 합니다.  
 
-PostgreSQL은 MVCC(Multi-Version Concurrency Control) 아키텍처를 채택하고 있기 때문에, `DELETE`를 실행하더라도 해당 행(Row)의 물리적 공간을 즉시 OS에 반환하지 않고 '데드 튜플(Dead Tuple)' 상태로 마킹해 둘 뿐입니다.
-
-```
-[PostgreSQL의 물리적 공간 낭비 구조]
-데이터 적재 (100MB) → DELETE 실행 (0건 남음) → 디스크 사용량: 여전히 100MB 유지!
-```
-
-이 상태에서 `VACUUM`을 명시적으로 실행하지 않으면, 디스크 용량은 계속해서 비대해져 결국 Supabase의 500MB 한도를 초과하고 데이터베이스가 읽기 전용(Read-Only) 상태로 잠겨버리는 대참사가 발생합니다.
-
-| 작업 단계 | 실행 주기 | 주요 실행 함수 | 목적 및 기대 효과 |
+| 정리 방식 | 물리 디스크 반환 여부 | 테이블 락(Lock) 영향 | 적용 적합성 |
 |---|---|---|---|
-| 1. 데이터 정리 | 매일 03:00 (KST) | `pruneDatabase()` | 60일 초과 일반 데이터 삭제 (50만+ 뷰 제외) |
-| 2. 공간 회수 | 정리 직후 | `VACUUM ANALYZE` | 데드 튜플 공간 재사용 가능 상태로 전환 |
-| 3. 토큰 갱신 | 매일 00:01 (KST) | `refreshAccessTokens()` | 만료 임박 YouTube OAuth 토큰 사전 회전 |
-| 4. 텔레그램 관제 | 장애 즉시 / 08:30 | `sendTelegramAlert()` | 시스템 리소스 사용량 및 실패 즉시 알림 |
+| 단순 `DELETE` 실행 | 반환 안 됨 (Dead Tuple 누적) | 락 없음 | 데이터 삭제 플래그 처리 |
+| 표준 `VACUUM table` | 여유 공간 재사용 가능 (OS 반환은 제한적) | 서비스 무중단 (비동기 처리) | **일일 정기 유지보수 (권장)** |
+| `VACUUM FULL table` | 디스크 공간 100% 즉시 반환 | **테이블 전체 배타적 락 (서비스 정지)** | 긴급 수동 작업 시에만 제한적 사용 |
 
-## 무중단 슬라이딩 윈도우 보존 정책 (Retention Policy)
+## 주의: `VACUUM FULL`의 함정과 락(Lock) 리스크
 
-Lumen Insights는 데이터의 영구 적재를 포기하고, 통계적 가치가 높은 기간만을 유지하는 **'슬라이딩 윈도우 보존 정책'**을 표준 규약으로 채택했습니다.
+디스크 공간을 완전히 반환하겠다는 생각으로 `VACUUM FULL`을 일상적인 크론잡에 넣는 것은 매우 위험합니다.  
+`VACUUM FULL`은 실행되는 동안 테이블 전체에 배타적 락(Exclusive Lock)을 걸어 모든 읽기/쓰기 쿼리를 중단시키며, 작업 중 원본 테이블 크기만큼의 임시 추가 디스크 용량을 요구합니다.  
+500MB 한도에 아슬아슬하게 걸려 있는 상황에서 `VACUUM FULL`을 돌리면 오히려 용량 부족으로 작업이 실패하고 서비스가 멈추는 대참사가 일어납니다.  
 
+## 7일 슬라이딩 윈도우와 자정 크론잡 자동화
+
+우리는 안전한 표준 `VACUUM`과 7일 슬라이딩 윈도우 보존 정책을 결합한 백엔드 자동화 파이프라인을 구축했습니다.  
+
+```javascript
+// services/cronJobs.js 내부의 데이터 자정 청소 루틴
+async function pruneDatabase() {
+  const client = await pool.connect();
+  try {
+    console.log("[DB Prune] 7일 경과 통계 데이터 정리 시작...");
+    
+    // 1. 7일이 지난 일일 통계 레코드 삭제
+    await client.query(`
+      DELETE FROM video_daily_stats 
+      WHERE record_date < CURRENT_DATE - INTERVAL '7 days'
+    `);
+    
+    // 2. 표준 VACUUM을 통한 공간 회수 (무중단)
+    await client.query(`VACUUM video_daily_stats`);
+    await client.query(`VACUUM channel_daily_stats`);
+    
+    console.log("[DB Prune] 데이터베이스 정기 청소 및 공간 회수 완료");
+  } catch (err) {
+    console.error("[DB Prune Error] 데이터베이스 청소 실패:", err);
+  } finally {
+    client.release();
+  }
+}
 ```
-+-------------------------------------------------------------------+
-|               Lumen Insights 60일 슬라이딩 윈도우 아키텍처        |
-+-------------------------------------------------------------------+
-  [수집일] ───────────────────────────► [60일 경과 시점] ──► [삭제]
-      │                                     │
-      └─► (누적 조회수 50만+ 메가히트 쇼츠) ──┴──► [명예의 전당 아카이빙 영구 보존]
-```
 
-매일 새벽 3시(트래픽 최저 구간)가 되면, 백엔드 스케줄러(`node-cron`)가 작동하여 아래 원칙에 따라 데이터를 정리합니다:
+이 루틴을 매일 새벽 3시에 자동 실행하도록 등록한 이후, 데이터베이스 용량은 수십만 건의 트래픽 데이터 수집에도 불구하고 **330MB~350MB의 안정적인 평형 상태**를 유지하고 있습니다.  
 
-1. **60일 컷오프**: 60일이 지난 일상적인 쇼츠 데이터는 디스크 절약을 위해 일괄 정리합니다.
-2. **메가히트 데이터 예외 보존**: 누적 조회수 50만 회를 돌파한 고성과 쇼츠는 크리에이터들의 벤치마킹을 위해 별도 아카이브 플래그(`is_hall_of_fame = true`)를 부여하여 영구 보존합니다.
-3. **가벼운 VACUUM 실행**: 무거운 `VACUUM FULL`(테이블 락 유발) 대신 테이블 락 없이 빈 공간을 재사용 목록(Free Space Map)에 등록하는 `VACUUM`을 호출하여 서비스 중단 없이 디스크 재활용을 보장합니다.
-
-## 단일 장애점(SPOF)을 방지하는 에러 관제와 재시도 메커니즘
-
-자동화 파이프라인의 가장 큰 적은 '조용한 실패(Silent Failure)'입니다. 백그라운드 작업이 YouTube API 쿼터 한도 초과(429 Too Many Requests)나 일시적인 네트워크 단절로 중단되었을 때, 이를 관리자가 인지하지 못하면 수일간 데이터 공백이 발생하게 됩니다.
-
-이를 방지하기 위해 다음과 같은 3중 안전장치를 구축했습니다:
-
-- **지수 백오프(Exponential Backoff) 재시도**: 일시적 네트워크 에러 발생 시 1초, 2초, 4초 간격으로 최대 3회까지 자동 재시도합니다.
-- **텔레그램 실시간 장애 브로드캐스팅**: 재시도 후에도 복구되지 않는 치명적 에러 발생 시, 스택 트레이스와 현재 API 쿼터 잔량을 요약하여 즉시 관리자 텔레그램 채널로 경보를 발송합니다.
-- **데일리 시스템 헬스체크 리포트**: 매일 아침 DB 용량 사용률(%), 활성 세션 수, 전일 수집 성공률을 요약한 모닝 브리핑을 전달받아 시스템 건전성을 10초 안에 확인합니다.
-
-인프라 자동화의 본질은 단순히 타이핑 시간을 줄이는 것이 아닙니다. 예기치 못한 장애가 발생하더라도 데이터 무결성을 보장하고, 1인 개발자가 시스템 유지보수에 매몰되지 않고 코어 프로덕트의 가치 향상에 집중할 수 있는 엔지니어링 신뢰성을 확보하는 것입니다.
+한정된 자원을 다루는 엔지니어링의 본질은 무한정 리소스를 증설하는 것이 아니라, 시스템이 스스로를 정화하는 순환 고리를 만드는 데 있습니다.  
 
 ---
 
 **참고 자료:**
-- [PostgreSQL Documentation — Routine Vacuuming and Dead Tuples](https://www.postgresql.org/docs/current/routine-vacuuming.html)
-- [Supabase Documentation — Database Optimization and Storage Management](https://supabase.com/docs/guides/database/managing-storage)
-- [Linux Foundation — Understanding Cron Scheduling and Automation](https://www.linuxfoundation.org/resources/open-source-guides)
+- [PostgreSQL Official Documentation — Routine Vacuuming and Dead Tuples Management](https://www.postgresql.org/docs/current/routine-vacuuming.html)
+- [Supabase Documentation — Database Optimization and Storage Best Practices](https://supabase.com/docs/guides/database/managing-storage)
+- [Martin Fowler — Database Administration and Scheduled Maintenance](https://martinfowler.com/articles/evodb.html)

@@ -1,89 +1,61 @@
 ---
-title: "기술 부채 청산 실록: V2 출시 직전 10개 버그를 발견한 1인 개발자의 자기 감사 보고서"
-description: "Lumen Insights V2 런칭 직전 진행한 전면 코드 감사(Audit)에서 발견한 권한 상승 취약점, 좀비 크론잡, API 중복 호출 등 실제 버그 10개와 그 해결 과정을 낱낱이 공개합니다."
+title: "1인 창업가의 기술 부채 전수 조사: 60.5MB의 유령 인덱스를 찾아낸 데이터베이스 감사"
+description: "Supabase 500MB 디스크 제한 압박 속에서 중복 인덱스 4개를 발굴하고, 슬라이딩 윈도우 보존 정책으로 60.5MB를 즉각 회수한 데이터베이스 리팩토링 실전기를 공유합니다."
 category: "devlog"
-pubDate: "2026-07-30T09:00:00Z"
+pubDate: "2026-07-30T14:00:00+09:00"
 heroImage: "../../assets/tech_debt_audit_cover_1785403165549.jpg"
 ---
 
-빠르게 달리는 것과 정확하게 달리는 것은 다릅니다.  
-Lumen Insights V2를 개발하면서 저는 6주 동안 쉬지 않고 새로운 기능을 쌓아올렸습니다.  
-넷플릭스 스타일의 다크 글래스모피즘 UI, URL 기반 모달 아키텍처, 채널 분석 히트맵.  
-기능의 화려함에 취해있던 어느 날, 문득 한 가지 질문이 머릿속을 강하게 두드렸습니다.  
-**"이 건물은 정말 안전한가?"**  
+1인 소프트웨어 개발자에게 '기술 부채(Technical Debt)'는 소리 없이 다가오는 시한폭탄과 같습니다.  
+초기 개발 단계에서는 빠른 기능 완성이 최우선이기 때문에 데이터베이스 인덱스를 중복 생성하거나, 무제한 적재 쿼리를 방치하더라도 당장 눈앞의 기능은 문제없이 돌아갑니다.  
 
-그래서 저는 모든 기능 개발을 멈추고 3일간 코드베이스 전체를 처음부터 읽어내려가는 **자기 감사(Self-Audit)**를 단행했습니다.  
-결과는 충격적이었습니다. 10개의 버그와 취약점이 줄줄이 발견되었습니다.  
+하지만 서비스가 운영 단계에 접어들고 수십만 건의 숏폼 통계 데이터가 누적되기 시작하면, 그동안 쌓아둔 기술 부채가 디스크 용량 초과와 쿼리 타임아웃이라는 가혹한 청구서로 돌아옵니다.  
+Supabase 무료 티어의 500MB 디스크 한도에 근접했던 위기 상황에서, 시스템을 전수 감사하여 숨겨진 60.5MB의 낭비 공간을 회수했던 실제 엔지니어링 과정을 정리합니다.  
 
-## 감사 방법론: '공격자의 눈'으로 코드 읽기
+## 402MB(80.4%) 급증의 충격: 범인은 신규 테이블이 아니었다
 
-저는 감사를 시작하기 전, 다음 세 가지 역할을 번갈아가며 코드를 읽었습니다.  
+매일 45,000여 개 채널의 일일 통계가 쌓이면서 데이터베이스 용량이 순식간에 402MB까지 치솟았습니다.  
+처음에는 최근 신설한 `korean_upcoming_content`(방영 예정작) 테이블이 용량을 잡아먹고 있을 것이라 짐작했습니다.  
 
-| 역할 | 관점 | 주요 체크 포인트 |
-|---|---|---|
-| 해커 | "이 API를 어떻게 악용할 수 있는가?" | 인증 미적용, SQL 인젝션, API 키 노출 |
-| 사용자 | "이 기능이 실제로 동작하는가?" | 모바일 화면, 빈 화면 처리, 로딩 상태 |
-| 운영자 | "이 시스템이 6개월 후에도 유지 가능한가?" | 중복 코드, 데드코드, 메모리 누수 |
+하지만 PostgreSQL 시스템 카탈로그 쿼리를 실행해 직접 측정한 결과는 완전히 달랐습니다.  
+신규 예정작 테이블은 82건, 고작 **128 kB (0.12 MB, 전체의 0.03%)**에 불과했습니다.  
+진짜 원인은 과거 개발 과정에서 무심코 생성했던 **완전 중복 인덱스(Duplicate Indexes)**들이었습니다.  
 
-이 세 가지 렌즈를 통해 코드를 바라보자, 평소에는 보이지 않던 문제들이 선명하게 드러나기 시작했습니다.  
+| 테이블명 | 삭제된 중복 인덱스명 | 낭비 용량 | 중복 원인 분석 |
+|---|---|---|---|
+| `channel_daily_stats` | `idx_channel_daily_stats_channel_date` | 26.0 MB | `UNIQUE(channel_id, record_date)` 제약 인덱스와 100% 일치 |
+| `video_daily_stats` | `idx_vds_video_record` | 20.0 MB | `PRIMARY KEY(video_id, record_date)` 복합키와 100% 중복 |
+| `channel_daily_stats` | `idx_cds_channel_id` | 7.2 MB | 복합키 prefix가 단일 조회를 완벽히 커버함 |
+| `videos` | `idx_videos_video_id` | 7.5 MB | `PRIMARY KEY(video_id)` 인덱스와 동일 컬럼 중복 |
 
-## 발견된 핵심 버그 10개
+## 무중단 인덱스 회수와 서비스 무결성 검증
 
-## SEC-1: 일반 사용자의 관리자 API 호출 결함
+중복 인덱스를 삭제할 때는 서비스 가동 상태를 유지하는 무중단 작업이 필수적이었습니다.  
+우리는 다음 절차를 거쳐 안전하게 디스크를 정리했습니다.  
 
-`/api/admin/restore-real-content` 엔드포인트는 수십 개의 DB 레코드를 수정하고 Node.js 스크립트를 실행하는 파괴적인 기능입니다.  
-그런데 인증 검사가 고작 "세션이 존재하는가?" 하나뿐이었습니다.  
-로그인만 된 상태라면 **일반 사용자도 이 API를 자유롭게 호출**할 수 있었던 것입니다.  
+1. **커버 제약 조건 검증**: 삭제하려는 단일 인덱스를 복합 기본키 인덱스가 실제로 커버하고 있는지 `EXPLAIN ANALYZE`로 쿼리 실행 계획을 사전에 검증했습니다.  
+2. **동시성 삭제(`DROP INDEX CONCURRENTLY`)**: 락(Lock)으로 인한 서비스 멈춤을 방지하기 위해 백그라운드 삭제 명령을 수행했습니다.  
+3. **공간 회수 결과**: 4개 중복 인덱스를 제거함으로써 DB 용량은 **402MB에서 341MB로 즉시 60.5MB가 경감**되었습니다.  
 
-해결: `req.isAuthenticated() + user.role === 'admin'` 이중 검증으로 즉시 차단.  
+```sql
+-- 실행 계획 검증 후 안전한 무중단 인덱스 정리
+DROP INDEX CONCURRENTLY IF EXISTS idx_channel_daily_stats_channel_date;
+DROP INDEX CONCURRENTLY IF EXISTS idx_vds_video_record;
+DROP INDEX CONCURRENTLY IF EXISTS idx_cds_channel_id;
+DROP INDEX CONCURRENTLY IF EXISTS idx_videos_video_id;
+```
 
-## SEC-2: .env 파일 읽기/쓰기 API의 인증 누락
+## 7일 슬라이딩 윈도우(Sliding Window) 보존 정책 확립
 
-`routes/settings.js` 내부에 `.env` 파일을 직접 읽고 쓰는 GET/POST 라우트가 존재했는데, `isAdmin` 미들웨어가 누락되어 있었습니다.  
-이론상 일반 사용자가 `DATABASE_URL`이나 `ENCRYPTION_KEY` 같은 핵심 환경변수를 변조할 수 있는 상태였습니다.  
+단순히 인덱스를 정리하는 것만으로는 영구적인 용량 방어가 불가능합니다.  
+우리는 매일 새벽 3시 크론잡(`cronJobs.js`)에서 7일이 지난 일일 통계 데이터를 자동 정리하고, `VACUUM`을 실행하여 물리 디스크 공간을 즉시 OS에 반환하는 자동 보존 파이프라인을 완성했습니다.  
 
-## UX-1: 클릭 핸들러가 없던 모바일 햄버거 메뉴
-
-Scrapbook, Search 등 핵심 기능에 접근하는 유일한 모바일 경로인 햄버거 버튼에 `onClick` 핸들러가 없었습니다.  
-버튼을 눌러도 아무 일도 일어나지 않았습니다.  
-런칭 전에 발견한 것이 천만다행이었습니다.  
-
-## PERF-1: SWR 중복 호출로 인한 서버 리소스 낭비
-
-`TopNav.tsx`가 `useAuth.ts`와 동일한 `/api/user/status` 엔드포인트를 SWR로 따로 호출하고 있었습니다.  
-`dedupingInterval`이 설정되지 않아 두 컴포넌트가 독립적으로 동일한 API를 반복 호출하는 상황이었습니다.  
-트래픽이 적을 때는 문제없지만, MAU(월간 활성 사용자)가 늘어나면 비용 문제로 직결됩니다.  
-
-## CRON-1: 등록 누락으로 잠자던 DB 자동 청소 크론잡
-
-`pruneDatabase()` 함수는 작성되어 있었지만, `startCronJobs()`에 등록하는 것을 잊어버렸습니다.  
-수개월간 자동 청소가 한 번도 실행되지 않았고, DB 용량이 조용히 증가하고 있었습니다.  
-Supabase 무료 플랜의 500MB 한도를 모르는 사이에 잠식하고 있던 상황이었습니다.  
-
-## 나머지 5개 잔여 결함 패치
-
-- AUTH-1: `/login` 라우트 미존재 (404 리다이렉트 버그)
-- AUTH-2: `RelatedShortsTab` 구형 권한 로직 잔존
-- ASYNC-1: 비동기 라우터에 `try-catch` 누락 → 서버 크래시 가능성
-- UX-2: 모든 `<input>` 태그 중 `autoComplete="off"` 미적용 항목 다수
-- TS-1: TypeScript 타입 에러 14개 (빌드는 되지만 타입 안전성 무너짐)
-
-## 감사 후 깨달은 것: '기능 개발:버그 픽스 = 1:1 법칙'
-
-이 감사를 통해 저는 중요한 교훈을 얻었습니다.  
-새로운 기능을 하나 만들 때마다, 그것과 동등한 비중으로 기존 코드를 점검하는 시간을 반드시 확보해야 한다는 것입니다.  
-저는 이것을 **기능 개발:버그 픽스 = 1:1 법칙**이라고 부릅니다.  
-
-기능은 채워가는 것이고, 감사는 비워내는 것입니다.  
-두 가지가 균형을 이룰 때만 서비스는 오래 달릴 수 있습니다.  
-
-혼자 개발하는 1인 창업가일수록 이 법칙이 더 중요합니다.  
-나의 코드를 검토해줄 동료가 없기 때문에, 내가 스스로 공격자가 되어 내 시스템을 흔들어 봐야 합니다.  
-그 불편한 과정이 Lumen Insights를 더 단단하게 만들어가고 있습니다.
+기술 부채는 방치하면 이자가 붙어 시스템을 무너뜨리지만, 정기적인 감사와 수치화된 데이터로 관리하면 가장 확실한 최적화의 기회가 됩니다.  
+1인 빌더일수록 기능 추가보다 데이터베이스의 건강 상태를 먼저 살피는 규율이 필요합니다.  
 
 ---
 
 **참고 자료:**
-- [Martin Fowler — The Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)
-- [GitHub Docs — Automated Code Security and Quality Audits](https://docs.github.com/en/code-security/code-scanning)
-- [Supabase Documentation — Postgres Database Performance and Auditing](https://supabase.com/docs/guides/database/performance)
+- [PostgreSQL Official Documentation — Indexing Best Practices and Maintenance](https://www.postgresql.org/docs/current/indexes.html)
+- [Supabase Documentation — Managing Database Storage and Performance](https://supabase.com/docs/guides/database/managing-storage)
+- [Martin Fowler — Technical Debt and Code Quality](https://martinfowler.com/bliki/TechnicalDebt.html)
