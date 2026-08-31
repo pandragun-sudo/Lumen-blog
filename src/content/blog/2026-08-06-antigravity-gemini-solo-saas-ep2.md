@@ -44,3 +44,10 @@ AI 특유의 "네, 알겠습니다! 훌륭한 질문입니다!" 식의 과도한
 다음 에피소드에서는 "푸시해"라는 한마디로 보안 검사부터 깃허브 배포, 데이터 수집까지 끝내는 자동화의 끝판왕, **커스텀 스킬(Skill)** 파일들의 비밀을 파헤쳐 보겠습니다.  
 
 Lumen Insights 솔루션 직접 경험해보기
+
+---
+
+**참고 자료:**
+- [Google for Developers — System Prompts and Behavioral Constraints for AI Agents](https://developers.googleblog.com/)
+- [GitHub Docs — Custom Instructions and Rules for Engineering Agents](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+- [Martin Fowler — Conversational Architecture and System Guidelines](https://martinfowler.com/articles/scaling-architecture-conversationally.html)

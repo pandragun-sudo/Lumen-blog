@@ -83,4 +83,11 @@ Lumen Shorts Swipe-File 크롬 확장 프로그램을 만들 때, 폴더 분류 
 80%의 완성도로 세상에 내놓고 사용자의 반응을 보며 진화하는 것이, 완벽을 추구하다 결코 세상에 나오지 못하는 것보다 압도적으로 낫습니다.  
 Lumen Insights도 그렇게 지금 여기까지 왔습니다.  
 다음에 기능을 추가하고 싶다는 생각이 들 때, 한 번만 멈추고 물어보세요.  
-"지금 이것 없이도 되는가?"  
+"지금 이것 없이도 되는가?"
+
+---
+
+**참고 자료:**
+- [Martin Fowler — YAGNI (You Aren't Gonna Need It) Principle](https://martinfowler.com/bliki/Yagni.html)
+- [Nielsen Norman Group — Simplicity and Avoiding Feature Creep in UX](https://www.nngroup.com/articles/simplicity-vs-choice/)
+- [Stripe Atlas — How to Build and Validate a Minimum Viable Product](https://stripe.com/guides/atlas/building-an-mvp)

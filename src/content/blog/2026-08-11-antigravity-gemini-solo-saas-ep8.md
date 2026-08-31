@@ -37,3 +37,10 @@ Lumen Insights의 설립자이자 '1MIN DRAMA' 채널 운영자로서, 저는 �
 > 외부 플랫폼의 정책 변화는 곧 나의 비즈니스 규칙 변화다. 코드는 현실 세계의 비즈니스 생태계를 완벽하게 동기화해야 하며, 데이터의 정직성은 사용자 신뢰의 핵심 기반이다.  절대적인 정확성을 추구하는 노력만이 지속 가능한 성장을 이끌 수 있다.
 
 다음 에피소드에서는 SWR과 로딩 UX를 다루며 '에러창의 공포'를 지워낸 디자인 철학을 이야기해 보겠습니다.  사용자 경험 최적화를 향한 저희의 여정은 계속될 것입니다.
+
+---
+
+**참고 자료:**
+- [YouTube Creator Insider — YouTube Shorts Duration Policy and Feed Expansion](https://support.google.com/youtube/answer/1005907)
+- [YouTube Data API v3 — Video Duration ISO 8601 Format Reference](https://developers.google.com/youtube/v3/docs/videos)
+- [W3C Date and Time Formats — ISO 8601 Parsing Guidelines](https://www.w3.org/TR/NOTE-datetime)

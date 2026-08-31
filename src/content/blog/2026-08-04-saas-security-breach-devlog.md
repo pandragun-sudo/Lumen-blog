@@ -100,4 +100,11 @@ git log --all --full-history -- "*.sql" "*.env" "*.zip" "*.dump"
 하지만 이것을 확인하지 않아 발생하는 사고는 수개월간의 대응 비용과 신뢰 손실로 이어집니다.  
 
 Lumen Insights는 이 사고를 계기로 인프라 보안을 기능 개발보다 우선순위에 두는 운영 원칙을 확립했습니다.  
-화려한 UI 뒤에 아무도 모르게 쌓이고 있는 위험을 직접 경험한 창업가로서, 이 글을 읽고 계신 모든 분들이 지금 당장 `git log`를 열어보시기를 권합니다.  
+화려한 UI 뒤에 아무도 모르게 쌓이고 있는 위험을 직접 경험한 창업가로서, 이 글을 읽고 계신 모든 분들이 지금 당장 `git log`를 열어보시기를 권합니다.
+
+---
+
+**참고 자료:**
+- [GitHub Docs — Best Practices for Preventing Secret and Token Leaks](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
+- [OWASP Foundation — Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/)
+- [The Twelve-Factor App — Config: Store Config in the Environment](https://12factor.net/config)

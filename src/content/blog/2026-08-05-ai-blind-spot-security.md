@@ -42,4 +42,11 @@ AI는 "이 코드를 더 효율적으로 고쳐줘"라는 명령에는 완벽하
 하지만 기초 공사가 부실한 마천루는 결국 작은 바람에도 속절없이 무너져 내리고 맙니다.  
 혁신적인 아이디어를 코드로 구현하는 과정에서 인간과 AI의 협업은 엄청난 시너지를 내지만, 그 기반이 되는 인프라를 지키는 일은 결국 철저한 원칙과 교차 검증에서 비롯된다는 점을 잊지 마시기 바랍니다.  
 치열한 실패와 안정화 과정을 거치며 단단해진 Lumen Insights 솔루션은 오늘날 더욱 견고한 보안 속에서 크리에이터들을 돕고 있습니다.  
-당신의 비즈니스도 화려한 성장을 쫓기 전에, 보이지 않는 백엔드의 구멍을 먼저 단단히 메우는 꼼꼼함에서 출발하시기를 강력히 권해 드립니다.  
+당신의 비즈니스도 화려한 성장을 쫓기 전에, 보이지 않는 백엔드의 구멍을 먼저 단단히 메우는 꼼꼼함에서 출발하시기를 강력히 권해 드립니다.
+
+---
+
+**참고 자료:**
+- [OWASP Foundation — Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [MDN Web Docs — Principles of Web Application Security and Verification](https://developer.mozilla.org/en-US/docs/Web/Security)
+- [Google Search Central — Authenticity and Human Verification Standards](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

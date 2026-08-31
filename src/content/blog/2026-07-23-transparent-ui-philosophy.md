@@ -70,7 +70,7 @@ YouTube는 채널의 실제 수익 데이터를 API로 공개하지 않습니다
 
 경쟁사들을 분석해보면, 상당수가 추정값을 실측값처럼 보여주거나 광고 단가를 터무니없이 높게 설정하여 예상 수익을 과장합니다.  
 처음 서비스를 쓰는 크리에이터는 "와, 내 채널이 이렇게 많이 버는구나"라며 놀랍니다.  
-하지만 실제 애드센스 수익을 확인하면 그 차이를 발견하게 됩니다.  
+하지만 실제 유튜브 스튜디오 정산 수익을 확인하면 그 차이를 발견하게 됩니다.  
 
 Lumen Insights는 처음부터 이 경쟁에서 이탈하기로 했습니다.  
 우리가 보여주는 추정 수익은 보수적입니다.  
@@ -83,4 +83,11 @@ Lumen Insights는 처음부터 이 경쟁에서 이탈하기로 했습니다.
 데이터를 다루는 서비스를 만든다면, 가장 먼저 스스로에게 물어보세요.  
 지금 화면에 표시된 숫자 중 100% 실측값이 아닌 것이 하나라도 있는가?  
 만약 있다면, 사용자는 그것을 알고 있는가?  
-Lumen Insights는 그 질문에 항상 "예스"라고 답할 수 있는 서비스를 만들고 있습니다.  
+Lumen Insights는 그 질문에 항상 "예스"라고 답할 수 있는 서비스를 만들고 있습니다.
+
+---
+
+**참고 자료:**
+- [Nielsen Norman Group — Transparency and Trust in User Interfaces](https://www.nngroup.com/articles/transparency-in-ui/)
+- [YouTube Analytics — Estimated Revenue vs Real-Time Metrics](https://support.google.com/youtube/answer/9314415)
+- [Google Search Central — Data Provenance and Schema Standards](https://developers.google.com/search/docs/appearance/structured-data)

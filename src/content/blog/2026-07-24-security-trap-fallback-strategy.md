@@ -89,4 +89,11 @@ Lumen Insights에서는 이 사고 이후 다음 폴백 전략들을 추가했�
 
 Lumen Insights는 이 장애를 통해 더 단단해졌습니다.  
 완벽한 보안이란 없지만, 장애가 발생했을 때 빠르게 감지하고 폴백으로 전환하는 시스템은 만들 수 있습니다.  
-선의로 시작한 패치가 예상치 못한 방식으로 돌아오는 경험 — 이것이 1인 개발자가 혼자 감당해야 하는 가장 힘든 종류의 배움입니다.  
+선의로 시작한 패치가 예상치 못한 방식으로 돌아오는 경험 — 이것이 1인 개발자가 혼자 감당해야 하는 가장 힘든 종류의 배움입니다.
+
+---
+
+**참고 자료:**
+- [MDN Web Docs — Understanding SameSite Cookie Policies and Cross-Site Contexts](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [IETF RFC 6265bis — Cookies: HTTP State Management Mechanism](https://datatracker.ietf.org/doc/html/rfc6265bis)
+- [OWASP Foundation — Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://owasp.org/www-community/attacks/Cross-Site_Request_Forgery)

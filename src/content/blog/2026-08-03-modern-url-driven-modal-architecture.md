@@ -93,4 +93,11 @@ Tier 시스템에 따라 ShortsPlayer(Tier 1)가 열리면 GlobalSearchModal(Tie
 URL 기반 모달 시스템은 Lumen Insights의 핵심 UX 자산이 되었습니다.  
 어느 화면에서든 현재 보고 있는 영상이나 채널의 URL을 복사해서 누군가에게 보내면, 그 사람도 정확히 동일한 화면을 바로 볼 수 있습니다.  
 이것은 추가 개발 비용 없이 아키텍처 설계에서 자연스럽게 얻어진 딥링킹(Deep Linking) 기능입니다.  
-뼈대를 바르게 세우면, 원하지 않았던 혜택까지 따라옵니다.  
+뼈대를 바르게 세우면, 원하지 않았던 혜택까지 따라옵니다.
+
+---
+
+**참고 자료:**
+- [React Official Documentation — State Management and URL Synchronization](https://react.dev/reference/react/useState)
+- [MDN Web Docs — Manipulating the Browser History and URL State](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+- [W3C WAI-ARIA — Accessible Dialog (Modal) Architecture Standards](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)

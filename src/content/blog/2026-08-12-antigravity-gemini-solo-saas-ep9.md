@@ -68,3 +68,10 @@ Lumen Insights가 경험한 이번 에러 핸들링 리팩토링은 기술적 �
 > 진정한 사용자 경험(UX) 설계는 단순히 코드를 수정하는 것을 넘어, 사용자의 심리를 깊이 이해하고 불안감을 해소하며 서비스에 대한 신뢰를 구축하는 과정입니다.  일시적인 기술적 실패를 사용자를 위한 '노력'으로 재해석하는 것이 핵심입니다.  이는 기술적인 완성도를 넘어 사용자의 인지적, 감성적 경험을 관리함으로써 서비스의 본질적인 가치를 높이는 길입니다.  
 
 저희는 앞으로도 Lumen Insights가 단순한 데이터 분석 도구를 넘어, 사용자에게 최고의 신뢰와 만족감을 주는 서비스가 될 수 있도록 기술과 UX의 접점에서 끊임없이 혁신할 것입니다.
+
+---
+
+**참고 자료:**
+- [SWR Documentation — Stale-While-Revalidate Data Fetching for React](https://swr.vercel.app/docs/getting-started)
+- [Nielsen Norman Group — Response Times and Perceived Performance Limits](https://www.nngroup.com/articles/response-times-3-important-limits/)
+- [MDN Web Docs — Asynchronous Data Fetching and Error Boundaries](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)

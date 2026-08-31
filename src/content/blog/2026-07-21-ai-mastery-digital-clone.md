@@ -84,4 +84,11 @@ AI를 잘 쓰는 사람과 그렇지 않은 사람의 차이는 프롬프트 실
 Lumen Insights는 현재 이 방법론 위에서 운영되고 있습니다.  
 스킬 파일이 담긴 `.agents` 폴더는 저의 20년치 경험과 비즈니스 철학이 압축된 두뇌이자, 제가 자리를 비운 사이에도 서비스를 올바른 방향으로 이끌어가는 나침반입니다.  
 지금 바로 여러분의 비즈니스 원칙을 문서화하고, AI에게 읽혀보세요.  
-그 문서 하나가 여러분의 AI 생산성을 몇 배로 끌어올릴 것입니다.  
+그 문서 하나가 여러분의 AI 생산성을 몇 배로 끌어올릴 것입니다.
+
+---
+
+**참고 자료:**
+- [Google Developers Blog — Engineering Agentic AI and Custom Tool Workflows](https://developers.googleblog.com/)
+- [GitHub Docs — Context Engineering and Prompt Best Practices](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+- [Google Search Central — AI and Helpful Content Guidelines](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
