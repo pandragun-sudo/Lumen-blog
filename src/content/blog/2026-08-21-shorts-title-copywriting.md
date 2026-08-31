@@ -1,6 +1,7 @@
 ---
 title: "쇼츠 제목과 검색어의 괴리: 내 채널 스튜디오에서 발견한 제목 작성법"
 description: "쇼츠 제목에 작품명을 넣지 않아도 검색 유입 1위를 기록하는 이유와, 피드 클릭률과 검색 롱테일을 모두 잡는 실전 카피라이팅 방식을 1MIN DRAMA 스튜디오 데이터로 분석합니다."
+category: "guide"
 pubDate: "2026-08-21T00:00:00.000Z"
 heroImage: "../../assets/shorts_title_copywriting_1786875429543.jpg"
 ---
