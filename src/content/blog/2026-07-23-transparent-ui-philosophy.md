@@ -15,7 +15,7 @@ heroImage: "../../assets/transparent_ui_philosophy.jpg"
 
 ## 가짜 데이터가 초래하는 치명적인 부메랑
 
-1MIN DRAMA(@onemindrama) 채널의 쇼츠 데이터를 분석하는 대시보드를 구축하면서, YouTube Data API v3의 제약으로 인해 특정 영상의 세부 시청 유지율 곡선을 실시간으로 가져올 수 없는 구조적 벽에 부딪혔습니다.  
+자체 운영 스토리 쇼츠 채널 채널의 쇼츠 데이터를 분석하는 대시보드를 구축하면서, YouTube Data API v3의 제약으로 인해 특정 영상의 세부 시청 유지율 곡선을 실시간으로 가져올 수 없는 구조적 벽에 부딪혔습니다.  
 
 초기에는 "UI 형태를 먼저 보여주자"는 생각으로 임의의 가상 그래프를 띄웠습니다.  
 그러나 실제 채널 스튜디오의 수치와 대시보드의 수치가 어긋나는 것을 목격한 순간, 강한 부끄러움과 함께 시스템의 근본적인 결함을 자각했습니다.  
@@ -33,7 +33,7 @@ heroImage: "../../assets/transparent_ui_philosophy.jpg"
 
 1. **가짜 난수 사용 영구 금지**: 프론트엔드와 백엔드 어디에서도 임의의 숫자를 생성하는 로직을 완전히 삭제했습니다.  
 2. **실제 데이터 기반 역산 모델 수립**: API로 확보할 수 있는 확실한 팩트(공개 조회수, 영상 길이, 게시 시간, 채널 총 구독자 수)를 출발점으로 삼았습니다.  
-3. **업계 표준 벤치마크 결합**: 1MIN DRAMA의 60여 편 스튜디오 데이터와 공인된 연구 지표를 대조하여, 조회수 구간별 평균 완주율(AVD) 분포를 수학적으로 추정하는 알고리즘을 설계했습니다.  
+3. **업계 표준 벤치마크 결합**: 자체 운영 채널의 60여 편 스튜디오 데이터와 공인된 연구 지표를 대조하여, 조회수 구간별 평균 완주율(AVD) 분포를 수학적으로 추정하는 알고리즘을 설계했습니다.  
 
 ```typescript
 // 투명한 데이터 출처를 보장하는 타입 인터페이스 설계
@@ -51,7 +51,7 @@ function calculateEstimatedRetention(viewCount: number, durationSec: number): Me
     value: Math.round(baseRetention * 100),
     isEmpirical: false,
     confidenceScore: 0.85,
-    sourceDescription: "1MIN DRAMA 스튜디오 구간별 회귀 분석 기반 추정치"
+    sourceDescription: "실측 스튜디오 구간별 회귀 분석 기반 추정치"
   };
 }
 ```
