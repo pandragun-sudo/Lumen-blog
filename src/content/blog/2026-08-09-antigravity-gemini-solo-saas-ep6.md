@@ -10,13 +10,13 @@ heroImage: "../../assets/images/blog/ep6_security.jpg"
 서비스의 인지도가 올라갈수록 시스템의 취약점을 노려 무차별적인 API 호출을 시도하거나, 단일 계정의 세션을 수십 명이 공유하여 리소스를 고갈시키는 어뷰징(Abuse) 시도가 급증하기 때문입니다.  
 
 특히 YouTube Data API와 같은 외부 상용 쿼터에 의존하는 1인 SaaS 환경에서, 악의적인 스크립트에 의한 무한 요청은 전체 사용자의 서비스 마비와 막대한 인프라 청구서로 이어질 수 있습니다.  
-거대 보안 전담팀이나 고가의 보안 솔루션 없이, 소프트웨어 아키텍처와 세션 제어 기술만으로 완성한 **다계층 보안 방어선(Defense-in-Depth)**을 공개합니다.  
+거대 보안 전담팀이나 고가의 보안 솔루션 없이, 소프트웨어 아키텍처와 세션 제어 기술만으로 완성한 다계층 보안 방어선(Defense-in-Depth)을 공개합니다.  
 
 ## 1인 SaaS가 직면하는 3대 핵심 위협
 
-1. **무차별 API 엔드포인트 크롤링**: `/api/dashboard/trending-tags` 등의 경로를 미인증 상태로 1초에 수백 번 찔러 DB 풀을 고갈시키는 공격  
-2. **SameSite 쿠키 탈취 및 세션 하이재킹**: CSRF 공격이나 교차 도메인 스크립트를 통한 사용자 세션 오용  
-3. **계정 등급 우회 및 쿼터 고갈**: 만료된 무료 체험(Trial) 계정이 백엔드 검증 누락으로 상위 등급 권한을 유지하는 결함  
+1. 무차별 API 엔드포인트 크롤링: `/api/dashboard/trending-tags` 등의 경로를 미인증 상태로 1초에 수백 번 찔러 DB 풀을 고갈시키는 공격  
+2. SameSite 쿠키 탈취 및 세션 하이재킹: CSRF 공격이나 교차 도메인 스크립트를 통한 사용자 세션 오용  
+3. 계정 등급 우회 및 쿼터 고갈: 만료된 무료 체험(Trial) 계정이 백엔드 검증 누락으로 상위 등급 권한을 유지하는 결함  
 
 | 보안 계층 | 방어 대상 및 위협 | 구현 기술 및 조치 |
 |---|---|---|
@@ -59,7 +59,7 @@ export function middleware(request: NextRequest) {
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [OWASP Foundation — Defense in Depth Principles](https://owasp.org/www-community/Defense_in_Depth)
 - [Next.js Documentation — Edge Middleware Authentication Patterns](https://nextjs.org/docs/app/building-your-application/routing/middleware)
 - [MDN Web Docs — Using HTTP Cookies and SameSite Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)

@@ -10,7 +10,7 @@ heroImage: "../../assets/automation_paradox_bot.jpg"
 GitHub에 코드를 푸시하기 전에 API 키가 누출되지 않았는지 매번 정규식으로 검사하는 일, 매일 아침 DB 상태와 유튜브 트래픽 지표를 수집해 브리핑을 작성하는 일들이 대표적입니다.  
 
 과거에는 이 모든 과정을 개발자가 수동으로 챙겨야 했고, 피로가 누적된 새벽에는 대형 커밋 사고를 내기도 했습니다.  
-이를 극복하기 위해 에이전트에게 단순 조언자가 아닌 **직접 도구를 다루는 실행자(Executor)**의 역할을 부여하는 **'커스텀 스킬(Custom Skills)'** 아키텍처를 구축했습니다.  
+이를 극복하기 위해 에이전트에게 단순 조언자가 아닌 직접 도구를 다루는 실행자(Executor)의 역할을 부여하는 '커스텀 스킬(Custom Skills)' 아키텍처를 구축했습니다.  
 
 ## 단순 LLM과 스킬 기반 에이전트의 구조적 차이
 
@@ -38,10 +38,10 @@ GitHub에 코드를 푸시하기 전에 API 키가 누출되지 않았는지 매
 
 ## 실제 운용 중인 2대 핵심 커스텀 스킬
 
-1. **`auto_push` 스킬 (보안 푸시 파이프라인)**  
+1. `auto_push` 스킬 (보안 푸시 파이프라인)  
 저장소에 코드를 올리기 전, `.env`, 대용량 덤프, 하드코딩된 API 키를 100% 전수 검사합니다. 위험 요소가 0건일 때만 작업 브랜치를 생성해 커밋하고 원격 저장소로 안전하게 푸시합니다.  
 
-2. **`morning_briefing` 스킬 (CTO 관제 & 숏폼 디렉팅)**  
+2. `morning_briefing` 스킬 (CTO 관제 & 숏폼 디렉팅)  
 매일 아침 자체 운영 채널의 24시간 실제 조회수와 Supabase 데이터베이스 용량 잔여치를 DB에서 직접 쿼리하여, 2개 페르소나(CTO 관제 모니터 + 디렉터 코칭)로 분리된 브리핑을 텔레그램으로 자동 발송합니다.  
 
 ```yaml
@@ -64,7 +64,7 @@ triggers:
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Google Antigravity Customization Documentation — Skills and Extension Systems](https://cloud.google.com/)
 - [GitHub Actions Documentation — Automating Workflows and CI/CD Security](https://docs.github.com/en/actions)
 - [Martin Fowler — Continuous Delivery and Automated Deployment Pipelines](https://martinfowler.com/bliki/ContinuousDelivery.html)

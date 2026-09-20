@@ -33,7 +33,7 @@ Lumen Insights 서비스 초기, 저는 모든 API 요청에 대해 엄격한 �
 
 이 뼈아픈 장애 이후, 우리는 '실패를 가정한 설계(Design for Failure)' 원칙을 전면 도입했습니다.  
 
-보안 검증이 실패하거나 외부 시스템이 응답하지 않을 때, 시스템이 스스로를 셧다운시키는 대신 안전하게 기능을 제한하는 **3단계 방어선**을 구축했습니다.  
+보안 검증이 실패하거나 외부 시스템이 응답하지 않을 때, 시스템이 스스로를 셧다운시키는 대신 안전하게 기능을 제한하는 3단계 방어선을 구축했습니다.  
 
 ```typescript
 // 서킷 브레이커 기반 안전한 데이터 조회 미들웨어 구조
@@ -64,15 +64,15 @@ async function fetchChannelMetadataWithFallback(channelId: string) {
 
 새로운 보안 정책이나 검증 로직을 추가할 때마다, 우리는 다음 두 가지 질문을 코딩 체크리스트에 의무화했습니다.  
 
-1. **"외부 의존성 서버가 100% 다운되었을 때, 우리 서비스의 핵심 화면이 여전히 열리는가?"**  
-2. **"보안 예외 상황이 발생했을 때, 사용자가 빈 화면 대신 상황을 이해할 수 있는 명확한 피드백을 받는가?"**  
+1. "외부 의존성 서버가 100% 다운되었을 때, 우리 서비스의 핵심 화면이 여전히 열리는가?"  
+2. "보안 예외 상황이 발생했을 때, 사용자가 빈 화면 대신 상황을 이해할 수 있는 명확한 피드백을 받는가?"  
 
 루멘 인사이트 아키텍처는 이 장애 극복을 거치며 한층 견고해졌습니다.  
 진정한 보안은 시스템을 꽁꽁 얼어붙게 만드는 것이 아니라, 어떤 극한의 장애 상황에서도 안전하게 작동을 지속할 수 있는 유연성을 확보하는 데 있습니다.  
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Martin Fowler — CircuitBreaker Pattern for Distributed Systems](https://martinfowler.com/bliki/CircuitBreaker.html)
 - [OWASP Foundation — Defensive Failure and Error Handling Guidelines](https://owasp.org/www-community/vulnerabilities/Improper_Error_Handling)
 - [MDN Web Docs — Graceful Degradation and Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation)

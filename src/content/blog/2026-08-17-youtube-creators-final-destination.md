@@ -9,9 +9,9 @@ category: "trend"
 
 할리우드 연예 매체 데드라인(Deadline)에서 주최한 'The Future of the Stage' 패널 토론은 전통 미디어(Legacy Media)와 뉴미디어 간의 권력 이동을 가장 명확하게 보여준 상징적인 사건이었습니다.
 
-이 자리에는 유튜브 최고경영자(CEO) 닐 모한(Neal Mohan)과 함께 미셸 카레(Michelle Khare), 클레오 에이브람(Cleo Abram) 등 글로벌 뉴미디어를 이끄는 대표 크리에이터들이 한자리에 모였습니다. 이들이 나눈 대화의 핵심은 유튜브가 더 이상 'TV 방송이나 영화계로 진출하기 위한 징검다리'가 아니라, 미디어 생태계의 **'최종 목적지(Final Destination)'**로 완전히 자리 잡았다는 선언이었습니다.
+이 자리에는 유튜브 최고경영자(CEO) 닐 모한(Neal Mohan)과 함께 미셸 카레(Michelle Khare), 클레오 에이브람(Cleo Abram) 등 글로벌 뉴미디어를 이끄는 대표 크리에이터들이 한자리에 모였습니다. 이들이 나눈 대화의 핵심은 유튜브가 더 이상 'TV 방송이나 영화계로 진출하기 위한 징검다리'가 아니라, 미디어 생태계의 '최종 목적지(Final Destination)'로 완전히 자리 잡았다는 선언이었습니다.
 
-자체 운영 스토리 쇼츠 채널 채널을 운영하며 드라마와 스토리 숏폼을 제작하는 창작자 입장에서도 이 변화는 매일 체감되는 현실입니다. 과거 방송사 편성국과 외주 제작사의 손을 거쳐야만 세상에 나올 수 있었던 영상 기획들이, 이제는 단 한 명의 크리에이터가 편집하여 업로드하는 즉시 수백만 시청자의 검증을 받기 때문입니다.
+자체 운영 스토리 쇼츠 채널을 운영하며 드라마와 스토리 숏폼을 제작하는 창작자 입장에서도 이 변화는 매일 체감되는 현실입니다. 과거 방송사 편성국과 외주 제작사의 손을 거쳐야만 세상에 나올 수 있었던 영상 기획들이, 이제는 단 한 명의 크리에이터가 편집하여 업로드하는 즉시 수백만 시청자의 검증을 받기 때문입니다.
 
 ## 게이트키퍼(Gatekeeper)의 소멸과 창작의 민주화
 
@@ -56,7 +56,7 @@ category: "trend"
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Deadline Hollywood — Neal Mohan and Creators on 'The Future of the Stage'](https://www.youtube.com/watch?v=DF5196nKwWw)
 - [YouTube Official Blog — Empowering Creators in the Modern Media Landscape](https://blog.youtube/)
 - [Think with Google — The Shift from Legacy TV to Creator-Led Video](https://www.thinkwithgoogle.com/marketing-strategies/video/)

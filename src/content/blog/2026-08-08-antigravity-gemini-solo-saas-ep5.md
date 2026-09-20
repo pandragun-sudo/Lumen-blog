@@ -19,13 +19,38 @@ PostgreSQL은 데이터 수정과 삭제 시 성능을 유지하기 위해 기�
 레코드를 삭제하면 해당 행을 '사용하지 않음(Dead Tuple)'으로 마킹만 해두고 물리적 디스크 공간은 그대로 점유합니다.  
 
 자체 운영 채널 벤치마킹을 위해 수집하던 `video_daily_stats` 테이블에서 29,689건의 레코드를 DELETE 쿼리로 지웠지만, 디스크 사용량은 여전히 400MB(80%)에 머물러 있었습니다.  
-이 데드 튜플들을 청소하고 공간을 OS 및 데이터베이스에 실제로 반환하려면 반드시 **`VACUUM`** 명령이 수행되어야 합니다.  
+이 데드 튜플들을 청소하고 공간을 OS 및 데이터베이스에 실제로 반환하려면 반드시 `VACUUM` 명령이 수행되어야 합니다.  
 
 | 정리 방식 | 물리 디스크 반환 여부 | 테이블 락(Lock) 영향 | 적용 적합성 |
 |---|---|---|---|
 | 단순 `DELETE` 실행 | 반환 안 됨 (Dead Tuple 누적) | 락 없음 | 데이터 삭제 플래그 처리 |
-| 표준 `VACUUM table` | 여유 공간 재사용 가능 (OS 반환은 제한적) | 서비스 무중단 (비동기 처리) | **일일 정기 유지보수 (권장)** |
-| `VACUUM FULL table` | 디스크 공간 100% 즉시 반환 | **테이블 전체 배타적 락 (서비스 정지)** | 긴급 수동 작업 시에만 제한적 사용 |
+| 표준 `VACUUM table` | 여유 공간 재사용 가능 (OS 반환은 제한적) | 서비스 무중단 (비동기 처리) | 일일 정기 유지보수 (권장) |
+| `VACUUM FULL table` | 디스크 공간 100% 즉시 반환 | 테이블 전체 배타적 락 (서비스 정지) | 긴급 수동 작업 시에만 제한적 사용 |
+
+```mermaid
+flowchart TD
+    subgraph Step1["1. 레코드 생성 및 저장"]
+        A["신규 통계 데이터 INSERT"] --> B["물리 디스크 블록 점유 (Live Tuple)"]
+    end
+
+    subgraph Step2["2. DELETE 실행 시 (MVCC 동작 방식)"]
+        B --> C["7일 경과 데이터 DELETE"]
+        C --> D["디스크 공간 유지 + Dead Tuple 마킹<br/>(물리 용량 감소 0MB)"]
+    end
+
+    subgraph Step3["3. 자동 VACUUM 청소 및 재사용 파이프라인"]
+        D --> E{"새벽 3시 자동 정기 루틴"}
+        E -->|표준 VACUUM| F["Dead Tuple 공간 회수 및 FSM(여유 공간 지도) 등록<br/>(서비스 무중단, 신규 INSERT 공간으로 재사용)"]
+        E -->|VACUUM FULL| G["전체 테이블 배타적 락 & 디스크 복제 필요<br/>(500MB 한도 환경에서 중단 리스크)"]
+    end
+
+    classDef live fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef dead fill:#2a1215,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
+    classDef clean fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    class A,B live;
+    class C,D,G dead;
+    class E,F clean;
+```
 
 ## 주의: `VACUUM FULL`의 함정과 락(Lock) 리스크
 
@@ -63,13 +88,13 @@ async function pruneDatabase() {
 }
 ```
 
-이 루틴을 매일 새벽 3시에 자동 실행하도록 등록한 이후, 데이터베이스 용량은 수십만 건의 트래픽 데이터 수집에도 불구하고 **330MB~350MB의 안정적인 평형 상태**를 유지하고 있습니다.  
+이 루틴을 매일 새벽 3시에 자동 실행하도록 등록한 이후, 데이터베이스 용량은 수십만 건의 트래픽 데이터 수집에도 불구하고 330MB~350MB의 안정적인 평형 상태를 유지하고 있습니다.  
 
 한정된 자원을 다루는 엔지니어링의 본질은 무한정 리소스를 증설하는 것이 아니라, 시스템이 스스로를 정화하는 순환 고리를 만드는 데 있습니다.  
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [PostgreSQL Official Documentation — Routine Vacuuming and Dead Tuples Management](https://www.postgresql.org/docs/current/routine-vacuuming.html)
 - [Supabase Documentation — Database Optimization and Storage Best Practices](https://supabase.com/docs/guides/database/managing-storage)
 - [Martin Fowler — Database Administration and Scheduled Maintenance](https://martinfowler.com/articles/evodb.html)

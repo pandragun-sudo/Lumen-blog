@@ -24,6 +24,24 @@
 /blog/2026-08-26-revenue-pipeline-diversification/ /blog/ 301
 /blog/2026-08-26-revenue-pipeline-diversification /blog/ 301
 
+# v3.0.9 AdSense Diet: Redirect deleted redundant/risky posts
+/blog/2026-08-05-single-video-algorithm-viral/ /blog/2026-08-18-youtube-shorts-avd-swipeaway-analysis/ 301
+/blog/2026-08-05-single-video-algorithm-viral /blog/2026-08-18-youtube-shorts-avd-swipeaway-analysis/ 301
+/blog/2026-08-24-saas-onboarding-retention/ /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
+/blog/2026-08-24-saas-onboarding-retention /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
+/blog/2026-07-21-ai-mastery-digital-clone/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-07-21-ai-mastery-digital-clone /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-02-ai-cofounder-leverage/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep3/ 301
+/blog/2026-08-02-ai-cofounder-leverage /blog/2026-08-06-antigravity-gemini-solo-saas-ep3/ 301
+/blog/2026-07-20-stop-development-feature-creep/ /blog/2026-08-23-solo-developer-mvp-strategy/ 301
+/blog/2026-07-20-stop-development-feature-creep /blog/2026-08-23-solo-developer-mvp-strategy/ 301
+/blog/2026-07-20-shorts-reference-chrome-extension/ /blog/2026-07-17-introducing-lumen-insights/ 301
+/blog/2026-07-20-shorts-reference-chrome-extension /blog/2026-07-17-introducing-lumen-insights/ 301
+/blog/2026-08-12-antigravity-gemini-solo-saas-ep9/ /blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ 301
+/blog/2026-08-12-antigravity-gemini-solo-saas-ep9 /blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ 301
+/blog/2026-08-14-antigravity-gemini-solo-saas-ep11/ /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
+/blog/2026-08-14-antigravity-gemini-solo-saas-ep11 /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
+
 # Tools Fallback Redirects
 /tools/* /blog/ 301
 /tools /blog/ 301
