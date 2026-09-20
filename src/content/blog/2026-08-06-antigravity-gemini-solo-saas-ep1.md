@@ -14,7 +14,7 @@ heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4
 인기 있는 AI 챗봇(ChatGPT, Claude)이나 코드 자동완성 에디터(Cursor)를 적극 활용했지만 근본적인 갈증은 해소되지 않았습니다.  
 이러한 도구들은 제가 코드를 복사해서 붙여넣고 터미널에서 실행 결과를 다시 입력해 주는 <span style="color: #ef4444;">'수동적인 보조 작업자(Copilot)'</span>에 불과했기 때문입니다.  
 프로젝트의 규모가 커지고 파일이 수백 개로 늘어나자, 기존의 챗봇들은 전체 시스템의 문맥(Context)을 기억하지 못한 채 파편화된 코드 조각만을 뱉어내기 시작했습니다.  
-제가 진정으로 필요로 했던 것은 코딩 스니펫을 짜주는 비서가 아니라, 제 로컬 환경을 직접 제어하며 능동적으로 사고하고 배포까지 책임지는 **완벽한 가상의 CTO**였습니다.  
+제가 진정으로 필요로 했던 것은 코딩 스니펫을 짜주는 비서가 아니라, 제 로컬 환경을 직접 제어하며 능동적으로 사고하고 배포까지 책임지는 완벽한 가상의 CTO였습니다.  
 이러한 치열한 고민 끝에, 저는 구글의 최신 에이전틱 플랫폼인 안티그라비티(Antigravity) 2.0과 제미나이(Gemini) 프로 모델을 전격 도입하기로 결단했습니다.  
 
 ## 왜 기존 모델들은 대규모 사이드 프로젝트에서 무너지는가?  
@@ -41,18 +41,18 @@ heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4
 
 ## CTO를 채용하다: 3단계 도입 프레임워크  
 
-이러한 위기를 타개하기 위해 저는 **'AI 에이전트 채택의 3단계 의사결정 프레임워크'**를 수립하고, 이에 완벽하게 부합하는 안티그라비티(Antigravity)를 도입했습니다.  
+이러한 위기를 타개하기 위해 저는 'AI 에이전트 채택의 3단계 의사결정 프레임워크'를 수립하고, 이에 완벽하게 부합하는 안티그라비티(Antigravity)를 도입했습니다.  
 
 ![1인 개발자의 실제 Antigravity 에이전트 작업 환경 및 프로젝트 플랜 관리 화면](../../assets/blog/antigravity_agent_workspace_capture.png)
 
-위 화면은 실제 1인 창업 및 개발 환경에서 운용 중인 **Antigravity AI 에이전트의 워크스페이스 스크린샷**입니다. 
-* **좌측 탐색기(Workspace Tree)**: 백엔드 API부터 프론트엔드 라우터, 마이그레이션 스크립트까지 전체 프로젝트 파일 트리를 에이전트가 완벽히 인덱싱하고 있습니다.
-* **중앙 에디터(Context Memory)**: `PROJECT_PLAN.md`로 과거 세션의 버그 히스토리와 설계 원칙을 에이전트가 잃어버리지 않도록 영구 기억 자산으로 동기화합니다.
-* **우측 Agent 패널(Autonomous Execution)**: 지시 사항을 전달하면 에이전트가 터미널 명령 실행, 코드 diff 작성, 오류 검증을 원스톱으로 자율 수행합니다.
+위 화면은 실제 1인 창업 및 개발 환경에서 운용 중인 Antigravity AI 에이전트의 워크스페이스 스크린샷입니다. 
+* 좌측 탐색기(Workspace Tree): 백엔드 API부터 프론트엔드 라우터, 마이그레이션 스크립트까지 전체 프로젝트 파일 트리를 에이전트가 완벽히 인덱싱하고 있습니다.
+* 중앙 에디터(Context Memory): `PROJECT_PLAN.md`로 과거 세션의 버그 히스토리와 설계 원칙을 에이전트가 잃어버리지 않도록 영구 기억 자산으로 동기화합니다.
+* 우측 Agent 패널(Autonomous Execution): 지시 사항을 전달하면 에이전트가 터미널 명령 실행, 코드 diff 작성, 오류 검증을 원스톱으로 자율 수행합니다.
 
-1단계는 **'문맥 유지력(Context Retention)'**입니다. 안티그라비티는 데스크톱 환경에서 동작하며 수백만 토큰에 달하는 거대한 컨텍스트 창을 활용해 수만 줄의 전체 코드베이스를 한 번에 파악합니다.  
-2단계는 **'운영체제 장악력(OS Integration)'**입니다. 제가 승인만 내리면 에이전트가 터미널 샌드박스(Terminal Sandbox) 내부에서 스스로 npm install을 실행하고 서버를 재시작하며 로그를 분석합니다.  
-3단계는 **'비용 효율성(Cost Efficiency)'**입니다. 막대한 토큰을 소모하는 에이전트 특성상 API 비용이 기하급수적으로 늘어날 수 있지만, 고효율 추론 모델 기반의 생태계는 자본이 부족한 1인 창업가에게 가장 현실적인 대안이 되었습니다.  
+1단계는 '문맥 유지력(Context Retention)'입니다. 안티그라비티는 데스크톱 환경에서 동작하며 수백만 토큰에 달하는 거대한 컨텍스트 창을 활용해 수만 줄의 전체 코드베이스를 한 번에 파악합니다.  
+2단계는 '운영체제 장악력(OS Integration)'입니다. 제가 승인만 내리면 에이전트가 터미널 샌드박스(Terminal Sandbox) 내부에서 스스로 npm install을 실행하고 서버를 재시작하며 로그를 분석합니다.  
+3단계는 '비용 효율성(Cost Efficiency)'입니다. 막대한 토큰을 소모하는 에이전트 특성상 API 비용이 기하급수적으로 늘어날 수 있지만, 고효율 추론 모델 기반의 생태계는 자본이 부족한 1인 창업가에게 가장 현실적인 대안이 되었습니다.  
 
 ```mermaid
 graph TD
@@ -88,7 +88,7 @@ graph TD
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Google DeepMind — Frontier Models and Autonomous Agentic Workflows](https://deepmind.google/technologies/)
 - [Anthropic Research — Building Effective Agents and Context Engineering](https://www.anthropic.com/research/building-effective-agents)
 - [Y Combinator Library — The Future of AI-Powered Solo Entrepreneurship](https://www.ycombinator.com/library)

@@ -63,7 +63,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.prose {
 				width: 100%;
-				max-width: 900px; /* Wider readability for text */
+				max-width: 1080px; /* Spacious reading and rich data layout */
 				margin: auto;
 				padding: 0 1.5rem;
 				color: var(--text-main);
@@ -85,7 +85,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.components-container {
 				width: 100%;
-				max-width: 900px;
+				max-width: 1080px;
 				margin: auto;
 				padding: 0 1.5rem;
 			}
@@ -201,30 +201,92 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				text-decoration-color: #1d4ed8;
 			}
 
-			/* Modern Table Styling */
-			.prose :global(table) {
+			/* Modern Responsive Table Styling */
+			.prose :global(.table-container) {
 				width: 100%;
+				max-width: 100%;
+				overflow-x: auto;
+				margin: 2.5em 0;
+				border-radius: 12px;
+				border: 1px solid #e2e8f0;
+				box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+				-webkit-overflow-scrolling: touch;
+				background: #ffffff;
+				scrollbar-width: thin;
+				scrollbar-color: #cbd5e1 #f1f5f9;
+			}
+
+			@media (min-width: 1200px) {
+				.prose :global(.table-container) {
+					width: calc(100% + 80px);
+					margin-left: -40px;
+					margin-right: -40px;
+					max-width: calc(100% + 80px);
+				}
+			}
+
+			.prose :global(.table-container table) {
+				display: table;
+				width: 100%;
+				min-width: 650px;
+				margin: 0;
+				border: none;
+				box-shadow: none;
+				border-radius: 0;
+			}
+
+			/* Fallback for tables prior to JS wrapper execution */
+			.prose :global(table) {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
 				border-collapse: collapse;
 				margin: 2.5em 0;
 				border-radius: 12px;
-				overflow: hidden;
 				border: 1px solid #e2e8f0;
-				font-size: 0.95rem;
-				line-height: 1.6;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+				font-size: 0.92rem;
+				line-height: 1.5;
+				box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+				scrollbar-width: thin;
+				scrollbar-color: #cbd5e1 #f1f5f9;
+			}
+
+			.prose :global(table)::-webkit-scrollbar,
+			.prose :global(.table-container)::-webkit-scrollbar {
+				height: 6px;
+			}
+
+			.prose :global(table)::-webkit-scrollbar-track,
+			.prose :global(.table-container)::-webkit-scrollbar-track {
+				background: #f1f5f9;
+				border-radius: 4px;
+			}
+
+			.prose :global(table)::-webkit-scrollbar-thumb,
+			.prose :global(.table-container)::-webkit-scrollbar-thumb {
+				background: #cbd5e1;
+				border-radius: 4px;
+			}
+
+			.prose :global(table)::-webkit-scrollbar-thumb:hover,
+			.prose :global(.table-container)::-webkit-scrollbar-thumb:hover {
+				background: #94a3b8;
 			}
 
 			.prose :global(th) {
 				background-color: #f1f5f9;
 				color: #334155;
 				font-weight: 700;
-				padding: 14px 16px;
+				padding: 13px 16px;
 				border-bottom: 2px solid #cbd5e1;
 				border-right: 1px solid #e2e8f0;
 				text-align: center;
 				letter-spacing: -0.01em;
-				white-space: nowrap;
+				word-break: keep-all;
 				vertical-align: middle;
+				font-size: 0.92rem;
 			}
 
 			.prose :global(th:last-child) {
@@ -233,18 +295,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 			.prose :global(th:first-child) {
 				text-align: left;
-				min-width: 240px;
+				min-width: 135px;
 			}
 
 			.prose :global(td) {
-				padding: 14px 16px;
+				padding: 13px 16px;
 				border-bottom: 1px solid #e2e8f0;
 				border-right: 1px solid #e2e8f0;
 				color: #1e293b;
 				text-align: center;
 				vertical-align: middle;
 				background-color: #ffffff;
-				white-space: nowrap;
+				word-break: keep-all;
+				font-size: 0.92rem;
+				line-height: 1.5;
 				transition: background-color 0.15s ease;
 			}
 
@@ -256,7 +320,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				text-align: left;
 				font-weight: 600;
 				color: #0f172a;
-				min-width: 240px;
+				min-width: 135px;
 				white-space: normal;
 			}
 
@@ -270,15 +334,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 			.prose :global(tbody tr:hover td) {
 				background-color: #e0f2fe;
-			}
-
-			@media (max-width: 768px) {
-				.prose :global(table) {
-					display: block;
-					overflow-x: auto;
-					white-space: nowrap;
-					-webkit-overflow-scrolling: touch;
-				}
 			}
 
 			@media (max-width: 768px) {
@@ -339,6 +394,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			document.querySelectorAll('.prose a').forEach(a => {
 				a.setAttribute('target', '_blank');
 				a.setAttribute('rel', 'noopener noreferrer');
+			});
+
+			// 모든 마크다운 표를 반응형 스크롤 컨테이너로 감싸기
+			document.querySelectorAll('.prose table').forEach(table => {
+				if (table.parentElement && !table.parentElement.classList.contains('table-container')) {
+					const wrapper = document.createElement('div');
+					wrapper.className = 'table-container';
+					table.parentNode.insertBefore(wrapper, table);
+					wrapper.appendChild(table);
+				}
 			});
 
 			// Mermaid 다이어그램 자동 렌더링

@@ -29,9 +29,45 @@ Lumen Insights의 설립자이자 '자체 운영 채널' 채널 운영자로서,
 
 유튜브 API가 반환하는 `PT1M30S`와 같은 ISO 8601 원본 문자열 형태를 완벽하게 초 단위 정수로 치환할 수 있는 정교한 정규식 파서(`parseDurationToSeconds`) 로직을 개발하기로 했습니다.
 
-이 파서가 다양한 길이 포맷(예: `PT5S`, `PT1M`, `PT1H10M30S` 등)을 정확히 처리하는지 단위 테스트로 철저히 검증하기로 했습니다.
+이 파서가 다양한 길이 포맷(예: `PT5S`, `PT1M`, `PT1H10M30S` 등)을 정확히 처리하는지 단위 테스트로 철저히 검증하기로 했습니다.  
+파싱된 초 단위 길이를 기준으로 180초(3분) 이하의 영상은 쇼츠로, 181초 이상의 영상은 롱폼으로 명확하게 구분하는 백엔드 분기 처리 로직을 새로 구현하기로 했습니다.  
 
-파싱된 초 단위 길이를 기준으로 180초(3분) 이하의 영상은 쇼츠로, 181초 이상의 영상은 롱폼으로 명확하게 구분하는 백엔드 분기 처리 로직을 새로 구현하기로 했습니다.  이러한 단계로 데이터의 정확성을 확보하고 사용자의 신뢰를 회복하는 것을 목표로 삼았습니다.
+```mermaid
+flowchart TD
+    subgraph API["1. YouTube Data API v3 응답 수신"]
+        A["동영상 상세 API 호출"] --> B["contentDetails.duration 문자열<br/>(예: PT2M30S, PT1M, PT45S)"]
+    end
+
+    subgraph Parser["2. 정밀 ISO 8601 초 단위 파서"]
+        B --> C["parseDurationToSeconds(duration)"]
+        C --> D["시(H)*3600 + 분(M)*60 + 초(S)<br/>정수 초(Seconds) 반환 (예: 150초)"]
+    end
+
+    subgraph Policy["3. 유튜브 정책 기반 RPM 분기 처리"]
+        D --> E{"duration_sec <= 180초?"}
+        E -->|Yes (3분 이하)| F["유튜브 쇼츠 풀(Shorts Pool) 배정<br/>평균 RPM 0.22원 적용 (정상)"]
+        E -->|No (3분 초과)| G["일반 롱폼(Long-form) 배정<br/>평균 RPM 2.20원 적용"]
+    end
+
+    classDef api fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef parse fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#ddd6fe;
+    classDef branch fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    class A,B api;
+    class C,D parse;
+    class E,F,G branch;
+```
+
+```javascript
+// ISO 8601 형식의 유튜브 동영상 길이를 정확한 초(Seconds) 정수로 파싱하는 정규식 유틸리티
+function parseDurationToSeconds(duration) {
+  const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  if (!match) return 0;
+  const hours = parseInt(match[1] || 0, 10);
+  const minutes = parseInt(match[2] || 0, 10);
+  const seconds = parseInt(match[3] || 0, 10);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+```
 
 ## 단 1초의 오차도 없는 정확한 데이터 동기화
 
@@ -46,7 +82,7 @@ Lumen Insights의 설립자이자 '자체 운영 채널' 채널 운영자로서,
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [YouTube Creator Insider — YouTube Shorts Duration Policy and Feed Expansion](https://support.google.com/youtube/answer/1005907)
 - [YouTube Data API v3 — Video Duration ISO 8601 Format Reference](https://developers.google.com/youtube/v3/docs/videos)
 - [W3C Date and Time Formats — ISO 8601 Parsing Guidelines](https://www.w3.org/TR/NOTE-datetime)

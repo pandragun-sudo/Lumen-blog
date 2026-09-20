@@ -27,8 +27,38 @@ Next.js의 복잡한 라우팅을 방어하고, 세션 로직을 다듬으며, �
 AI는 주어진 컨텍스트, 즉 현재 작업 중인 코드베이스의 논리적 흐름 안에서는 그 어떤 인간 개발자보다 뛰어난 통찰력을 발휘합니다.  
 하지만 자신이 직접 작성하지 않은 과거의 유산이나, 파일 시스템 구석에 박혀있는 형태 없는 리스크 앞에서는 한없이 맹목적일 수밖에 없습니다.  
 AI는 "이 코드를 더 효율적으로 고쳐줘"라는 명령에는 완벽하게 응답하지만, "내가 저장소 어딘가에 실수로 백업 파일을 올려두진 않았을까?"라는 의심을 스스로 품지 못합니다.  
-결국 코드를 짠 당사자나 그 코드를 함께 작성한 AI 비서는, 절대 자신들의 결과물을 완벽하게 객관적인 시선으로 감사할 수 없다는 소프트웨어 공학의 오랜 불문율이 다시 한번 증명된 것입니다.  
-우리는 우리가 보고 싶은 것만 보았고, AI는 우리가 지시한 곳만 바라보았던 것입니다.  
+| 평가 영역 | 생성형 AI 어시스턴트의 강점 | 현실 시스템 인프라에서의 사각지대 |
+|---|---|---|
+| 코드 로직 및 리팩토링 | 문맥 내 버그 추적 및 최적화 탁월 | 작업 창 외부 파일 시스템 위험 인지 불가 |
+| 단위 테스트 및 UI 스타일 | 컴포넌트 단위 빠른 목업 및 테스트 | 미등록 대용량 덤프 및 Git 이력 미감지 |
+| 인프라 위생 및 물리 보안 | 시스템 프롬프트에 명시된 규칙 준수 | 스스로 숨겨진 레거시 파일 의심 불가 |
+
+```mermaid
+flowchart TD
+    subgraph Blindspot["1. AI 어시스턴트의 컨텍스트 사각지대"]
+        A["사용자 프롬프트: UI/로직 개선 요청"] --> B["현재 열린 파일 컨텍스트 분석"]
+        B --> C["고품질 코드 신속 생성 (완벽해 보임)"]
+        C -.-> D["저장소 구석의 100MB 덤프 파일 인지 실패<br/>(AI는 지시받지 않은 물리 파일을 의심하지 않음)"]
+    end
+
+    subgraph Verification["2. 외부 감사(Red Teaming)의 충격"]
+        D --> E["외부 보안 크로스체크"]
+        E --> F["평문 토큰 & 백업 덤프 8개 폭탄 발굴"]
+    end
+
+    subgraph SystemSolution["3. 영구 통제: 시스템 헌법 하드코딩"]
+        F --> G["AGENTS.md 절대 규약 제정"]
+        G --> H["작업 전 물리 파일 스캔 의무화<br/>(10MB 초과 및 .env 원천 차단)"]
+        H --> I["인프라 위생을 최우선하는 엔지니어링 확립"]
+    end
+
+    classDef danger fill:#2a1215,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
+    classDef check fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#ddd6fe;
+    classDef secure fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    class A,B,C,D danger;
+    class E,F check;
+    class G,H,I secure;
+```
 
 ## 위기를 기회로 바꾸는 시스템의 통제
 이러한 위기를 기회로 삼기 위해 우리는 시스템 운영의 룰을 전면적으로 개편했습니다.  
@@ -46,7 +76,7 @@ AI는 "이 코드를 더 효율적으로 고쳐줘"라는 명령에는 완벽하
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [OWASP Foundation — Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [MDN Web Docs — Principles of Web Application Security and Verification](https://developer.mozilla.org/en-US/docs/Web/Security)
 - [Google Search Central — Authenticity and Human Verification Standards](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

@@ -18,9 +18,9 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 이 현상은 LLM(대형 언어 모델)의 근본적인 동작 원리와 연관되어 있습니다.  
 아무리 긴 컨텍스트 윈도우를 지원하는 최신 모델이라도, 대화 기록이 길어지면 다음과 같은 문제가 필연적으로 발생합니다.  
 
-1. **주의 집중도 분산 (Attention Degradation)**: 수만 토큰의 과거 대화 속에서 초기에 정의한 핵심 보안 규칙이나 아키텍처 원칙이 희석됩니다.  
-2. **환각의 누적 (Error Propagation)**: 이전 턴에서 발생한 작은 오해나 잘못된 변수명이 다음 턴의 프롬프트에 입력으로 재사용되면서 눈덩이처럼 불어납니다.  
-3. **임의적 코드 수정 (Context Drift)**: 전체 시스템의 의존 관계를 파악하지 못한 채, 당장 눈앞의 에러 메시지만을 해결하기 위해 기존 정상 코드를 덮어써 버립니다.  
+1. 주의 집중도 분산 (Attention Degradation): 수만 토큰의 과거 대화 속에서 초기에 정의한 핵심 보안 규칙이나 아키텍처 원칙이 희석됩니다.  
+2. 환각의 누적 (Error Propagation): 이전 턴에서 발생한 작은 오해나 잘못된 변수명이 다음 턴의 프롬프트에 입력으로 재사용되면서 눈덩이처럼 불어납니다.  
+3. 임의적 코드 수정 (Context Drift): 전체 시스템의 의존 관계를 파악하지 못한 채, 당장 눈앞의 에러 메시지만을 해결하기 위해 기존 정상 코드를 덮어써 버립니다.  
 
 자체 운영 채널 분석 대시보드를 Next.js와 Supabase로 마이그레이션하던 초기, 저는 이 엔트로피 때문에 수차례 코드베이스 전체를 롤백해야 했습니다.  
 
@@ -32,7 +32,7 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 
 ## 엔트로피를 통제하는 단일 진실 공급원(SSOT) 아키텍처
 
-무질서도를 통제하기 위해서는 휘발되는 대화창의 기억에 의존하지 않고, 항상 시스템의 현재 상태를 동기화하는 **외부 영구 메모리 계층**을 구축해야 합니다.  
+무질서도를 통제하기 위해서는 휘발되는 대화창의 기억에 의존하지 않고, 항상 시스템의 현재 상태를 동기화하는 외부 영구 메모리 계층을 구축해야 합니다.  
 
 우리가 구축한 해결책은 3단계 메모리 방어선입니다.  
 
@@ -45,9 +45,9 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 3계층: obsidian_notes/개발일지.md (시행착오 및 아키텍처 히스토리)
 ```
 
-1. **`AGENTS.md` (헌법적 룰셋)**: "SQL은 반드시 플레이스홀더 사용", "UI에 시스템 이모지 하드코딩 금지", "민감 키 암호화" 등 프로젝트 전반에 영구 적용될 절대 규칙을 선언합니다.  
-2. **`PROJECT_PLAN.md` (실시간 나침반)**: 대화가 길어져 토큰이 낭비되기 전, 현재 진행 중인 마일스톤과 완료된 작업을 실시간으로 기록하고, 새로운 세션을 시작할 때 이 문서를 가장 먼저 주입받도록 만듭니다.  
-3. **세션 전환 규약 (Session Refresh)**: 하나의 큰 기능 단위가 완료되면 주저 없이 대화창을 닫고, 최신화된 문서를 바탕으로 새 대화를 시작합니다.  
+1. `AGENTS.md` (헌법적 룰셋): "SQL은 반드시 플레이스홀더 사용", "UI에 시스템 이모지 하드코딩 금지", "민감 키 암호화" 등 프로젝트 전반에 영구 적용될 절대 규칙을 선언합니다.  
+2. `PROJECT_PLAN.md` (실시간 나침반): 대화가 길어져 토큰이 낭비되기 전, 현재 진행 중인 마일스톤과 완료된 작업을 실시간으로 기록하고, 새로운 세션을 시작할 때 이 문서를 가장 먼저 주입받도록 만듭니다.  
+3. 세션 전환 규약 (Session Refresh): 하나의 큰 기능 단위가 완료되면 주저 없이 대화창을 닫고, 최신화된 문서를 바탕으로 새 대화를 시작합니다.  
 
 ## 프롬프트 엔지니어링을 넘어선 시스템 엔지니어링
 
@@ -60,7 +60,7 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Martin Fowler — Software Architecture and Single Source of Truth](https://martinfowler.com/articles/designDead.html)
 - [Anthropic — Context Window Management and Prompt Engineering Strategies](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Google Cloud — Architecture Framework for Robust Software Systems](https://cloud.google.com/architecture/framework)

@@ -18,8 +18,8 @@ Supabase 무료 티어의 500MB 디스크 한도에 근접했던 위기 상황�
 처음에는 최근 신설한 `korean_upcoming_content`(방영 예정작) 테이블이 용량을 잡아먹고 있을 것이라 짐작했습니다.  
 
 하지만 PostgreSQL 시스템 카탈로그 쿼리를 실행해 직접 측정한 결과는 완전히 달랐습니다.  
-신규 예정작 테이블은 82건, 고작 **128 kB (0.12 MB, 전체의 0.03%)**에 불과했습니다.  
-진짜 원인은 과거 개발 과정에서 무심코 생성했던 **완전 중복 인덱스(Duplicate Indexes)**들이었습니다.  
+신규 예정작 테이블은 82건, 고작 128 kB (0.12 MB, 전체의 0.03%)에 불과했습니다.  
+진짜 원인은 과거 개발 과정에서 무심코 생성했던 완전 중복 인덱스(Duplicate Indexes)들이었습니다.  
 
 | 테이블명 | 삭제된 중복 인덱스명 | 낭비 용량 | 중복 원인 분석 |
 |---|---|---|---|
@@ -28,14 +28,44 @@ Supabase 무료 티어의 500MB 디스크 한도에 근접했던 위기 상황�
 | `channel_daily_stats` | `idx_cds_channel_id` | 7.2 MB | 복합키 prefix가 단일 조회를 완벽히 커버함 |
 | `videos` | `idx_videos_video_id` | 7.5 MB | `PRIMARY KEY(video_id)` 인덱스와 동일 컬럼 중복 |
 
+```mermaid
+flowchart TD
+    subgraph Redundant["1. 중복 인덱스로 인한 60.5MB 디스크 낭비 구조"]
+        A["video_daily_stats 테이블"]
+        A --> B["PRIMARY KEY(video_id, record_date) [정상 인덱스]"]
+        A --> C["idx_vds_video_record [20MB 완전 중복]"]
+        D["channel_daily_stats 테이블"]
+        D --> E["UNIQUE(channel_id, record_date) [정상 인덱스]"]
+        D --> F["idx_channel_daily_stats_date [26MB 완전 중복]"]
+        D --> G["idx_cds_channel_id [7.2MB 복합키 prefix 중복]"]
+    end
+
+    subgraph Execution["2. 무중단 회수 파이프라인 (DROP INDEX CONCURRENTLY)"]
+        H["EXPLAIN ANALYZE 쿼리 플랜 사전 검증"] --> I["동시성 백그라운드 인덱스 드롭 실행"]
+        I --> J["서비스 무중단 4개 중복 인덱스 제거"]
+    end
+
+    subgraph Result["3. 최적화 결과 및 보존 정책 확립"]
+        J --> K["디스크 용량: 402MB ➔ 341.5MB (60.5MB 즉각 회수)"]
+        K --> L["매일 새벽 3시 7일 슬라이딩 윈도우 크론잡 영구 안착"]
+    end
+
+    classDef danger fill:#2a1215,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
+    classDef clean fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#ddd6fe;
+    classDef secure fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    class C,F,G danger;
+    class B,E,H,I,J clean;
+    class K,L secure;
+```
+
 ## 무중단 인덱스 회수와 서비스 무결성 검증
 
 중복 인덱스를 삭제할 때는 서비스 가동 상태를 유지하는 무중단 작업이 필수적이었습니다.  
 우리는 다음 절차를 거쳐 안전하게 디스크를 정리했습니다.  
 
-1. **커버 제약 조건 검증**: 삭제하려는 단일 인덱스를 복합 기본키 인덱스가 실제로 커버하고 있는지 `EXPLAIN ANALYZE`로 쿼리 실행 계획을 사전에 검증했습니다.  
-2. **동시성 삭제(`DROP INDEX CONCURRENTLY`)**: 락(Lock)으로 인한 서비스 멈춤을 방지하기 위해 백그라운드 삭제 명령을 수행했습니다.  
-3. **공간 회수 결과**: 4개 중복 인덱스를 제거함으로써 DB 용량은 **402MB에서 341MB로 즉시 60.5MB가 경감**되었습니다.  
+1. 커버 제약 조건 검증: 삭제하려는 단일 인덱스를 복합 기본키 인덱스가 실제로 커버하고 있는지 `EXPLAIN ANALYZE`로 쿼리 실행 계획을 사전에 검증했습니다.  
+2. 동시성 삭제(`DROP INDEX CONCURRENTLY`): 락(Lock)으로 인한 서비스 멈춤을 방지하기 위해 백그라운드 삭제 명령을 수행했습니다.  
+3. 공간 회수 결과: 4개 중복 인덱스를 제거함으로써 DB 용량은 402MB에서 341MB로 즉시 60.5MB가 경감되었습니다.  
 
 ```sql
 -- 실행 계획 검증 후 안전한 무중단 인덱스 정리
@@ -55,7 +85,7 @@ DROP INDEX CONCURRENTLY IF EXISTS idx_videos_video_id;
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [PostgreSQL Official Documentation — Indexing Best Practices and Maintenance](https://www.postgresql.org/docs/current/indexes.html)
 - [Supabase Documentation — Managing Database Storage and Performance](https://supabase.com/docs/guides/database/managing-storage)
 - [Martin Fowler — Technical Debt and Code Quality](https://martinfowler.com/bliki/TechnicalDebt.html)

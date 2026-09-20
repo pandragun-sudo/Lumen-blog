@@ -10,16 +10,49 @@ heroImage: "../../assets/scrapbook_routing_architecture.jpg"
 사용자가 특정 숏폼 영상이나 채널 상세 정보를 클릭했을 때, 새 페이지로 튕겨 나가지 않고 현재 대시보드 위에서 상세 정보를 오버레이로 보여주는 방식은 작업 흐름을 유지하는 데 탁월합니다.  
 
 하지만 단순한 React `useState(isOpen)` 방식의 모달은 브라우저의 '뒤로 가기' 버튼을 누르면 모달만 닫히는 것이 아니라 아예 이전 사이트로 이탈해 버리는 치명적인 결함을 낳습니다.  
-이를 극복하기 위해 도입한 **URL 기반 모달(URL-Driven Modal)** 아키텍처와, 그 과정에서 마주했던 교묘한 버그들을 해결한 과정을 정리합니다.  
+이를 극복하기 위해 도입한 URL 기반 모달(URL-Driven Modal) 아키텍처와, 그 과정에서 마주했던 교묘한 버그들을 해결한 과정을 정리합니다.  
 
 ## URL-Driven 모달의 원리와 장점
 
-우리가 설계한 모달 아키텍처의 핵심은 **"모든 모달의 상태는 오직 URL 쿼리 파라미터(`?modal=shorts_player&videoId=xyz`)가 결정한다"**는 원칙이었습니다.  
+우리가 설계한 모달 아키텍처의 핵심은 "모든 모달의 상태는 오직 URL 쿼리 파라미터(`?modal=shorts_player&videoId=xyz`)가 결정한다"는 원칙이었습니다.  
 
 이 방식은 다음과 같은 강력한 이점을 제공합니다.  
-1. **공유 가능한 딥링크(Deep Linking)**: 특정 영상 분석 모달이 열린 상태의 URL을 그대로 복사해 공유할 수 있습니다.  
-2. **자연스러운 브라우저 히스토리 지원**: 뒤로 가기(Back) 버튼을 누르면 모달만 닫히고 원래 대시보드 상태로 부드럽게 복귀합니다.  
-3. **단일 모달 컨트롤러**: 전역 `ModalController` 컴포넌트 하나가 URL 파라미터를 구독하고 알맞은 모달을 조건부 렌더링합니다.  
+1. 공유 가능한 딥링크(Deep Linking): 특정 영상 분석 모달이 열린 상태의 URL을 그대로 복사해 공유할 수 있습니다.  
+2. 자연스러운 브라우저 히스토리 지원: 뒤로 가기(Back) 버튼을 누르면 모달만 닫히고 원래 대시보드 상태로 부드럽게 복귀합니다.  
+3. 단일 모달 컨트롤러: 전역 `ModalController` 컴포넌트 하나가 URL 파라미터를 구독하고 알맞은 모달을 조건부 렌더링합니다.  
+
+```mermaid
+flowchart LR
+    subgraph Browser["1. 사용자 인터랙션"]
+        A["영상/채널 카드 클릭"] --> B["URL 쿼리 파라미터 갱신<br/>(?modal=shorts_player&videoId=...)"]
+        B --> C["브라우저 History 스택 Push"]
+    end
+
+    subgraph Routing["2. Next.js 라우팅 파이프라인"]
+        C --> D["useSearchParams() 훅 구독"]
+        D --> E["단일 진입점: ModalController"]
+    end
+
+    subgraph Rendering["3. 조건부 모달 렌더링"]
+        E -->|modal === 'shorts_player'| F["ShortsPlayerModal 마운트"]
+        E -->|modal === 'channel_detail'| G["ChannelActionModal 마운트"]
+        E -->|modal === null| H["오버레이 해제 (대시보드 유지)"]
+    end
+
+    subgraph Exit["4. 안전한 모달 종료"]
+        F -.->|ESC 또는 배경 클릭| I["useModalCloser()"]
+        I -->|모든 관련 파라미터 일괄 삭제| B
+    end
+
+    classDef action fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef route fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#ddd6fe;
+    classDef modal fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    classDef clean fill:#2a1215,stroke:#f59e0b,stroke-width:2px,color:#fef3c7;
+    class A,B,C action;
+    class D,E route;
+    class F,G modal;
+    class H,I clean;
+```
 
 ## 모달 겹침과 좀비 URL 파라미터(Zombie Param)의 습격
 
@@ -68,7 +101,7 @@ URL-Driven 아키텍처는 강력하지만, 클로저의 상태 동기화와 파
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Next.js Documentation — Routing: Query Parameters and Shallow Routing](https://nextjs.org/docs/app/building-your-application/routing)
 - [React Documentation — Synchronizing with Effects and Preventing Stale Closures](https://react.dev/learn/synchronizing-with-effects)
 - [Nielsen Norman Group — Modal vs Modeless Dialog Design Guidelines](https://www.nngroup.com/articles/modal-nonmodal-dialog/)

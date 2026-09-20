@@ -38,7 +38,7 @@ Lumen Insights 초기 버전 개발 당시, 저는 눈앞의 기능 구현에만
 
 ## PROJECT_PLAN.md: AI와 인간이 공유하는 단일 진실 공급원 (SSOT)
 
-이 혼란을 종식시키기 위해 도입한 도구가 바로 프로젝트 루트의 `PROJECT_PLAN.md`입니다. 이 문서는 단순한 할 일 목록(To-Do List)이 아니라, 시스템의 현재 상태(Current State), 다음 마일스톤, 기술적 제약 사항이 실시간으로 기록되는 **동적 상태 저장소**입니다.
+이 혼란을 종식시키기 위해 도입한 도구가 바로 프로젝트 루트의 `PROJECT_PLAN.md`입니다. 이 문서는 단순한 할 일 목록(To-Do List)이 아니라, 시스템의 현재 상태(Current State), 다음 마일스톤, 기술적 제약 사항이 실시간으로 기록되는 동적 상태 저장소입니다.
 
 새로운 세션이 시작되면, 에이전트는 규칙(Rule)에 따라 다른 어떤 코드도 건드리기 전에 반드시 `PROJECT_PLAN.md`를 가장 먼저 읽습니다.
 
@@ -46,19 +46,19 @@ Lumen Insights 초기 버전 개발 당시, 저는 눈앞의 기능 구현에만
 # Lumen Insights - Project Plan
 
 ## 현재 컨텍스트
-* **작업 단계:** [v2.3.7] 블로그 E-E-A-T 전수 검증 및 고위험 포스팅 클린업 진행 중.
-* **현재 우선 과제:**
+* 작업 단계: [v2.3.7] 블로그 E-E-A-T 전수 검증 및 고위험 포스팅 클린업 진행 중.
+* 현재 우선 과제:
   1. [x] MFA 오인 위험 포스팅 삭제 및 301 리다이렉트 매핑
   2. [ ] 42편 전 포스팅 외부 권위 출처 링크 2~3건 결합
   3. [ ] Astro 빌드 검증 및 사이트맵 최신화
-* **기술적 제약:** Supabase 무료 티어 500MB 엄수 (무기한 데이터 적재 금지).
+* 기술적 제약: Supabase 무료 티어 500MB 엄수 (무기한 데이터 적재 금지).
 ```
 
 에이전트는 이 파일을 읽는 순간 "지금은 데이터베이스 튜닝이 아니라 블로그 E-E-A-T 검증 단계이며, 500MB DB 제약을 위반하면 안 된다"는 맥락을 1초 만에 복원합니다. 작업이 완료되면 에이전트가 직접 완료 항목을 체크하고 다음 우선순위를 갱신합니다.
 
 ## 지식 자산화: 옵시디언(Obsidian) 개발 일지 자동 아카이빙
 
-플랜 관리가 '현재와 미래의 좌표'를 잡아준다면, 과거의 시행착오를 자산으로 바꾸는 것은 **옵시디언 개발 일지 자동 아카이빙 시스템**입니다.
+플랜 관리가 '현재와 미래의 좌표'를 잡아준다면, 과거의 시행착오를 자산으로 바꾸는 것은 옵시디언 개발 일지 자동 아카이빙 시스템입니다.
 
 1인 개발에서 동일한 유형의 버그(예: KST 타임존 오차, 조회수 쉼표 파싱 실패)를 두 번 디버깅하는 것은 치명적인 시간 낭비입니다. Lumen Insights의 에이전트 규약에는 복잡한 트러블슈팅이나 아키텍처 결정이 있을 때마다 `obsidian_notes/Lumen_Insights_개발일지.md`에 의사결정 기록(ADR, Architecture Decision Record)을 자동으로 덧붙이도록(Append-Only) 정의되어 있습니다.
 
@@ -72,7 +72,7 @@ Lumen Insights 초기 버전 개발 당시, 저는 눈앞의 기능 구현에만
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Martin Fowler — Architecture Decision Records (ADRs)](https://martinfowler.com/articles/scaling-architecture-conversationally.html#ArchitectureDecisionRecords)
 - [GitHub Documentation — About READMEs and Project Documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

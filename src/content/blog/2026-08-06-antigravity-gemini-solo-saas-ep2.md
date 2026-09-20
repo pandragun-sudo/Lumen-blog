@@ -10,14 +10,14 @@ Lumen Insights 시스템을 개발하며 수많은 AI 코딩 어시스턴트를 
 처음에는 빠른 코드 작성 능력에 감탄하지만, 대화가 조금만 길어지면 "왜 이 모델은 어제 정한 코딩 규칙을 오늘 또 잊어버리는 걸까?"라는 깊은 피로감에 직면하곤 했습니다.  
 
 우리가 안티그라비티(Antigravity) 2.0 생태계에 정착한 가장 결정적인 이유는, 에이전트에게 확고한 '정체성'과 '영구 기억'을 부여할 수 있는 메커니즘 때문이었습니다.  
-1인 창업가가 AI를 단순한 챗봇이 아니라 깐깐한 시니어 풀스택 엔지니어로 훈련시키는 **`AGENTS.md` 룰 세팅법**을 핵심 문답 형식으로 풀어봅니다.  
+1인 창업가가 AI를 단순한 챗봇이 아니라 깐깐한 시니어 풀스택 엔지니어로 훈련시키는 `AGENTS.md` 룰 세팅법을 핵심 문답 형식으로 풀어봅니다.  
 
 ## Q1. AI가 자꾸 엉뚱한 코드를 짜거나 어제 합의한 규칙을 무시합니다. 근본 원인이 무엇인가요?
 
 일반적인 챗봇 인터페이스는 '현재 열려 있는 단일 대화 세션' 안에서만 단기 기억을 유지합니다.  
 작업이 진행되어 토큰이 수만 개를 넘어가면 초기에 주입했던 시스템 프롬프트가 컨텍스트 윈도우 밖으로 밀려나게 됩니다.  
 
-이 문제를 해결하려면 에이전트가 매 턴마다 자동으로 읽고 실행해야 하는 **물리적 규약 문서(`AGENTS.md`)**를 작업 공간 최상단에 배치하는 것이 효과적입니다.  
+이 문제를 해결하려면 에이전트가 매 턴마다 자동으로 읽고 실행해야 하는 물리적 규약 문서(`AGENTS.md`)를 작업 공간 최상단에 배치하는 것이 효과적입니다.  
 Antigravity는 파일 시스템을 인식하므로, 이 문서를 단일 진실 공급원(SSOT)으로 삼아 모델이 임의로 규칙을 왜곡하지 못하도록 강제합니다.  
 
 | 에이전트 운영 방식 | 일반 대화창 프롬프팅 | `AGENTS.md` 기반 통제 아키텍처 |
@@ -26,10 +26,39 @@ Antigravity는 파일 시스템을 인식하므로, 이 문서를 단일 진실 
 | 코딩 스타일 일관성 | 모델 기분에 따라 라이브러리 파편화 | 지정된 디자인 토큰 및 SQL 규칙 강제 |
 | 보안 통제력 | 민감 키 노출 및 평문 저장 위험 | 플레이스홀더 및 암호화 헬퍼 의무화 |
 
+```mermaid
+flowchart TD
+    subgraph Drift["1. 일반 대화형 챗봇의 한계: 컨텍스트 유실"]
+        A["초기 대화 규칙 주입"] --> B["작업 진행 (토큰 누적)"]
+        B --> C["시스템 프롬프트 윈도우 밖으로 밀려남"]
+        C --> D["어제 합의한 규칙 망각 & 코딩 스타일 붕괴"]
+    end
+
+    subgraph Memory["2. Antigravity 3대 계층형 영구 메모리 체계"]
+        E["작업 공간 최상단 SSOT 문서군"]
+        E --> F["AGENTS.md<br/>(전역 헌법: 보안 규약 / SQL $1 / 디자인 가이드)"]
+        E --> G["PROJECT_PLAN.md<br/>(현재 세션 활성 마일스톤 & 체크리스트)"]
+        E --> H["nuance.md<br/>(보이스 톤 / 금지어 / E-E-A-T 품질 기준)"]
+    end
+
+    subgraph Pipeline["3. 실행 및 기계적 품질 검증"]
+        F & G & H --> I["AI Agent (엄격한 페어 프로그래머)"]
+        I --> J["코드 수정 및 빌드 산출물 생성"]
+        J --> K["기계적 Linter 자동 검증<br/>(오류 0건 통과 시에만 최종 완료)"]
+    end
+
+    classDef drift fill:#2a1215,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
+    classDef arch fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#ddd6fe;
+    classDef verify fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#a7f3d0;
+    class A,B,C,D drift;
+    class E,F,G,H arch;
+    class I,J,K verify;
+```
+
 ## Q2. `AGENTS.md`에는 구체적으로 어떤 내용을 명시해야 하나요?
 
 "좋은 코드를 짜줘" 같은 모호한 문장은 아무런 효과가 없습니다.  
-우리는 과거 개발 일지에서 실제로 터졌던 버그와 보안 사고를 바탕으로, 다음의 **5대 실전 규약**을 명문화했습니다.  
+우리는 과거 개발 일지에서 실제로 터졌던 버그와 보안 사고를 바탕으로, 다음의 5대 실전 규약을 명문화했습니다.  
 
 ```markdown
 # AGENTS.md 핵심 헌법 규약 예시
@@ -53,9 +82,9 @@ Antigravity는 파일 시스템을 인식하므로, 이 문서를 단일 진실 
 규칙이 수백 줄로 늘어나면 모델의 인지 부하(Attention Load)가 발생합니다.  
 이를 방지하기 위해 우리는 문서를 계층화했습니다.  
 
-1. **`AGENTS.md`**: 전역 보안 및 코딩 규약 (상시 적용)  
-2. **`PROJECT_PLAN.md`**: 현재 세션의 마일스톤 및 체크리스트 (실시간 갱신)  
-3. **`nuance.md`**: 보이스 톤, 금지어 및 E-E-A-T 품질 기준 (글쓰기/UI 전용)  
+1. `AGENTS.md`: 전역 보안 및 코딩 규약 (상시 적용)  
+2. `PROJECT_PLAN.md`: 현재 세션의 마일스톤 및 체크리스트 (실시간 갱신)  
+3. `nuance.md`: 보이스 톤, 금지어 및 E-E-A-T 품질 기준 (글쓰기/UI 전용)  
 
 역할별로 문서를 분리하고 필요한 컨텍스트만 정밀하게 로드하도록 파이프라인을 구성함으로써, 모델은 불필요한 토큰 낭비 없이 최고 속도로 작업할 수 있게 되었습니다.  
 
@@ -67,7 +96,7 @@ AI 페어 프로그래밍의 완성도는 화려한 수식어에 있지 않습�
 
 ---
 
-**참고 자료:**
+참고 자료:
 - [Anthropic — System Prompts and Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)
 - [Google Cloud — Designing Effective Prompts for Gemini Agents](https://cloud.google.com/vertex-ai/docs/generative-ai/text/prompt-guidelines)
 - [Martin Fowler — Specification by Example and Living Documentation](https://martinfowler.com/bliki/SpecificationByExample.html)
