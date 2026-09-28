@@ -1,5 +1,5 @@
 ---
-title: "1인 개발자를 위한 안티그라비티(Antigravity) 룰 세팅법: AGENTS.md로 AI에게 영구 기억 심기"
+title: "Antigravity 룰 세팅 가이드: AGENTS.md로 AI 코딩 에이전트에 영구 메모리 구축하기"
 description: "AI 페어 프로그래밍 시 발생하는 컨텍스트 유실과 코딩 스타일 붕괴를 원천 방어하기 위해 AGENTS.md를 설계하고 운영하는 실전 가이드를 Q&A 형식으로 정리합니다."
 category: "devlog"
 pubDate: "2026-08-06T14:00:00+09:00"

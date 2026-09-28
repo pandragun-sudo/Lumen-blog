@@ -1,6 +1,6 @@
 ---
-title: "100MB 깃허브(GitHub) 커밋 유출 사고와 영구 메모리 격리 아키텍처 구축기"
-description: "로컬 DB 덤프와 소스 압축본이 원격 저장소에 노출되었던 대형 보안 사고를 겪은 후, git-filter-repo 기반 이력 세척과 BFG 분리, 그리고 암호화 헬퍼 체계를 구축한 실전 보안 포스트모텀입니다."
+title: "GitHub 100MB 파일 용량 제한 오류와 커밋 유출 해결: git-filter-repo와 BFG 실전 복구 가이드"
+description: "GitHub 100MB 용량 초과 푸시 오류(Push Error)와 커밋 파일 유출을 해결한 포스트모텀입니다. git-filter-repo와 BFG Repo-Cleaner를 이용해 커밋 히스토리에서 대용량 파일을 영구 삭제하고 복구하는 실전 방법을 다룹니다."
 category: "devlog"
 pubDate: "2026-08-04T15:00:00+09:00"
 heroImage: "../../assets/saas_security_breach.jpg"

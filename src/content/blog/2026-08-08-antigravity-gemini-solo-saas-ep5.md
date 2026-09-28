@@ -1,6 +1,6 @@
 ---
-title: "Supabase 500MB 무료 티어 한계 극복기: PostgreSQL Dead Tuples와 VACUUM 자동화"
-description: "DELETE 쿼리만으로는 줄어들지 않는 PostgreSQL 디스크 공간의 원리를 분석하고, 7일 슬라이딩 윈도우와 cronJobs.js 자동 VACUUM 파이프라인으로 500MB DB를 무결점으로 유지한 엔지니어링 기록입니다."
+title: "Supabase 500MB 무료 티어 용량 줄이기: PostgreSQL Dead Tuples와 VACUUM 자동화 해결법"
+description: "Supabase 무료 500MB 디스크 한계에 부딪혔을 때 용량을 확보하는 엔지니어링 가이드입니다. DELETE 후에도 줄어들지 않는 PostgreSQL Dead Tuples의 원리와 VACUUM 자동화 파이프라인 구축법을 공유합니다."
 category: "devlog"
 pubDate: "2026-08-08T14:00:00+09:00"
 heroImage: "../../assets/images/blog/ep5_servers.jpg"

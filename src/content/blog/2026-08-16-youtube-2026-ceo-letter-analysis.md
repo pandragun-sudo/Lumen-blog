@@ -1,6 +1,6 @@
 ---
-title: "유튜브 2026 CEO 레터 분석: 숏폼 크리에이터가 알아야 할 3가지 생존 전략"
-description: "닐 모한 CEO의 2026 유튜브 비전과 함께 자체 운영 채널 운영 경험 및 Lumen Insights 데이터를 바탕으로 도출한 크리에이터 생존 전략과 '리텐션 붕괴 모델(Retention Decay Model)'을 심층 분석합니다."
+title: "유튜브 CEO 닐 모한 2026 연례 서한 분석: 숏폼 알고리즘 변화와 크리에이터 3대 생존 전략"
+description: "유튜브 CEO 닐 모한의 2026 연례 서한을 심층 분석합니다. 숏폼 알고리즘의 리텐션 붕괴 모델과 플랫폼 정책 변화, E-E-A-T 기반 크리에이터 생존 전략을 스튜디오 실측 지표와 함께 공유합니다."
 category: "trend"
 pubDate: "2026-08-17T22:00:00+09:00"
 heroImage: "../../assets/youtube_2026_future.jpg"

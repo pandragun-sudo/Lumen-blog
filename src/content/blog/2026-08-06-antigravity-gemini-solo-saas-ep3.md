@@ -1,6 +1,6 @@
 ---
-title: "AI 에이전트에게 팔다리를 달아주는 법: Antigravity 커스텀 스킬(Custom Skills) 아키텍처"
-description: "단순한 텍스트 답변을 넘어 터미널 명령어 실행, 보안 스캔, Git 자동 푸시, 브리핑 작성을 자율 수행하는 커스텀 스킬의 설계 구조와 실전 구현 사례를 다룹니다."
+title: "AI 코딩 에이전트 자동화: Antigravity 커스텀 스킬(Custom Skills) 아키텍처 설계와 구현"
+description: "단순 텍스트 답변을 넘어 터미널 명령어 실행, 보안 스캔, Git 자동 배포를 자율 수행하는 AI 코딩 에이전트 커스텀 스킬의 설계 구조와 실전 구현 사례를 다룹니다."
 category: "devlog"
 pubDate: "2026-08-06T16:00:00+09:00"
 heroImage: "../../assets/automation_paradox_bot.jpg"

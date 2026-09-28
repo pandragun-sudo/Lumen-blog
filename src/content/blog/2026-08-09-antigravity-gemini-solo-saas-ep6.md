@@ -1,6 +1,6 @@
 ---
-title: "1인 SaaS를 위한 다계층 보안 방어선: Next.js 미들웨어와 토큰 어뷰징 차단"
-description: "외부 API 쿼터 고갈과 무단 크롤링 공격으로부터 1인 SaaS를 보호하기 위해 설계한 Next.js 미들웨어, Redis Rate Limit, SameSite 쿠키 보안 아키텍처를 상세히 공유합니다."
+title: "Next.js 미들웨어 API 보안과 Rate Limit 구현: 토큰 어뷰징 및 무단 크롤링 방어 아키텍처"
+description: "외부 API 쿼터 고갈과 무단 크롤링 공격으로부터 서비스를 보호하기 위한 Next.js 미들웨어 보안, Redis Rate Limit, SameSite 쿠키 방어 아키텍처를 상세히 공유합니다."
 category: "devlog"
 pubDate: "2026-08-09T14:00:00+09:00"
 heroImage: "../../assets/images/blog/ep6_security.jpg"

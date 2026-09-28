@@ -1,6 +1,6 @@
 ---
-title: "길을 잃지 않는 법: 프로젝트 플랜 관리와 컨텍스트 엔지니어링"
-description: "AI 에이전트와의 수십 번 세션 전환 속에서도 아키텍처 일관성을 유지하는 프로젝트 플랜 관리법과 옵시디언(Obsidian) 개발 일지 자동화 시스템을 해부합니다."
+title: "AI 코딩 프로젝트 컨텍스트 유실 방지법: 세션 전환과 프롬프트 엔지니어링 아키텍처"
+description: "AI 에이전트와의 세션 전환 속에서도 아키텍처 일관성을 유지하는 프로젝트 플랜 관리법과 컨텍스트 엔지니어링, 옵시디언 개발 일지 자동화 시스템을 해부합니다."
 category: "devlog"
 pubDate: "2026-08-07T08:29:07Z"
 heroImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"

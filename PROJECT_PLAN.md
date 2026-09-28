@@ -80,14 +80,24 @@
 ### 🛠️ 긴급 조치 및 다음 새 세션 진행 가이드 (Next Action)
 - [x] **서치콘솔 유령 URL 삭제 요청**: 사용자가 서치콘솔 [삭제] 메뉴에서 `https://lumeninsights.kr/community/` 접두사 일괄 삭제 제출 완료.
 - [x] **코드단 리디렉션 안전망**: `public/_redirects`에 `/community/* /blog/ 301` 및 `/tools/* /blog/ 301` 탑재 완료.
-- [ ] **[새 채팅] 필수 페이지 및 9월 핵심 글 수동 색인 생성 요청 (URL 검사)**:
-  1. `https://lumeninsights.kr/privacy` (개인정보처리방침 - 최우선)
-  2. `https://lumeninsights.kr/terms` (이용약관 - 최우선)
-  3. `https://lumeninsights.kr/contact` (문의하기 - 최우선)
-  4. `https://lumeninsights.kr/blog/2026-09-28-youtube-returning-viewers-session-watch-time/` (오늘 자 258만 뷰 신규 글)
-  5. `https://lumeninsights.kr/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm/` (쇼츠 알고리즘 완결판)
-- [ ] **[새 채팅] 구글 검색 클릭 유입용 실용 키워드 포스팅 1~2편 기획 및 승인 후 작성**:
-  - 예: "유튜브 쇼츠 조회수 0회 탈출법", "2026 YPP 수익 창출 조건" 등 검색 의도 중심 글.
+- [x] **[완료] 필수 페이지 및 9월 핵심 글 수동 색인 생성 요청 (URL 검사)**:
+  1. `https://lumeninsights.kr/privacy` (색인 등록 및 '색인 생성 요청됨' 완료 확인)
+  2. `https://lumeninsights.kr/terms` (색인 요청 완료 확인)
+  3. `https://lumeninsights.kr/contact` (색인 요청 완료 확인)
+  4. `https://lumeninsights.kr/blog/2026-09-28-youtube-returning-viewers-session-watch-time/` (신규 글 색인 요청 완료 확인)
+  5. `https://lumeninsights.kr/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm/` (완결판 색인 요청 완료 확인)
+- [x] **[완료] 구글 서치콘솔 16개월 실측 40개 검색어(Queries) 전수 분석**:
+  - 총 클릭 36회, 노출 666회, CTR 5.4%, 평균 순위 9.4위 실측 확인.
+  - 8월 25일 트래픽 0 급락 원인 규명: 툴/커뮤니티 삭제로 실무 검색어(캡컷, 프리미어, 투표) 유입 절단 + 기존 글의 독백형 제목 문제.
+- [x] **[완료] 1차 최우선 기존 포스팅 11편 SEO 실측 키워드 제목/디스크립션 수정 완료**:
+  - 서치콘솔 실측어(`유튜브 해시태그 개수`, `유튜브 수익창출 조건`, `엔트로피 ai`) 및 구글 1페이지 SERP 실측어(`쇼츠 썸네일 설정`, `업로드 골든타임`, `3초 훅`, `시청 유지율`, `100MB 깃허브 오류`, `다크모드 FOUC`, `Supabase 500MB`) 매핑 완료.
+- [x] **[완료] 2차 순차 개선군 10편 구글 SERP 실측 키워드 제목/디스크립션 수정 완료**:
+  - `쇼츠 제목 짓는법`, `유튜브 대본 작성법`, `채널 성장 전략`, `쇼츠 트렌드 2026`, `CEO 레터`, `AI 코딩 컨텍스트 유실 방지`, `Antigravity 룰 세팅`, `커스텀 스킬`, `Next.js 미들웨어 보안`, `Next.js 모달 쿼리 파라미터` 매핑 완료. (총 21편 리팩토링 완성)
+- [ ] **[다음 단계] 21편 변경 내역 사용자 최종 검토 및 Git 커밋/푸시 승인**:
+  - 검토 완료 시 `origin/main` 브랜치 커밋 및 프로덕션 배포.
+- [ ] **[다음 단계] 실전 제작 경험 기반 신규 포스팅 집필**:
+  - `프리미어 프로 한글 자동 자막 생성법과 음성 텍스트 변환(STT) 오류 해결 가이드` (서치콘솔 CTR 100% 실측 쿼리 직결)
+
 
 
 

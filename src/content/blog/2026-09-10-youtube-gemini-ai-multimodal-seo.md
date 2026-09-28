@@ -1,6 +1,6 @@
 ---
-title: "유튜브 Gemini 검색 개편: 태그가 사라진 시대, 영상 속 음성과 개체가 검색 1위를 만드는 원리"
-description: "수십 개의 해시태그와 키워드 나열이 무력화된 유튜브 알고리즘의 변화를 분석합니다. 5월 Google I/O의 Gemini 멀티모달 비디오 엔진 발표부터, 제목에 없던 '은교'로 검색 1위를 기록한 자체 운영 채널 175만 뷰 스튜디오 지표까지 AI SEO의 본질을 밝힙니다."
+title: "유튜브 해시태그 개수와 태그의 종말: 2026 Gemini AI 비디오 검색 최적화(SEO) 실측 분석"
+description: "유튜브 해시태그 개수와 태그 무용론의 진실을 밝힙니다. 175만 뷰 스튜디오 지표를 바탕으로, 해시태그 없이도 Gemini AI가 영상 속 음성과 장면을 분석해 검색 1위를 만드는 차세대 비디오 SEO 원리를 분석합니다."
 pubDate: 2026-09-10T00:00:00.000Z
 heroImage: "../../assets/blog/youtube_gemini_multimodal_seo_thumb.jpg"
 category: "trend"

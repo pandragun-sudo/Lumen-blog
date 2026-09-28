@@ -1,6 +1,6 @@
 ---
-title: "Next.js URL-Driven 모달 아키텍처와 좀비 파라미터(Zombie Param) 퇴치기"
-description: "브라우저 히스토리와 URL 쿼리 파라미터로 모달 상태를 동기화하는 과정에서 발생한 Stale Closure 및 좀비 파라미터 버그를 완벽히 디버깅한 실전 아키텍처를 공유합니다."
+title: "Next.js URL 쿼리 파라미터 모달 아키텍처: 좀비 파라미터 버그와 브라우저 히스토리 동기화"
+description: "브라우저 히스토리와 URL 쿼리 파라미터로 모달 상태를 동기화하는 과정에서 발생한 좀비 파라미터 버그와 Stale Closure를 완벽히 해결한 Next.js 실전 아키텍처를 공유합니다."
 category: "devlog"
 pubDate: "2026-08-03T16:00:00+09:00"
 heroImage: "../../assets/scrapbook_routing_architecture.jpg"

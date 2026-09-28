@@ -1,6 +1,6 @@
 ---
-title: "더 이상 예쁜 쓰레기는 없다: 완벽한 다크모드와 디자인 시스템 정착기"
-description: "바이브 코딩이 남긴 149개의 파편화된 색상 코드를 걷어내고, 시맨틱 토큰(Semantic Token) 기반의 완벽한 UI 시스템을 구축한 사투."
+title: "Next.js 다크모드 깜빡임(FOUC) 해결과 시맨틱 토큰 디자인 시스템 구축 가이드"
+description: "Next.js SSR 환경에서 발생하는 다크모드 화면 깜빡임(FOUC) 현상의 원인과 해결법을 공유합니다. 차단 스크립트와 시맨틱 토큰 설계를 통해 깜빡임 없는 완벽한 다크모드 디자인 시스템을 구현한 경험입니다."
 category: "devlog"
 pubDate: "2026-08-10T08:30:00+09:00"
 heroImage: "../../assets/images/blog/ep7_darkmode.jpg"
