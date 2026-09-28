@@ -54,6 +54,6 @@
   - **파일명**: `src/content/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm.md`
   - **반영 내역**: 1차(11.7만) -> 2차(42.2만) -> 3차(151.6만) -> 4차(258.2만 뷰, 100만 순 시청자) 전 주기 24일간 종단 추적 완성
 - [x] **Step 6: Astro 정적 빌드 검증 및 45개 페이지 생성 확인** (완료, 45 page(s) built in 1.24s, sitemap-index.xml 자동 갱신)
-- [x] **Step 7: Git 커밋 및 원격 브랜치 푸시 (`feature/blog-eeat-adsense-quality`)** (진행)
+- [x] **Step 7: Git 커밋 및 원격 브랜치 푸시 (`feature/blog-eeat-adsense-quality`)** (완료, `0814808`)
 
 
