@@ -58,6 +58,36 @@
   - **파일명**: `src/content/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm.md`
   - **반영 내역**: 1차(11.7만) -> 2차(42.2만) -> 3차(151.6만) -> 4차(258.2만 뷰, 100만 순 시청자) 전 주기 24일간 종단 추적 완성
 - [x] **Step 6: Astro 정적 빌드 검증 및 45개 페이지 생성 확인** (완료, 45 page(s) built in 1.24s, sitemap-index.xml 자동 갱신)
-- [x] **Step 7: Git 커밋 및 원격 브랜치 푸시 (`feature/blog-eeat-adsense-quality`)** (완료, `0814808`)
+- [x] **Step 7: Git 커밋 및 원격 브랜치 푸시 (`feature/blog-eeat-adsense-quality`)** (완료)
+- [x] **Step 8: 옛날 커뮤니티 좀비 URL 방어용 `_redirects` 301 안전망 추가** (완료)
+- [x] **Step 9: 프로덕션 배포 브랜치 동기화 및 푸시** (진행 중)
+
+---
+
+## 4. 서치콘솔 정밀 진단 및 애드센스 6회 반려 근본 원인 규명 (2026-09-28)
+
+### 🚨 구글 심사 봇이 '가치 없는 콘텐츠'로 6번 자동 반려한 3대 기술적 원인
+1. **8월 25일 이후 34일간 '구글 검색 클릭수 0회' (Organic Traffic 부재)**:
+   - 8월 말 블로그 개편 이후 모든 글이 '내부 케이스 스터디'로 바뀌면서 일반 검색자의 검색 의도(Search Intent)와 단절됨.
+   - 검색 유입이 전무한 사이트에 대해 애드센스 봇이 "상업적 광고 인벤토리 가치 없음 = 가치 없는 콘텐츠"로 기계적 자동 반려(Auto-Reject).
+2. **구글 색인의 70% 이상이 '죽은 유령 페이지'로 오염**:
+   - 구글에 색인된 69개 페이지 중 50개 이상이 이미 삭제된 옛날 커뮤니티 주소(`https://lumeninsights.kr/community/post/*`) 및 7월 삭제 글들.
+   - 봇이 접속 시 404/빈 페이지를 만나 "빈 페이지(Thin Content) 투성이 사이트"로 인식.
+3. **필수 법적 페이지 및 9월 명작 글 15편의 '색인 누락'**:
+   - 개인정보처리방침(`/privacy`), 이용약관(`/terms`), 문의하기(`/contact`)가 구글에서 '발견됨 - 현재 색인이 생성되지 않음(크롤링 안 함)' 상태로 방치.
+   - 9월의 150만/250만 뷰 분석 글 등 최신 고품질 글 15편도 색인 미생성 상태라 봇이 단 한 줄도 읽지 않고 심사 진행.
+
+### 🛠️ 긴급 조치 및 다음 새 세션 진행 가이드 (Next Action)
+- [x] **서치콘솔 유령 URL 삭제 요청**: 사용자가 서치콘솔 [삭제] 메뉴에서 `https://lumeninsights.kr/community/` 접두사 일괄 삭제 제출 완료.
+- [x] **코드단 리디렉션 안전망**: `public/_redirects`에 `/community/* /blog/ 301` 및 `/tools/* /blog/ 301` 탑재 완료.
+- [ ] **[새 채팅] 필수 페이지 및 9월 핵심 글 수동 색인 생성 요청 (URL 검사)**:
+  1. `https://lumeninsights.kr/privacy` (개인정보처리방침 - 최우선)
+  2. `https://lumeninsights.kr/terms` (이용약관 - 최우선)
+  3. `https://lumeninsights.kr/contact` (문의하기 - 최우선)
+  4. `https://lumeninsights.kr/blog/2026-09-28-youtube-returning-viewers-session-watch-time/` (오늘 자 258만 뷰 신규 글)
+  5. `https://lumeninsights.kr/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm/` (쇼츠 알고리즘 완결판)
+- [ ] **[새 채팅] 구글 검색 클릭 유입용 실용 키워드 포스팅 1~2편 기획 및 승인 후 작성**:
+  - 예: "유튜브 쇼츠 조회수 0회 탈출법", "2026 YPP 수익 창출 조건" 등 검색 의도 중심 글.
+
 
 

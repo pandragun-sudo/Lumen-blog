@@ -46,3 +46,8 @@
 /tools/* /blog/ 301
 /tools /blog/ 301
 
+# Community Fallback Redirects (Defend against old zombie URLs)
+/community/* /blog/ 301
+/community /blog/ 301
+
+
