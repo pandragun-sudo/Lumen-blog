@@ -20,6 +20,22 @@ category: "case-study"
 
 ---
 
+## 영상으로 한눈에 보기: 쇼츠 1만 벽 정체와 채널 품질 점수
+
+본 포스팅에서 다루는 핵심 분석과 스튜디오 실측 데이터를 영상으로 더 알기 쉽게 정리했습니다. 글을 읽기 전 편하게 시청해 보세요.
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/1u_L4M3vDxk"
+    title="시청시간이 더 긴데 왜 7천 회에서 멈출까? 유튜브 쇼츠 '1만 벽'의 충격적인 진실"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+---
+
 ## 3편의 스튜디오 실측 데이터 비교
 
 스튜디오 캡처 화면에서 확인되는 3편의 핵심 지표는 다음과 같습니다.
