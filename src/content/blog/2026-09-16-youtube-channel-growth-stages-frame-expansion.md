@@ -21,9 +21,8 @@ category: "case-study"
 본 분석에서 다루는 200만 쇼츠 채널 '짤컷'을 총괄한 '짤듀'의 3대 성장 수명 주기와 연구소 자체 운영 채널의 실측 교차 검증 데이터를 5분 15초 분량의 모션 그래픽으로 시각화한 비디오 리포트입니다. 텍스트를 읽기 전 영상으로 전체적인 데이터 흐름을 먼저 확인하실 수 있습니다.
 
 <div class="video-container">
-  <!-- 공식 유튜브 업로드 완료 후 영상 ID(https://youtu.be/xxx)가 발급되면 src 주소를 업데이트합니다 -->
   <iframe
-    src="https://www.youtube-nocookie.com/embed/PENDING_YOUTUBE_ID"
+    src="https://www.youtube-nocookie.com/embed/1u_L4M3vDxk"
     title="200만 채널 '짤컷'이 밝힌 알고리즘 정체 3단계: '짤듀' 영상을 보고 1년 차 연구소가 배운 프레임의 힘"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
