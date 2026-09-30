@@ -10,7 +10,14 @@ import RelatedPosts from '../components/RelatedPosts.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category = 'devlog' } = Astro.props;
+
+const categoryNames: Record<string, string> = {
+	devlog: '개발일지 (Devlog)',
+	'case-study': '채널 분석 (Case Study)',
+	guide: '가이드 (Guide)',
+	trend: '트렌드 (Trend)',
+};
 ---
 
 <html lang="ko">
@@ -76,8 +83,38 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				border-bottom: 1px solid var(--border-light);
 				padding-bottom: 2em;
 			}
+			.category-badge {
+				display: inline-block;
+				padding: 0.35rem 0.9rem;
+				font-size: 0.85rem;
+				font-weight: 700;
+				letter-spacing: 0.02em;
+				border-radius: 9999px;
+				margin-bottom: 1.2rem;
+				width: fit-content;
+			}
+			.category-badge.devlog {
+				background: rgba(59, 130, 246, 0.1);
+				color: #2563eb;
+				border: 1px solid rgba(59, 130, 246, 0.2);
+			}
+			.category-badge.case-study {
+				background: rgba(16, 185, 129, 0.1);
+				color: #059669;
+				border: 1px solid rgba(16, 185, 129, 0.2);
+			}
+			.category-badge.guide {
+				background: rgba(245, 158, 11, 0.1);
+				color: #d97706;
+				border: 1px solid rgba(245, 158, 11, 0.2);
+			}
+			.category-badge.trend {
+				background: rgba(139, 92, 246, 0.1);
+				color: #7c3aed;
+				border: 1px solid rgba(139, 92, 246, 0.2);
+			}
 			.title h1 {
-				margin: 0.5em 0;
+				margin: 0.3em 0 0.8em;
 				font-size: 3rem;
 				font-weight: 800;
 				letter-spacing: -0.03em;
@@ -363,6 +400,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</div>
 				<div class="prose">
 					<div class="title">
+						<span class={`category-badge ${category}`}>
+							{categoryNames[category] || '개발일지 (Devlog)'}
+						</span>
+						<h1 set:html={title} />
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							<span>•</span>
@@ -378,7 +419,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1 set:html={title} />
 					</div>
 					<slot />
 					<AuthorCard />
