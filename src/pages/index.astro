@@ -26,27 +26,42 @@ const categoryNames: Record<string, string> = {
 		<style>
 			/* Hero Section */
 			.hero {
-				padding: 4rem 1rem 3rem;
+				padding: 5rem 1rem 4rem;
 				text-align: center;
-				background: linear-gradient(135deg, rgba(30, 41, 59, 0.03) 0%, rgba(15, 23, 42, 0.08) 100%);
-				border-bottom: 1px solid rgba(0,0,0,0.05);
-				margin-bottom: 3rem;
+				background: linear-gradient(135deg, #0e0b14 0%, #1a1326 50%, #0e0b14 100%);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				margin-bottom: 3.5rem;
+				position: relative;
+				overflow: hidden;
+			}
+			.hero::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 550px;
+				height: 220px;
+				background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.16) 0%, transparent 70%);
+				pointer-events: none;
 			}
 			.hero h1 {
-				font-size: 3rem;
+				font-size: 3.2rem;
 				font-weight: 800;
 				margin-bottom: 1rem;
-				background: linear-gradient(90deg, #1e293b 0%, #3b82f6 100%);
+				background: linear-gradient(135deg, #ffffff 0%, #e9d5ff 50%, #c084fc 100%);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				letter-spacing: -0.03em;
+				position: relative;
 			}
 			.hero p {
-				font-size: 1.2rem;
-				color: var(--text-muted);
-				max-width: 600px;
+				font-size: 1.15rem;
+				color: #cbd5e1;
+				max-width: 620px;
 				margin: 0 auto;
-				line-height: 1.6;
+				line-height: 1.7;
+				position: relative;
 			}
 			
 			main {
