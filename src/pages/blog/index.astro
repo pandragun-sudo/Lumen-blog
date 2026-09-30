@@ -27,26 +27,7 @@ const categoryNames: Record<string, string> = {
 			main {
 				max-width: 1160px;
 				margin: 0 auto;
-				padding: 2.5rem 1.5rem 5rem;
-			}
-			.page-header {
-				text-align: center;
-				margin-bottom: 2.5rem;
-			}
-			.page-header h1 {
-				font-size: 2.5rem;
-				font-weight: 800;
-				letter-spacing: -0.03em;
-				margin-bottom: 0.75rem;
-				background: linear-gradient(90deg, #1e293b 0%, #3b82f6 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
-			.page-header p {
-				color: var(--text-muted);
-				font-size: 1.1rem;
-				max-width: 600px;
-				margin: 0 auto;
+				padding: 3rem 1.5rem 5rem;
 			}
 			
 			.category-filter {
@@ -237,11 +218,6 @@ const categoryNames: Record<string, string> = {
 		<Header />
 		<main>
 			<section>
-				<div class="page-header">
-					<h1>블로그 인사이트 아카이브</h1>
-					<p>데이터 기반 유튜브 쇼츠 역공학 분석과 엔지니어링 실전 기록</p>
-				</div>
-
 				<div class="category-filter">
 					<button class="active" data-filter="all">전체보기</button>
 					<button data-filter="devlog">개발일지 (Devlog)</button>
