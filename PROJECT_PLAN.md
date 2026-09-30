@@ -189,3 +189,16 @@
     3. `lumen_youtube_watermark_white_medium_pure_300.png` (800x800 투명 PNG): 단정형 미디엄 라지 `[구독]`
     4. 대표 파일 `lumen_youtube_watermark_white_v1_pure_text.png`를 380px 라지 버전으로 교체 완료.
   - **크기별 실시간 비교 프리뷰 목업 완성**: `lumen_watermark_text_size_comparison.png`.
+- [x] **Step 36: 1MIN DRAMA × 10MIN DRAMA 통합 채널 브랜딩 리디자인 착수** (완료)
+  - **사용자 요청 분석**:
+    - "실제 이미지를 보지 않아서 감이 안 오는데?" ➔ 구체적인 시각화 목업 이미지 즉각 제작.
+    - "롱폼 채널은 10min drama라고 채널을 이미 개설해놓긴 했어.. 약간의 확장판 느낌이랄까?" ➔ 1분 숏폼과 10분 롱폼의 패밀리 브랜드 시스템(Family Brand Architecture) 설계.
+    - "로고는 펜촉과 필름을 결합한 느낌" ➔ 복고풍 클립아트 탈피, 세련된 모던 기하학 샴페인 골드 벡터 로고 3종 시안 구축.
+  - **신규 로고 3종 시안 제작 (`1MINDRAMA/`)**:
+    1. `1MIN_DRAMA_logo_candidate1_reel_nib.png`: 시네마 릴 & 펜촉 엠블럼 (상단 1분/10분 시계 바늘 필름 릴 + 하단 스프로킷 펜촉 - 강력 추천 ⭐)
+    2. `1MIN_DRAMA_logo_candidate2_geometric_film.png`: 기하학적 일체형 필름 펜촉 (펜촉 실루엣 자체가 35mm 영화 필름)
+    3. `1MIN_DRAMA_logo_candidate3_script_ribbon.png`: 시네마틱 펜 & 필름 리본 (기존 채널의 헤리티지 계승)
+  - **시네마틱 미니멀 배너 2종 제작 (2560x1440, 모바일 1235x338 세이프존 100% 준수)**:
+    1. `1MIN_DRAMA_banner_cinematic_2560x1440.jpg` (숏폼 메인)
+    2. `10MIN_DRAMA_banner_cinematic_2560x1440.jpg` (롱폼 심층 확장판)
+  - **실시간 채널 비교 목업 완성**: `1min_drama_channel_redesign_preview.png` (현재 복고풍 콜라주 vs 신규 1MIN & 10MIN DRAMA 헤더 뷰 비교).
