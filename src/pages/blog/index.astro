@@ -10,6 +10,13 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog'))
 	.filter((post) => post.data.pubDate.valueOf() <= Date.now())
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categoryNames: Record<string, string> = {
+	devlog: '개발일지',
+	'case-study': '채널 분석',
+	guide: '가이드',
+	trend: '트렌드',
+};
 ---
 
 <!doctype html>
@@ -18,107 +25,211 @@ const posts = (await getCollection('blog'))
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				width: 960px;
+				max-width: 1160px;
+				margin: 0 auto;
+				padding: 2.5rem 1.5rem 5rem;
 			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
+			.page-header {
 				text-align: center;
+				margin-bottom: 2.5rem;
 			}
-			ul li:first-child img {
-				width: 100%;
+			.page-header h1 {
+				font-size: 2.5rem;
+				font-weight: 800;
+				letter-spacing: -0.03em;
+				margin-bottom: 0.75rem;
+				background: linear-gradient(90deg, #1e293b 0%, #3b82f6 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
+			.page-header p {
+				color: var(--text-muted);
+				font-size: 1.1rem;
+				max-width: 600px;
+				margin: 0 auto;
 			}
-			ul li img {
-				width: 100%;
-				aspect-ratio: 16 / 9;
-				object-fit: cover;
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
+			
 			.category-filter {
 				display: flex;
-				gap: 0.75rem;
+				gap: 0.65rem;
 				justify-content: center;
 				margin-bottom: 3rem;
 				flex-wrap: wrap;
 			}
 			.category-filter button {
-				padding: 0.6rem 1.25rem;
+				padding: 0.55rem 1.2rem;
 				border: 1px solid rgba(0, 0, 0, 0.08);
-				background: rgba(255, 255, 255, 0.8);
+				background: rgba(255, 255, 255, 0.85);
 				backdrop-filter: blur(10px);
 				border-radius: 9999px;
 				cursor: pointer;
-				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 				font-weight: 600;
-				font-size: 0.95rem;
+				font-size: 0.9rem;
 				color: #4b5563;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 			}
 			.category-filter button:hover {
-				background: white;
+				background: #ffffff;
 				border-color: rgba(0, 0, 0, 0.15);
 				transform: translateY(-1px);
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 				color: #111827;
 			}
 			.category-filter button.active {
 				background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
 				color: #ffffff !important;
 				border-color: transparent;
-				box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+				box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+			}
+
+			.post-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			.post-grid li {
+				background: var(--bg);
+				border: 1px solid var(--border-light);
+				border-radius: 16px;
+				overflow: hidden;
+				transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+				display: flex;
+				flex-direction: column;
+			}
+			.post-grid li:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+			}
+			.post-grid li a {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				text-decoration: none;
+				color: inherit;
+			}
+			.thumb-wrap {
+				width: 100%;
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
+				background: #f1f5f9;
+				border-bottom: 1px solid var(--border-light);
+			}
+			.thumb-wrap img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.35s ease;
+				display: block;
+			}
+			.post-grid li:hover .thumb-wrap img {
+				transform: scale(1.04);
+			}
+			.card-body {
+				padding: 1.25rem 1.4rem 1.4rem;
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+			}
+			
+			/* Category Badges */
+			.category-badge {
+				display: inline-block;
+				padding: 0.2rem 0.6rem;
+				font-size: 0.72rem;
+				font-weight: 700;
+				letter-spacing: 0.02em;
+				border-radius: 9999px;
+				margin-bottom: 0.65rem;
+				width: fit-content;
+			}
+			.category-badge.devlog {
+				background: rgba(59, 130, 246, 0.1);
+				color: #2563eb;
+				border: 1px solid rgba(59, 130, 246, 0.2);
+			}
+			.category-badge.case-study {
+				background: rgba(16, 185, 129, 0.1);
+				color: #059669;
+				border: 1px solid rgba(16, 185, 129, 0.2);
+			}
+			.category-badge.guide {
+				background: rgba(245, 158, 11, 0.1);
+				color: #d97706;
+				border: 1px solid rgba(245, 158, 11, 0.2);
+			}
+			.category-badge.trend {
+				background: rgba(139, 92, 246, 0.1);
+				color: #7c3aed;
+				border: 1px solid rgba(139, 92, 246, 0.2);
+			}
+
+			.title {
+				margin: 0;
+				color: var(--text-main);
+				font-size: 1.2rem;
+				line-height: 1.45;
+				font-weight: 700;
+				word-break: keep-all;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				min-height: 3.5rem;
+				transition: color 0.2s ease;
+			}
+			.post-grid li:hover .title {
+				color: rgb(var(--accent));
+			}
+			.description {
+				margin: 0.5rem 0 1rem;
+				color: var(--text-muted);
+				font-size: 0.9rem;
+				line-height: 1.55;
+				word-break: keep-all;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.card-footer {
+				margin-top: auto;
+				padding-top: 0.75rem;
+				border-top: 1px solid var(--border-light);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.date {
+				margin: 0;
+				color: var(--text-light);
+				font-size: 0.82rem;
+				font-weight: 500;
+			}
+
+			@media (max-width: 960px) {
+				.post-grid {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1.5rem;
+				}
+			}
+			@media (max-width: 640px) {
+				main {
+					padding: 1.5rem 1rem 3.5rem;
+				}
+				.page-header h1 {
+					font-size: 2rem;
+				}
+				.post-grid {
+					grid-template-columns: 1fr;
+					gap: 1.25rem;
+				}
+				.title {
+					min-height: auto;
+				}
 			}
 		</style>
 	</head>
@@ -126,6 +237,11 @@ const posts = (await getCollection('blog'))
 		<Header />
 		<main>
 			<section>
+				<div class="page-header">
+					<h1>블로그 인사이트 아카이브</h1>
+					<p>데이터 기반 유튜브 쇼츠 역공학 분석과 엔지니어링 실전 기록</p>
+				</div>
+
 				<div class="category-filter">
 					<button class="active" data-filter="all">전체보기</button>
 					<button data-filter="devlog">개발일지 (Devlog)</button>
@@ -133,20 +249,30 @@ const posts = (await getCollection('blog'))
 					<button data-filter="guide">가이드 (Guide)</button>
 					<button data-filter="case-study">채널 분석 (Case Study)</button>
 				</div>
-				<ul>
+				<ul class="post-grid">
 					{
 						posts.map((post) => (
 							<li data-category={post.data.category}>
 								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && post.data.heroImage !== 'AI_GENERATED' && (
-										typeof post.data.heroImage === 'string' && post.data.heroImage.startsWith('http')
-											? <img width={720} height={360} src={post.data.heroImage} alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:0.5rem;" />
-											: <Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+									<div class="thumb-wrap">
+										{post.data.heroImage && post.data.heroImage !== 'AI_GENERATED' && (
+											typeof post.data.heroImage === 'string' && post.data.heroImage.startsWith('http')
+												? <img width={720} height={360} src={post.data.heroImage} alt={post.data.title} />
+												: <Image width={720} height={360} src={post.data.heroImage} alt={post.data.title} />
+										)}
+									</div>
+									<div class="card-body">
+										<span class={`category-badge ${post.data.category || 'devlog'}`}>
+											{categoryNames[post.data.category] || '개발일지'}
+										</span>
+										<h4 class="title">{post.data.title}</h4>
+										<p class="description">{post.data.description}</p>
+										<div class="card-footer">
+											<p class="date">
+												<FormattedDate date={post.data.pubDate} />
+											</p>
+										</div>
+									</div>
 								</a>
 							</li>
 						))
@@ -157,7 +283,7 @@ const posts = (await getCollection('blog'))
 		<Footer />
 		<script>
 			const buttons = document.querySelectorAll('.category-filter button');
-			const items = document.querySelectorAll('main ul li');
+			const items = document.querySelectorAll('.post-grid li');
 			
 			buttons.forEach(button => {
 				button.addEventListener('click', () => {
@@ -167,9 +293,9 @@ const posts = (await getCollection('blog'))
 					const filter = button.getAttribute('data-filter');
 					items.forEach(item => {
 						if (filter === 'all' || item.getAttribute('data-category') === filter) {
-							item.style.display = '';
+							(item as HTMLElement).style.display = '';
 						} else {
-							item.style.display = 'none';
+							(item as HTMLElement).style.display = 'none';
 						}
 					});
 				});
