@@ -2,7 +2,7 @@
 title: "프리미어 프로를 버렸다: React(Remotion) 코드로 4분 49초 모션그래픽 유튜브 영상을 만든 이유"
 description: "마우스로 타임라인을 쪼개고 수백 개의 자막 레이어를 수정하는 반복 노동에서 벗어나, React와 브라우저 렌더링 엔진(Remotion)을 활용해 4분 49초 Full HD 모션그래픽 영상과 120px 고화질 썸네일을 100% 코드로 완성한 1인 크리에이터의 엔지니어링 기록입니다."
 pubDate: 2026-09-30T09:00:00+09:00
-heroImage: "../../assets/blog/channel_growth_framework_thumb.jpg"
+heroImage: "../../assets/blog/remotion_motion_graphics_thumb.jpg"
 category: "devlog"
 ---
 
