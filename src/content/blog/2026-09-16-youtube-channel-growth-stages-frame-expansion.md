@@ -20,17 +20,15 @@ category: "case-study"
 
 본 포스팅에서 다루는 핵심 분석과 스튜디오 실측 데이터를 영상으로 더 알기 쉽게 정리했습니다. 글을 읽기 전 편하게 시청해 보세요.
 
-<!-- 영상 후편집 및 재업로드 대기 중
 <div class="video-container">
   <iframe
-    src="https://www.youtube-nocookie.com/embed/PENDING_GROWTH_VIDEO_ID"
-    title="200만 채널 '짤컷'이 밝힌 알고리즘 정체 3단계: '짤듀' 영상을 보고 1년 차 연구소가 배운 프레임의 힘"
+    src="https://www.youtube-nocookie.com/embed/uQWzv-UuiNQ"
+    title="200만 쇼츠 채널이 밝힌 알고리즘 정체 3단계: 1년 차 연구소가 스튜디오 실데이터로 배운 프레임의 힘"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
     loading="lazy">
   </iframe>
 </div>
--->
 
 ---
 
