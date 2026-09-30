@@ -171,3 +171,11 @@
     2. `lumen_youtube_watermark_opt2_subscribe_purple.png` (800x800 투명 PNG): 딥 퍼플 글래스 `[▶ SUBSCRIBE]` 버튼형 (채널 톤앤매너 일체화)
     3. `lumen_youtube_watermark_opt3_pure_symbol.png` (800x800 투명 PNG): 투명 크리스탈 링 로고 단독형 (미니멀 프리미엄)
   - **실제 유튜브 플레이어 4-카드 비교 목업 완성**: `lumen_watermark_comparison_mockup.png` (기존 검은 사각 박스 vs 옵션 1~3의 실제 영상 재생 시뮬레이션 및 800x800 체커보드 원본 검증).
+- [x] **Step 34: 대형 채널 표준 반영 — 프리텐다드(Pretendard) 순백색 텍스트 워터마크 3종 제작** (완료)
+  - **사용자 피드백 반영**: 빨간 박스의 시선 분산을 배제하고, 국내 대형 지식/엔터/테크 채널들이 사용하는 가독성 최상급 폰트인 'Pretendard(Black/ExtraBold)' 기반 순백색 한글 텍스트 워터마크 제작.
+  - **밝은 영상 & 어두운 영상 전천후 가독성 보장**: 흰색 슬라이드나 밝은 영상에서도 텍스트가 날아가지 않도록 미세 듀얼 섀도우(타이트 스트로크 섀도우 + 소프트 앰비언트 섀도우) 설계.
+  - **신규 3종 고화질 에셋 제작 (`Lumen-blog/src/assets/brand/`)**:
+    1. `lumen_youtube_watermark_white_v1_pure_text.png` (800x800 투명 PNG): 무테 순백색 프리텐다드 `[구독]` 텍스트형 (대형 채널 대표 정석 ⭐)
+    2. `lumen_youtube_watermark_white_v2_play_text.png` (800x800 투명 PNG): 순백색 프리텐다드 `[▶ 구독]` 액션형 (아이콘 결합형)
+    3. `lumen_youtube_watermark_white_v3_dark_pill.png` (800x800 투명 PNG): 다크 글래스 알약 + 화이트 `[구독]` 텍스트형 (차콜 반투명 알약)
+  - **실시간 비교 프리뷰 목업 제작**: `lumen_watermark_white_pretendard_preview.png` (어두운 영상 및 밝은 영상 프레임 실측 시뮬레이션).
