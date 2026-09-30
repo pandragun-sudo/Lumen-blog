@@ -151,10 +151,23 @@
   - **유튜브 공식 영상 연동**: `https://youtu.be/1u_L4M3vDxk` (ID: `1u_L4M3vDxk`).
   - **블로그 본문 iframe 탑재**: `2026-09-16-youtube-channel-growth-stages-frame-expansion.md` 26행에 공식 ID 반영.
   - **Astro 정적 빌드 통과**: 46개 전체 페이지 100% 정상 빌드 완료.
-
-
-
-
-
-
-
+- [x] **Step 31: 유튜브 배너 무결점 합성 & 블로그 UI 정돈** (완료)
+  - 배너 중앙 텍스트 축소 시 발생했던 사각 패치 자국 및 이중 조명(Double Glow) 100% 원천 해결 (원본 배경 분리 추출 + 핀샤프 벡터 타이포그래피 + 앰비언트 블룸 일체화).
+  - 헤더 브랜드 로고 아이콘 삭제 (`Header.astro` 텍스트 단독 복원).
+  - 메인 홈 hero 영역 투명화 (`background: transparent; border: none;`).
+  - 소개 페이지 배너 아담하게 축소 (`about.astro` `max-width: 640px !important;`).
+  - 깃 커밋 및 푸시 완료 (`1df8520`).
+- [x] **Step 32: 유튜브 공식 프로필 & 양대 플랫폼 파비콘 등록** (완료)
+  - Type B '고선명 라벤더 링 (Radiant Lavender Ring)' 최종 채택.
+  - 하단 영문 텍스트 제거 및 6점 정밀 기하학 폴리곤 마스크로 순수 크리스탈 'L' 심볼만 중앙 리밸런싱.
+  - 유튜브 공식 프로필 로고 생성: `src/assets/brand/lumen_logo_youtube_profile_ring.jpg` (1024x1024).
+  - 블로그 파비콘 마스터 세트 교체 및 배포: `public/favicon.ico`, `public/favicon.png` (투명 원형 링), `public/apple-touch-icon.png` (깃 푸시 `81261b5`, Cloudflare Pages 실서버 200 OK 검증).
+  - 루멘 인사이트 분석 사이트(`yt-shorts-mvp/v2`) 파비콘 전면 교체: `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png` (Next.js 14 App Router 컨벤션 및 layout.tsx metadata.icons 등록, `localhost:3000` 200 OK 검증, 깃 푸시 `6262fc3`).
+- [x] **Step 33: 유튜브 동영상 워터마크 원리 규명 및 3종 고화질 투명 PNG 제작 & 실시간 플레이어 비교 목업 완성** (완료)
+  - **원리 규명**: 유튜브는 글자를 자동 추가하지 않으며, 타 채널들의 '구독' 표기는 **워터마크 이미지 파일 자체에 버튼을 일체형으로 디자인**하여 업로드한 것임을 명쾌히 규명.
+  - **불투명 검은 사각 vs 투명 PNG 비교**: 기존 스튜디오에 등록된 사각 불투명 JPG의 시야 가림 문제를 진단하고, 100% 알파 투명 채널이 적용된 고화질 에셋 제작.
+  - **3종 고화질 에셋 제작 (`Lumen-blog/src/assets/brand/`)**:
+    1. `lumen_youtube_watermark_opt1_subscribe_red.png` (800x800 투명 PNG): 유튜브 레드 `[▶ 구독]` 알약 버튼 일체형 (추천 ⭐ - 구독 전환율 극대화)
+    2. `lumen_youtube_watermark_opt2_subscribe_purple.png` (800x800 투명 PNG): 딥 퍼플 글래스 `[▶ SUBSCRIBE]` 버튼형 (채널 톤앤매너 일체화)
+    3. `lumen_youtube_watermark_opt3_pure_symbol.png` (800x800 투명 PNG): 투명 크리스탈 링 로고 단독형 (미니멀 프리미엄)
+  - **실제 유튜브 플레이어 4-카드 비교 목업 완성**: `lumen_watermark_comparison_mockup.png` (기존 검은 사각 박스 vs 옵션 1~3의 실제 영상 재생 시뮬레이션 및 800x800 체커보드 원본 검증).
