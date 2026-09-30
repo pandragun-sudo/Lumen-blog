@@ -179,3 +179,13 @@
     2. `lumen_youtube_watermark_white_v2_play_text.png` (800x800 투명 PNG): 순백색 프리텐다드 `[▶ 구독]` 액션형 (아이콘 결합형)
     3. `lumen_youtube_watermark_white_v3_dark_pill.png` (800x800 투명 PNG): 다크 글래스 알약 + 화이트 `[구독]` 텍스트형 (차콜 반투명 알약)
   - **실시간 비교 프리뷰 목업 제작**: `lumen_watermark_white_pretendard_preview.png` (어두운 영상 및 밝은 영상 프레임 실측 시뮬레이션).
+- [x] **Step 35: '구독' 텍스트 2.2배 확대(라지 380px) 및 모바일/PC 즉각 판독 최적화** (완료)
+  - **사용자 피드백 반영**: "구독 글자가 쫌 더 커도 될 것 같은데? 너무 작지 않아?" 지적 수용.
+  - **폰트 크기 2.2배 확대**: 폰트 사이즈를 기존 170px에서 **380px(라지 볼드)**로 대폭 확대 (텍스트 너비 294px ➔ 657px, 상단 링 로고 너비의 72% 비중 차지).
+  - **시각적 안정감 극대화**: 링 로고 아래에 든든하고 단단한 '구독' 텍스트 베이스가 형성되어, 모바일 초소형 화면이나 1080p 전체화면에서도 즉각적으로 명료하게 읽히도록 최적화.
+  - **신규 라지 에셋 패키징 (`Lumen-blog/src/assets/brand/`)**:
+    1. `lumen_youtube_watermark_white_large_pure_380.png` (800x800 투명 PNG): 시원한 라지 볼드 `[구독]` (강력 추천 ⭐)
+    2. `lumen_youtube_watermark_white_large_play_320.png` (800x800 투명 PNG): 시원한 라지 `[▶ 구독]` 액션형
+    3. `lumen_youtube_watermark_white_medium_pure_300.png` (800x800 투명 PNG): 단정형 미디엄 라지 `[구독]`
+    4. 대표 파일 `lumen_youtube_watermark_white_v1_pure_text.png`를 380px 라지 버전으로 교체 완료.
+  - **크기별 실시간 비교 프리뷰 목업 완성**: `lumen_watermark_text_size_comparison.png`.
