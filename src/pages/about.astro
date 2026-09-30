@@ -63,3 +63,15 @@ import Layout from '../layouts/BlogPost.astro';
 		margin-bottom: 0.5em;
 	}
 </style>
+
+<style is:global>
+	/* 소개 페이지 배너 아담하고 단정하게 축소 (Simple is Best) */
+	.hero-image {
+		max-width: 640px !important;
+		margin: 0.5rem auto 2.5rem !important;
+	}
+	.hero-image img {
+		border-radius: 14px !important;
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08) !important;
+	}
+</style>

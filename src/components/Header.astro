@@ -6,10 +6,7 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<h2>
-			<a href="/" class="brand-link">
-				<img src="/favicon.png" alt="Lumen Insights Lab" width="26" height="26" class="brand-icon" />
-				<span>{SITE_BRAND}</span>
-			</a>
+			<a href="/">{SITE_BRAND}</a>
 		</h2>
 		<div class="nav-right">
 			<div class="internal-links">
@@ -42,17 +39,10 @@ import HeaderLink from './HeaderLink.astro';
 		font-size: 1.2em;
 		font-weight: 700;
 	}
-	.brand-link {
-		display: flex;
-		align-items: center;
-		gap: 10px;
+	h2 a,
+	h2 a.active {
 		text-decoration: none;
 		color: var(--text-main);
-	}
-	.brand-icon {
-		border-radius: 6px;
-		box-shadow: 0 2px 8px rgba(147, 51, 234, 0.25);
-		display: block;
 	}
 	nav {
 		display: flex;
