@@ -23,6 +23,22 @@ category: "guide"
 
 ---
 
+## 영상으로 한눈에 보기: 유튜브 알고리즘이 '스토리의 재미'를 수치화하는 법
+
+본 칼럼에서 다루는 구글 추천 알고리즘의 심층 신경망 원리와 스튜디오 실측 3대 리텐션 데이터를 영상으로 시각화했습니다. 글을 읽기 전 편하게 시청해 보세요.
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/7T7DCALyS8w"
+    title="유튜브는 어떻게 '스토리의 재미'를 수치화할까? 알고리즘이 간파하는 시청 유지 시간의 진실"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+---
+
 ## 구글 추천 논문이 밝힌 비밀: 단순 시청 시간과 가중치 시청 시간의 차이
 
 유튜브 추천 시스템의 핵심 두뇌가 어떻게 작동하는지 이해하려면, 지난 수년간 추천 알고리즘의 교과서로 평가받는 구글 리서치(Google Research) 팀의 공식 논문, 《Deep Neural Networks for YouTube Recommendations(유튜브 추천을 위한 심층 신경망)》을 먼저 살펴볼 필요가 있습니다.
