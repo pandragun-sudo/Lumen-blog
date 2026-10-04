@@ -5,8 +5,8 @@
 /blog/2026-08-02-adsense-rejection-loop-saas-vs-blog /blog/2026-08-02-saas-dashboard-vs-seo-blog/ 301
 
 # Fallback for deleted or legacy paths to blog index
-/blog/introducing-lumen-insights/ /blog/2026-07-17-introducing-lumen-insights/ 301
-/blog/introducing-lumen-insights /blog/2026-07-17-introducing-lumen-insights/ 301
+/blog/introducing-lumen-insights/ /about/ 301
+/blog/introducing-lumen-insights /about/ 301
 
 # Deleted Low-Quality Posts Fallback
 /blog/2026-08-01-lumen-insights-v1-closure-notice/ /blog/ 301
@@ -35,8 +35,8 @@
 /blog/2026-08-02-ai-cofounder-leverage /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
 /blog/2026-07-20-stop-development-feature-creep/ /blog/ 301
 /blog/2026-07-20-stop-development-feature-creep /blog/ 301
-/blog/2026-07-20-shorts-reference-chrome-extension/ /blog/2026-07-17-introducing-lumen-insights/ 301
-/blog/2026-07-20-shorts-reference-chrome-extension /blog/2026-07-17-introducing-lumen-insights/ 301
+/blog/2026-07-20-shorts-reference-chrome-extension/ /about/ 301
+/blog/2026-07-20-shorts-reference-chrome-extension /about/ 301
 /blog/2026-08-12-antigravity-gemini-solo-saas-ep9/ /blog/ 301
 /blog/2026-08-12-antigravity-gemini-solo-saas-ep9 /blog/ 301
 /blog/2026-08-14-antigravity-gemini-solo-saas-ep11/ /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
@@ -56,8 +56,8 @@
 /blog/2026-08-05-ai-blind-spot-security /blog/2026-08-04-saas-security-breach-devlog/ 301
 /blog/2026-08-23-solo-developer-mvp-strategy/ /blog/ 301
 /blog/2026-08-23-solo-developer-mvp-strategy /blog/ 301
-/blog/2026-08-20-youtube-growth-three-pillars-strategy/ /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ 301
-/blog/2026-08-20-youtube-growth-three-pillars-strategy /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ 301
+/blog/2026-08-20-youtube-growth-three-pillars-strategy/ /blog/ 301
+/blog/2026-08-20-youtube-growth-three-pillars-strategy /blog/ 301
 /blog/2026-08-22-shortform-content-trends-2026/ /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
 /blog/2026-08-22-shortform-content-trends-2026 /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
 
@@ -70,6 +70,14 @@
 /tools/* /blog/ 301
 /tools /blog/ 301
 
+/blog/2026-07-17-introducing-lumen-insights/ /about/ 301
+/blog/2026-07-17-introducing-lumen-insights /about/ 301
+/blog/2026-07-23-transparent-ui-philosophy/ /blog/ 301
+/blog/2026-07-23-transparent-ui-philosophy /blog/ 301
+/blog/2026-08-27-shorts-subscriber-myth/ /blog/ 301
+/blog/2026-08-27-shorts-subscriber-myth /blog/ 301
+/blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ /blog/ 301
+/blog/2026-09-16-youtube-channel-growth-stages-frame-expansion /blog/ 301
 # Community Fallback Redirects (Defend against old zombie URLs)
 /community/* /blog/ 301
 /community /blog/ 301

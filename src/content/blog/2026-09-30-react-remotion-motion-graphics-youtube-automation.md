@@ -16,7 +16,7 @@ category: "devlog"
 
 이 근본적인 회의감에서 출발하여, 우리는 어도비 프리미어 프로(Premiere Pro)와 파이널컷을 완전히 내려놓고 **React 기반의 프로그래밍 비디오 엔진인 'Remotion'**을 도입했습니다. 
 
-실제로 우리 연구소의 [이전 분석 칼럼(200만 채널 성장 수명 주기와 프레임 확장론)](/blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/) 상단에 탑재된 **4분 49초짜리 Full HD 모션그래픽 영상과 고화질 썸네일**은 단 1초의 GUI 영상 툴도 켜지 않고 오직 순수 코드로만 빌드되었습니다.
+실제로 제가 이전에 올린 **4분 49초짜리 Full HD 모션그래픽 영상과 고화질 썸네일**은 단 1초의 GUI 영상 툴도 켜지 않고 오직 순수 코드로만 빌드되었습니다.
 
 ---
 
@@ -218,4 +218,3 @@ npx remotion still src/index.ts ChannelGrowthThumbA "out/thumbnail_A.jpg"
 참고 자료:
 - [Remotion — Make videos programmatically](https://www.remotion.dev/)
 - [Martin Fowler — Infrastructure As Code](https://martinfowler.com/bliki/InfrastructureAsCode.html)
-- [루멘 인사이트 랩 — 200만 채널 성장 수명 주기와 프레임 확장론 (실제 Remotion 영상 탑재)](https://lumeninsights.kr/blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/)
