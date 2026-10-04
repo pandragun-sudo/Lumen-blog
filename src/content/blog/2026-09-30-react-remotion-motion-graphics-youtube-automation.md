@@ -216,6 +216,6 @@ npx remotion still src/index.ts ChannelGrowthThumbA "out/thumbnail_A.jpg"
 ---
 
 참고 자료:
-- [Remotion 공식 문서 — React를 활용한 프로그래밍 방식 비디오 제작](https://www.remotion.dev/)
-- [Martin Fowler — Infrastructure as Code and Declarative Systems](https://martinfowler.com/bliki/InfrastructureAsCode.html)
+- [Remotion — Make videos programmatically](https://www.remotion.dev/)
+- [Martin Fowler — Infrastructure As Code](https://martinfowler.com/bliki/InfrastructureAsCode.html)
 - [루멘 인사이트 랩 — 200만 채널 성장 수명 주기와 프레임 확장론 (실제 Remotion 영상 탑재)](https://lumeninsights.kr/blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/)

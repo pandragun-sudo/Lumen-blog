@@ -75,6 +75,4 @@ heroImage: "../../assets/shorts_title_copywriting_1786875429543.jpg"
 ---
 
 참고 자료:
-- [YouTube Creators — 영상 제목 및 설명 최적화 가이드](https://www.youtube.com/creators)
-- [Google 검색 센터 — 효과적인 제목 링크 작성 권장사항](https://developers.google.com/search/docs/appearance/title-link?hl=ko)
-- [Think with Google — 모바일 시청자의 콘텐츠 탐색 행동 연구](https://www.thinkwithgoogle.com/marketing-strategies/video/youtube-shorts-strategy/)
+- [Google 검색 센터 — Google 검색에서 시선을 끄는 제목 링크 작성](https://developers.google.com/search/docs/appearance/title-link?hl=ko)

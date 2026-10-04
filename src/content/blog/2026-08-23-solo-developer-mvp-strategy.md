@@ -14,7 +14,7 @@ heroImage: "../../assets/solo_dev_mvp_1786875571715.jpg"
 
 ## 시장은 기획서가 아닌 작동하는 프로토타입에 반응한다
 
-스타트업 실패 원인을 수년간 추적 조사한 CB Insights의 리서치에 따르면, 실패한 초기 스타트업의 42%가 "시장 수요가 없는 제품을 만들었다(No Market Need)"를 가장 결정적인 실패 원인으로 꼽았습니다.  
+CB Insights가 2026년 3월 공개한 분석(2023년 이후 폐업한 스타트업 대상)에 따르면, 주요 실패 원인으로 '자금 소진'(70%)과 '제품-시장 적합성 부족'(43%)이 꼽혔습니다. 시장이 원하지 않는 제품을 만드는 것이 흔한 실패 원인이라는 점은 린 스타트업이 오래 강조해 온 문제와 맞닿아 있습니다.  
 
 자체 운영 스토리 쇼츠 채널을 운영하며 시청자들이 "다음에 방영할 신작 드라마 정보는 어디서 미리 확인하느냐"는 질문을 자주 던졌습니다.  
 우리는 이 수요를 검증하기 위해 거대한 자체 크롤러나 고가의 유료 API를 도입하는 대신, 48시간 만에 최소 기능 제품(MVP)을 배포하는 린(Lean) 전략을 선택했습니다.  
@@ -61,6 +61,6 @@ export function UpcomingReleasesWidget({ items }: { items: UpcomingItem[] }) {
 ---
 
 참고 자료:
-- [CB Insights — The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/)
-- [Eric Ries — The Lean Startup Methodology and MVP Principles](https://theleanstartup.com/)
+- [CB Insights — Why Startups Fail: Top 9 Reasons](https://www.cbinsights.com/research/startup-failure-reasons-top/)
+- [Eric Ries — The Lean Startup](https://theleanstartup.com/)
 - [Y Combinator — How to plan an MVP](https://www.ycombinator.com/library/6f-how-to-plan-an-mvp)

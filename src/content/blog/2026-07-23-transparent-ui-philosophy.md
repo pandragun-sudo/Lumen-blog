@@ -45,13 +45,13 @@ interface MetricDataPoint {
 }
 
 function calculateEstimatedRetention(viewCount: number, durationSec: number): MetricDataPoint {
-  // 실제 수집된 조회수와 영상 길이를 기반으로 통계적 기대치 계산
+  // 설명을 위해 단순화한 예시입니다. 0.72 / 0.54는 실제 모델의 계수가 아니라 예시 값입니다.
   const baseRetention = viewCount > 100000 ? 0.72 : 0.54;
   return {
     value: Math.round(baseRetention * 100),
     isEmpirical: false,
     confidenceScore: 0.85,
-    sourceDescription: "실측 스튜디오 구간별 회귀 분석 기반 추정치"
+    sourceDescription: "예시: 구간별 기준값 기반 추정치"
   };
 }
 ```
@@ -77,6 +77,5 @@ API로 검증된 실제 수치는 선명한 에메랄드 그린 배지로 렌더
 ---
 
 참고 자료:
-- [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 - [Nielsen Norman Group — Trustworthiness in Web Design: 4 Credibility Factors](https://www.nngroup.com/articles/trustworthy-design/)
-- [W3C — Design Principles for Web Data Integrity and Provenance](https://www.w3.org/TR/prov-overview/)
+- [W3C — PROV-Overview](https://www.w3.org/TR/prov-overview/)

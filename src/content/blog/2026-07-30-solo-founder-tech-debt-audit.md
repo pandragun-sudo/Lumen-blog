@@ -86,6 +86,6 @@ DROP INDEX CONCURRENTLY IF EXISTS idx_videos_video_id;
 ---
 
 참고 자료:
-- [PostgreSQL Official Documentation — Indexing Best Practices and Maintenance](https://www.postgresql.org/docs/current/indexes.html)
+- [PostgreSQL Docs — Indexes](https://www.postgresql.org/docs/current/indexes.html)
 - [Supabase Documentation — Understanding Database and Disk Size](https://supabase.com/docs/guides/platform/database-size)
-- [Martin Fowler — Technical Debt and Code Quality](https://martinfowler.com/bliki/TechnicalDebt.html)
+- [Martin Fowler — Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html)

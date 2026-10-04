@@ -17,12 +17,12 @@ category: "trend"
 
 전통적인 방송 스트리밍 서비스(OTT)와 유튜브의 가장 본질적인 차이는 콘텐츠의 유통을 가로막는 '게이트키퍼'의 유무입니다.
 
-기존 레거시 미디어에서는 한 편의 파일럿 프로그램을 만들기 위해 방송사 편성국, 투자사, 광고주의 다층 승인을 거쳐야 했습니다. 기획안 작성부터 실제 브라운관에 송출되기까지 평균 12~18개월이라는 긴 시간이 소요되었습니다.
+기존 레거시 미디어에서는 한 편의 파일럿 프로그램을 만들기 위해 방송사 편성국, 투자사, 광고주의 다층 승인을 거쳐야 했습니다. 기획안 작성부터 실제 브라운관에 송출되기까지 통상 수개월에서 1년 이상의 긴 시간이 소요되곤 했습니다.
 
 | 구분 | 레거시 방송 / 전통 OTT | 유튜브 크리에이터 생태계 |
 |---|---|---|
 | 의사결정 구조 | 편성국/투자사 승인 필수 (게이트키퍼) | 크리에이터 직접 발행 (Zero Gatekeeper) |
-| 제작부터 피드백까지 | 최소 6개월 ~ 18개월 소요 | 업로드 즉시 (실시간 스튜디오 지표 피드백) |
+| 제작부터 피드백까지 | 수개월 ~ 1년 이상 소요 | 업로드 즉시 (실시간 스튜디오 지표 피드백) |
 | 시청자 타겟팅 | 불특정 다수 대중 (Mass Audience) | 알고리즘 기반 초개인화 니치(Niche) 타겟 |
 | 콘텐츠 수정 주기 | 시즌 종료 후 개편 (경직성) | 시청자 반응 데이터에 따른 다음 회차 즉시 보정 |
 
@@ -58,5 +58,3 @@ category: "trend"
 
 참고 자료:
 - [Deadline Hollywood — Neal Mohan and Creators on 'The Future of the Stage'](https://www.youtube.com/watch?v=DF5196nKwWw)
-- [YouTube Official Blog — Empowering Creators in the Modern Media Landscape](https://blog.youtube/)
-- [Think with Google — The Shift from Legacy TV to Creator-Led Video](https://www.thinkwithgoogle.com/marketing-strategies/video/)

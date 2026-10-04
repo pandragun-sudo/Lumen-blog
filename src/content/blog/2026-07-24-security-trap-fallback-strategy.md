@@ -36,7 +36,7 @@ Lumen Insights 서비스 초기, 저는 모든 API 요청에 대해 엄격한 �
 보안 검증이 실패하거나 외부 시스템이 응답하지 않을 때, 시스템이 스스로를 셧다운시키는 대신 안전하게 기능을 제한하는 3단계 방어선을 구축했습니다.  
 
 ```typescript
-// 서킷 브레이커 기반 안전한 데이터 조회 미들웨어 구조
+// 서킷 브레이커 기반 안전한 데이터 조회 구조 (설명을 위해 단순화한 예시 코드)
 async function fetchChannelMetadataWithFallback(channelId: string) {
   try {
     // 1단계: 정상 실시간 API 호출 시도 (타임아웃 2초 제한)
@@ -73,6 +73,6 @@ async function fetchChannelMetadataWithFallback(channelId: string) {
 ---
 
 참고 자료:
-- [Martin Fowler — CircuitBreaker Pattern for Distributed Systems](https://martinfowler.com/bliki/CircuitBreaker.html)
+- [Martin Fowler — Circuit Breaker](https://martinfowler.com/bliki/CircuitBreaker.html)
 - [OWASP Foundation — Improper Error Handling](https://owasp.org/www-community/Improper_Error_Handling)
-- [MDN Web Docs — Graceful Degradation and Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation)
+- [MDN — Graceful degradation (Glossary)](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation)

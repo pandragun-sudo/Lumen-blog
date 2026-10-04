@@ -6,10 +6,10 @@ pubDate: "2026-08-17T11:00:00.000Z"
 heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 ---
 
-유튜브가 2018년 이후 가장 큰 폭의 유튜브 파트너 프로그램(YPP) 생태계 개편안을 공식 채널을 거쳐 발표했습니다.  
+유튜브가 2027년 2월 1일부터 적용되는 유튜브 파트너 프로그램(YPP) 개편안을 발표했습니다. (기준 수치의 출처: YouTube 고객센터 YPP 안내)  
 제가 그동안 자체 운영 스토리 쇼츠 채널을 운영하며 스튜디오 지표에서 체감했던 알고리즘의 깐깐한 품질 필터링이 이제는 공식 규정으로 명문화된 셈입니다.  
 이번 2027년 개편은 기존의 단순 트래픽 분배 구조에서 벗어나, 쇼츠(Shorts) 피드의 비정상적인 트래픽 인플레이션을 제어하고 <span style="color: #2563eb;">오리지널 크리에이터 옥석 가리기</span>를 본격화하려는 플랫폼의 구조적 결단이 담겨 있습니다.  
-2027년 2월부터 단계적으로 적용되는 이번 검증 기준과 알고리즘 심사 체계의 핵심 변경점을 1인 크리에이터이자 엔지니어의 관점에서 분석해 봅니다.  
+2027년 2월 1일부터 적용되는 이번 검증 기준과 알고리즘 심사 체계의 핵심 변경점을 1인 크리에이터이자 엔지니어의 관점에서 분석해 봅니다.  
 
 ## 1. YPP 채널 검증 기준: 2026년 대비 상향된 품질 허들
 
@@ -21,7 +21,6 @@ heroImage: "../../assets/youtube_ypp_2027_update.jpg"
 | 롱폼 시청 시간 (최근 365일) | 4,000 시간 | <span style="color: #ef4444;">8,000 시간</span> | 2배 상향 |
 | 쇼츠 유효 조회수 (최근 90일) | 1,000만 회 | <span style="color: #ef4444;">2,000만 회</span> | 2배 상향 |
 | 최소 구독자 수 | 1,000명 | 1,000명 | 현행 유지 |
-| 채널 무결성 검증 (가이드라인 준수) | 기본 확인 | AI 저작권 및 딥페이크 정밀 검증 추가 | 심사 강화 |
 
 처음 자체 운영 채널을 운영할 당시, 쇼츠 누적 1,000만 뷰를 달성하기 위해 매일 스와이프 이탈률(Swipe-away Rate)과 평균 시청 지속 시간(AVD)을 분석하던 과정이 떠오릅니다.  
 이 기준이 2,000만 뷰와 8,000시간으로 상향된다는 것은, 일회성 바이럴이나 요행에 의존하는 채널이 더 이상 알고리즘의 장기적 신뢰를 얻기 어렵다는 사실을 보여줍니다.  
@@ -39,7 +38,7 @@ AI를 악용한 무단 복제 영상, 단순 화면 캡처 짜깁기, 영혼 없
 ## 3. 시청자 만족도와 반복 시청 중심의 다층 평가 체계
 
 단순한 조회수 집계 방식에도 중대한 변화가 예고되었습니다.  
-유튜브는 향후 파트너 심사에서 단순 재생 수가 아닌 '유효 시청 시간'과 '시청자 재방문율'에 가중치를 부여합니다.  
+일부 해설에서는 파트너 심사에서 단순 재생 수보다 '유효 시청 시간'과 '시청자 재방문율'의 비중이 커질 것으로 전망하지만, 공식 발표로 확인된 내용은 아닙니다.  
 실측 스튜디오의 실제 시청자 지표를 분석해 보아도, 3초 만에 이탈한 100만 회의 조회수보다 70% 이상의 완주율을 기록한 10만 회의 영상이 채널의 추천 점수(Quality Score)에 훨씬 긍정적인 영향을 미쳤습니다.  
 
 순간적인 호기심을 자극해 클릭만 유도하고 곧바로 이탈하는 콘텐츠는 추천 엔진의 2차 검증을 통과하지 못합니다.  
@@ -60,6 +59,4 @@ AI를 악용한 무단 복제 영상, 단순 화면 캡처 짜깁기, 영혼 없
 ---
 
 참고 자료:
-- [YouTube Help — YouTube Partner Program Overview & Eligibility Requirements](https://support.google.com/youtube/answer/72851)
-- [YouTube Official Blog — Empowering Creators with Multi-Tiered Engagement](https://blog.youtube/news-and-events/)
-- [Google Search Central — E-E-A-T and Originality for Digital Creators](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [YouTube Help — YouTube Partner Program overview & eligibility](https://support.google.com/youtube/answer/72851)

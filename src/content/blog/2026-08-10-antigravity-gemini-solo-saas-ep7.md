@@ -52,7 +52,7 @@ Lucide SVG 전환의 성과 및 예상치 못한 변수:
 
 ## 시각적 신뢰도가 1인 SaaS에 미치는 영향
 
-자체 운영 스토리 쇼츠 채널 쇼츠 채널의 데이터 분석을 제공하는 풀스택 엔지니어 입장에서 UI 전면 리팩토링은 단순히 미관을 개선하는 작업을 넘어, 서비스의 확장성과 유지보수성, 그리고 가장 중요하게는 사용자 신뢰도를 확보하기 위한 전략적인 투자였습니다. 초기 '바이브 코딩'의 빠른 개발 속도는 스타트업에게 필수적이지만, 서비스가 성장함에 따라 발생하는 기술 부채, 특히 디자인 파편화 문제는 반드시 해결해야 할 과제임을 이번 경험으로 명확히 인식했습니다. 시맨틱 토큰 도입을 통한 색상 시스템 정립과 Lucide SVG 아이콘으로의 전환은 이러한 문제들을 근본적으로 해결하고, 서비스를 더욱 견고하고 전문적인 제품으로 발전시키는 기반을 마련했습니다.
+자체 운영 스토리 쇼츠 채널의 데이터 분석을 제공하는 풀스택 엔지니어 입장에서 UI 전면 리팩토링은 단순히 미관을 개선하는 작업을 넘어, 서비스의 확장성과 유지보수성, 그리고 가장 중요하게는 사용자 신뢰도를 확보하기 위한 전략적인 투자였습니다. 초기 '바이브 코딩'의 빠른 개발 속도는 스타트업에게 필수적이지만, 서비스가 성장함에 따라 발생하는 기술 부채, 특히 디자인 파편화 문제는 반드시 해결해야 할 과제임을 이번 경험으로 명확히 인식했습니다. 시맨틱 토큰 도입을 통한 색상 시스템 정립과 Lucide SVG 아이콘으로의 전환은 이러한 문제들을 근본적으로 해결하고, 서비스를 더욱 견고하고 전문적인 제품으로 발전시키는 기반을 마련했습니다.
 
 이 과정에서 얻은 핵심 인사이트는 다음과 같습니다.
 > 디자인은 단순한 미학적 요소가 아니라, 사용자와 서비스 간의 신뢰를 구축하는 핵심적인 요소이며, 이는 곧 시스템의 지속 가능성과 직결됩니다. 기술적 완성도만큼이나 시각적 완성도에 대한 투자는 결코 낭비가 아님을 이번 UI 리팩토링 경험으로 증명했습니다. 효율적인 디자인 시스템의 구축은 단기적인 개발 비용을 넘어 장기적인 서비스의 지속 가능성과 브랜드 가치를 높이는 필수적인 과정입니다.
@@ -60,6 +60,6 @@ Lucide SVG 전환의 성과 및 예상치 못한 변수:
 ---
 
 참고 자료:
-- [Tailwind CSS Official — Designing with Semantic Tokens and Dark Mode](https://tailwindcss.com/docs/dark-mode)
-- [Lucide Icons — Consistent & Clean Vector Icons for Modern Web](https://lucide.dev/)
+- [Tailwind CSS Docs — Dark mode](https://tailwindcss.com/docs/dark-mode)
+- [Lucide — Icon library](https://lucide.dev/)
 - [Nielsen Norman Group — Visual Hierarchy in UX: Definition](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/)

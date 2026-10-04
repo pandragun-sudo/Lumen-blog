@@ -46,15 +46,15 @@ Lumen Insights 초기 버전 개발 당시, 저는 눈앞의 기능 구현에만
 # Lumen Insights - Project Plan
 
 ## 현재 컨텍스트
-* 작업 단계: [v2.3.7] 블로그 E-E-A-T 전수 검증 및 고위험 포스팅 클린업 진행 중.
+* 작업 단계: [예시] DB 용량 최적화 마일스톤 진행 중.
 * 현재 우선 과제:
-  1. [x] MFA 오인 위험 포스팅 삭제 및 301 리다이렉트 매핑
-  2. [ ] 42편 전 포스팅 외부 권위 출처 링크 2~3건 결합
-  3. [ ] Astro 빌드 검증 및 사이트맵 최신화
+  1. [x] 중복 인덱스 정리
+  2. [ ] 보존 정책 크론잡 검증
+  3. [ ] 빌드 검증
 * 기술적 제약: Supabase 무료 티어 500MB 엄수 (무기한 데이터 적재 금지).
 ```
 
-에이전트는 이 파일을 읽는 순간 "지금은 데이터베이스 튜닝이 아니라 블로그 E-E-A-T 검증 단계이며, 500MB DB 제약을 위반하면 안 된다"는 맥락을 1초 만에 복원합니다. 작업이 완료되면 에이전트가 직접 완료 항목을 체크하고 다음 우선순위를 갱신합니다.
+에이전트는 이 파일을 읽는 순간 "지금은 DB 용량 최적화 단계이며, 500MB DB 제약을 위반하면 안 된다"는 맥락을 1초 만에 복원합니다. 작업이 완료되면 에이전트가 직접 완료 항목을 체크하고 다음 우선순위를 갱신합니다.
 
 ## 지식 자산화: 옵시디언(Obsidian) 개발 일지 자동 아카이빙
 
@@ -73,6 +73,5 @@ Lumen Insights 초기 버전 개발 당시, 저는 눈앞의 기능 구현에만
 ---
 
 참고 자료:
-- [Martin Fowler — Architecture Decision Records (ADRs)](https://martinfowler.com/articles/scaling-architecture-conversationally.html#ArchitectureDecisionRecords)
+- [Martin Fowler — Scaling the Practice of Architecture, Conversationally](https://martinfowler.com/articles/scaling-architecture-conversationally.html#ArchitectureDecisionRecords)
 - [GitHub Documentation — About READMEs and Project Documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-- [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)

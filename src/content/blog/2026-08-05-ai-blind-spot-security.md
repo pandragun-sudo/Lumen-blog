@@ -77,6 +77,5 @@ flowchart TD
 ---
 
 참고 자료:
-- [OWASP Foundation — Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [MDN Web Docs — Principles of Web Application Security and Verification](https://developer.mozilla.org/en-US/docs/Web/Security)
-- [Google Search Central — Authenticity and Human Verification Standards](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [MDN — Security](https://developer.mozilla.org/en-US/docs/Web/Security)

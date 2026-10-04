@@ -65,6 +65,5 @@ triggers:
 ---
 
 참고 자료:
-- [Google Antigravity Customization Documentation — Skills and Extension Systems](https://cloud.google.com/)
-- [GitHub Actions Documentation — Automating Workflows and CI/CD Security](https://docs.github.com/en/actions)
-- [Martin Fowler — Continuous Delivery and Automated Deployment Pipelines](https://martinfowler.com/bliki/ContinuousDelivery.html)
+- [GitHub Docs — GitHub Actions documentation](https://docs.github.com/en/actions)
+- [Martin Fowler — Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)

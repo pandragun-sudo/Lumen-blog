@@ -91,7 +91,7 @@ export function useModalCloser() {
 }
 ```
 
-## 구조적 버원칙의 타협에서 발생한다
+## 구조적 버그는 원칙의 타협에서 발생한다
 
 이 디버깅 경험은 상태 관리가 URL과 결합할 때 얼마나 엄격한 생명주기 관리가 필요한지를 일깨워주었습니다.  
 편의를 위해 컴포넌트 내부에서 URL 파라미터를 임의로 주입하던 레거시 코드를 모두 걷어내고, SWR을 통한 DB 실제 데이터 직접 바인딩으로 데이터 흐름을 정돈했습니다.  
@@ -102,6 +102,6 @@ URL-Driven 아키텍처는 강력하지만, 클로저의 상태 동기화와 파
 ---
 
 참고 자료:
-- [Next.js Documentation — Routing: Query Parameters and Shallow Routing](https://nextjs.org/docs/app/building-your-application/routing)
-- [React Documentation — Synchronizing with Effects and Preventing Stale Closures](https://react.dev/learn/synchronizing-with-effects)
-- [Nielsen Norman Group — Modal vs Modeless Dialog Design Guidelines](https://www.nngroup.com/articles/modal-nonmodal-dialog/)
+- [Next.js Docs — useSearchParams](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
+- [React Docs — Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects)
+- [Nielsen Norman Group — Modal & Nonmodal Dialogs: When (& When Not) to Use Them](https://www.nngroup.com/articles/modal-nonmodal-dialog/)

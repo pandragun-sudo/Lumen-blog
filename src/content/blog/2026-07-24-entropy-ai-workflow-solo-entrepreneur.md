@@ -61,6 +61,5 @@ heroImage: "../../assets/entropy_workflow_thumbnail.jpg"
 ---
 
 참고 자료:
-- [Martin Fowler — Software Architecture and Single Source of Truth](https://martinfowler.com/articles/designDead.html)
-- [Anthropic — Context Window Management and Prompt Engineering Strategies](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+- [Anthropic Docs — Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Google Cloud — Architecture Framework for Robust Software Systems](https://cloud.google.com/architecture/framework)

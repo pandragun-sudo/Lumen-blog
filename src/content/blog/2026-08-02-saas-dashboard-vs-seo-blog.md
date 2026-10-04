@@ -22,7 +22,7 @@ Googlebot은 자바스크립트를 실행할 수 있지만, 복잡한 API 권한
 | 비교 기준 | 단일 웹 앱 통합 구조 (과거) | 정적 미디어 완전 분리 구조 (현재) |
 |---|---|---|
 | 블로그 빌드 방식 | Next.js 동적 서버 사이드 렌더링 | Astro 기반 완전 정적 HTML 생성 (SSG) |
-| 검색 엔진 색인 | 자바스크립트 렌더링 지연으로 누락 빈발 | 0.8초 정적 컴파일, Schema.org 100% 인식 |
+| 검색 엔진 색인 | 자바스크립트 렌더링 지연으로 누락 빈발 | 0.8초 정적 컴파일, 구조화 데이터(JSON-LD) 적용 |
 | 배포 및 인프라 | Vercel 단일 풀스택 인스턴스 | Cloudflare Pages 독립 엣지 배포 |
 | 보안 격리 | 앱 쿠키와 블로그 방문자 세션 간섭 | 도메인 및 환경변수 완전 격리 |
 
@@ -32,7 +32,7 @@ Googlebot은 자바스크립트를 실행할 수 있지만, 복잡한 API 권한
 
 1. 자바스크립트 제로 번들(Zero-JS by Default): 불필요한 클라이언트 사이드 런타임을 배제하고, 순수한 시맨틱 HTML과 최적화된 WebP 이미지만으로 페이지를 생성합니다.  
 2. 독립된 사이트맵 자동화: `sitemap-index.xml`과 `robots.txt`가 빌드 시점에 자동으로 생성되어 검색 엔진에 실시간 반영됩니다.  
-3. 구조화된 메타데이터(Schema.org): 모든 테크 아티클에 `Article` 및 `Person` 스키마를 JSON-LD로 주입하여 E-E-A-T 신뢰도를 극대화했습니다.  
+3. 구조화된 메타데이터(Schema.org): 모든 테크 아티클에 `Article` 및 `Person` 스키마를 JSON-LD로 주입하여 E-E-A-T(경험·전문성·권위·신뢰) 신호를 분명히 하려 했습니다.  
 
 ```astro
 ---
@@ -50,8 +50,8 @@ const { title, description, pubDate, heroImage } = Astro.props;
 
 ## 시스템 분리가 가져다준 엔지니어링 이점
 
-웹 앱과 블로그를 물리적으로 분리한 결과, 대시보드 백엔드가 대량의 배치 크롤링을 돌리거나 DB 유지보수를 진행하더라도 블로Cloudflare 엣지 네트워크에서 100% 가동률을 유지합니다.  
-블로그의 빌드 속도는 전체 47개 페이지 기준 0.8초 만에 완료되는 놀라운 성능을 보여줍니다.  
+웹 앱과 블로그를 물리적으로 분리한 결과, 대시보드 백엔드가 대량의 배치 크롤링을 돌리거나 DB 유지보수를 진행하더라도 블로그는 Cloudflare 엣지 네트워크에서 독립적으로 서비스되어 영향을 받지 않습니다.  
+블로그 빌드는 전체 47개 페이지 기준 1초 미만으로 완료됩니다.  
 
 서로 다른 성격의 워크로드는 아키텍처 수준에서 분리되어야 합니다.  
 동적 상호작용은 Next.js 웹 앱에 맡기고, 지식의 기록과 지식 전달은 가벼운 정적 미디어에 맡기는 것.  
@@ -60,6 +60,5 @@ const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
 참고 자료:
-- [Astro Documentation — Islands Architecture and Zero-JS Performance](https://docs.astro.build/en/concepts/islands/)
-- [Google Search Central — JavaScript SEO Best Practices](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)
-- [MDN Web Docs — Server-Side Rendering vs Static Site Generation](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps)
+- [Astro Docs — Islands architecture](https://docs.astro.build/en/concepts/islands/)
+- [Google Search Central — Understand JavaScript SEO Basics](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)

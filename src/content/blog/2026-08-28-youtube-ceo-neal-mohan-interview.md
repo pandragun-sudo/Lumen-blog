@@ -11,6 +11,8 @@ category: "trend"
 
 영문 인터뷰로 진행되어 국내 크리에이터들에게는 다소 추상적으로 전달되었으나, 그가 직접 밝힌 추천 엔진의 설계 철학, 안전 정책, 그리고 파트너 프로그램(YPP)의 진화 방향은 자체 운영 스토리 쇼츠 채널을 운영하며 매일 스튜디오 지표를 마주하는 크리에이터이자 엔지니어에게 가장 강력한 데이터 나침반이 됩니다.
 
+> 안내: 이 글은 인터뷰 영상을 보고 정리한 요지이며 직접 인용이 아닙니다. 영상에 없는 해석(특히 '알고리즘 평가 레이어' 표와 스튜디오 지표 대조)은 저자의 의견입니다.
+
 ## 알고리즘 에코 챔버 논란과 개인화 추천의 본질
 
 주목해야 할 대목은 "알고리즘이 시청자를 고립시키고 확증 편향(Echo Chamber)을 강화한다"는 비판에 대한 닐 모한의 직설적인 반박이었습니다.
@@ -66,5 +68,3 @@ category: "trend"
 
 참고 자료:
 - [CBS Mornings — YouTube CEO Neal Mohan on the Future of Video and Safety](https://www.youtube.com/watch?v=nscEFAL5ttI)
-- [YouTube Official Blog — Our Approach to Recommendations and Responsible AI](https://blog.youtube/)
-- [Google 검색 센터 — 검색 및 추천의 유용한 콘텐츠(Helpful Content) 가이드라인](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ko)

@@ -89,6 +89,4 @@ graph TD
 ---
 
 참고 자료:
-- [Google DeepMind — Frontier Models and Autonomous Agentic Workflows](https://deepmind.google/technologies/)
-- [Anthropic Research — Building Effective Agents and Context Engineering](https://www.anthropic.com/research/building-effective-agents)
-- [Y Combinator Library — The Future of AI-Powered Solo Entrepreneurship](https://www.ycombinator.com/library)
+- [Anthropic — Building Effective AI Agents](https://www.anthropic.com/research/building-effective-agents)

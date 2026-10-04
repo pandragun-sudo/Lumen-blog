@@ -1,6 +1,6 @@
 ---
 title: "Next.js 미들웨어 API 보안과 Rate Limit 구현: 토큰 어뷰징 및 무단 크롤링 방어 아키텍처"
-description: "외부 API 쿼터 고갈과 무단 크롤링 공격으로부터 서비스를 보호하기 위한 Next.js 미들웨어 보안, Redis Rate Limit, SameSite 쿠키 방어 아키텍처를 상세히 공유합니다."
+description: "외부 API 쿼터 고갈과 무단 크롤링 공격으로부터 서비스를 보호하기 위한 Next.js 미들웨어 보안, Rate Limit, SameSite 쿠키 방어 아키텍처를 상세히 공유합니다."
 category: "devlog"
 pubDate: "2026-08-09T14:00:00+09:00"
 heroImage: "../../assets/images/blog/ep6_security.jpg"
@@ -27,10 +27,10 @@ heroImage: "../../assets/images/blog/ep6_security.jpg"
 
 ## Next.js Edge Middleware를 통한 1차 관문 방어
 
-모든 요청이 무거운 백엔드 비즈니스 로직이나 DB 커넥션 풀을 건드리기 전에, 엣지(Edge) 네트워크 단계에서 인증 유효성을 먼저 검사하여 서버 부하를 99% 차단합니다.  
+모든 요청이 무거운 백엔드 비즈니스 로직이나 DB 커넥션 풀을 건드리기 전에, 엣지(Edge) 네트워크 단계에서 인증 유효성을 먼저 검사하여 서버 부하를 크게 줄입니다.  
 
 ```typescript
-// src/middleware.ts: 엣지 단의 신속한 인증 및 레이트 리밋 검증
+// src/middleware.ts: 설명을 위해 단순화한 예시 (실제 구현과 다를 수 있음)
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
@@ -60,6 +60,6 @@ export function middleware(request: NextRequest) {
 ---
 
 참고 자료:
-- [OWASP Developer Guide — Principles of security (Defense in Depth)](https://devguide.owasp.org/en/02-foundations/03-security-principles/)
-- [Next.js Documentation — Edge Middleware Authentication Patterns](https://nextjs.org/docs/app/building-your-application/routing/middleware)
-- [MDN Web Docs — Using HTTP Cookies and SameSite Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+- [OWASP Developer Guide — Principles of security](https://devguide.owasp.org/en/02-foundations/03-security-principles/)
+- [Next.js Docs — proxy.js (formerly Middleware)](https://nextjs.org/docs/app/building-your-application/routing/middleware)
+- [MDN — Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)

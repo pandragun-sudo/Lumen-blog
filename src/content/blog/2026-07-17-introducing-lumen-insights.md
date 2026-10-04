@@ -24,7 +24,7 @@ heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=
 
 실제로 수집을 시작하자 충격적인 사실들이 드러나기 시작했습니다.  
 
-| 기존 가설 (카더라) | 실제 데이터 분석 결과 |
+| 기존 가설 (카더라) | 수집 데이터에서 관찰한 경향 (저자 정리) |
 |---|---|
 | "저녁 8시 업로드가 최적이다" | 채널마다 상이, 장르별로 최대 4시간 차이 존재 |
 | "첫 1시간 반응이 전부다" | 일부 영상은 72시간 이후 급격한 상승세로 성장 |
@@ -91,6 +91,5 @@ Lumen Insights를 개발하면서 저는 세 가지 설계 원칙을 처음부�
 ---
 
 참고 자료:
-- [YouTube Data API v3 — Official Overview and Quota Guidelines](https://developers.google.com/youtube/v3/getting-started)
-- [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-- [YouTube Help Center — Understand YouTube Analytics Metrics](https://support.google.com/youtube/answer/141805)
+- [YouTube Data API — Overview](https://developers.google.com/youtube/v3/getting-started)
+- [YouTube Help — Get started with YouTube Analytics](https://support.google.com/youtube/answer/9002587)
