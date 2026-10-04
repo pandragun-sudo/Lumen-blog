@@ -31,10 +31,10 @@
 /blog/2026-08-24-saas-onboarding-retention /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
 /blog/2026-07-21-ai-mastery-digital-clone/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
 /blog/2026-07-21-ai-mastery-digital-clone /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
-/blog/2026-08-02-ai-cofounder-leverage/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep3/ 301
-/blog/2026-08-02-ai-cofounder-leverage /blog/2026-08-06-antigravity-gemini-solo-saas-ep3/ 301
-/blog/2026-07-20-stop-development-feature-creep/ /blog/2026-08-23-solo-developer-mvp-strategy/ 301
-/blog/2026-07-20-stop-development-feature-creep /blog/2026-08-23-solo-developer-mvp-strategy/ 301
+/blog/2026-08-02-ai-cofounder-leverage/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-02-ai-cofounder-leverage /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-07-20-stop-development-feature-creep/ /blog/ 301
+/blog/2026-07-20-stop-development-feature-creep /blog/ 301
 /blog/2026-07-20-shorts-reference-chrome-extension/ /blog/2026-07-17-introducing-lumen-insights/ 301
 /blog/2026-07-20-shorts-reference-chrome-extension /blog/2026-07-17-introducing-lumen-insights/ 301
 /blog/2026-08-12-antigravity-gemini-solo-saas-ep9/ /blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ 301
@@ -43,6 +43,24 @@
 /blog/2026-08-14-antigravity-gemini-solo-saas-ep11 /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
 
 # Tools Fallback Redirects
+# Pruned Low-Value Posts (2026-10-05) -> related stronger posts
+/blog/2026-07-24-entropy-ai-workflow-solo-entrepreneur/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-07-24-entropy-ai-workflow-solo-entrepreneur /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-06-antigravity-gemini-solo-saas-ep1/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-06-antigravity-gemini-solo-saas-ep1 /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-06-antigravity-gemini-solo-saas-ep3/ /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-06-antigravity-gemini-solo-saas-ep3 /blog/2026-08-06-antigravity-gemini-solo-saas-ep2/ 301
+/blog/2026-08-09-antigravity-gemini-solo-saas-ep6/ /blog/ 301
+/blog/2026-08-09-antigravity-gemini-solo-saas-ep6 /blog/ 301
+/blog/2026-08-05-ai-blind-spot-security/ /blog/2026-08-04-saas-security-breach-devlog/ 301
+/blog/2026-08-05-ai-blind-spot-security /blog/2026-08-04-saas-security-breach-devlog/ 301
+/blog/2026-08-23-solo-developer-mvp-strategy/ /blog/ 301
+/blog/2026-08-23-solo-developer-mvp-strategy /blog/ 301
+/blog/2026-08-20-youtube-growth-three-pillars-strategy/ /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ 301
+/blog/2026-08-20-youtube-growth-three-pillars-strategy /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ 301
+/blog/2026-08-22-shortform-content-trends-2026/ /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
+/blog/2026-08-22-shortform-content-trends-2026 /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
+
 /tools/* /blog/ 301
 /tools /blog/ 301
 
