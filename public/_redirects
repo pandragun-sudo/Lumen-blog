@@ -37,8 +37,8 @@
 /blog/2026-07-20-stop-development-feature-creep /blog/ 301
 /blog/2026-07-20-shorts-reference-chrome-extension/ /blog/2026-07-17-introducing-lumen-insights/ 301
 /blog/2026-07-20-shorts-reference-chrome-extension /blog/2026-07-17-introducing-lumen-insights/ 301
-/blog/2026-08-12-antigravity-gemini-solo-saas-ep9/ /blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ 301
-/blog/2026-08-12-antigravity-gemini-solo-saas-ep9 /blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ 301
+/blog/2026-08-12-antigravity-gemini-solo-saas-ep9/ /blog/ 301
+/blog/2026-08-12-antigravity-gemini-solo-saas-ep9 /blog/ 301
 /blog/2026-08-14-antigravity-gemini-solo-saas-ep11/ /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
 /blog/2026-08-14-antigravity-gemini-solo-saas-ep11 /blog/2026-08-03-modern-url-driven-modal-architecture/ 301
 
@@ -61,6 +61,12 @@
 /blog/2026-08-22-shortform-content-trends-2026/ /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
 /blog/2026-08-22-shortform-content-trends-2026 /blog/2026-08-16-youtube-2026-ceo-letter-analysis/ 301
 
+/blog/2026-08-10-antigravity-gemini-solo-saas-ep7/ /blog/ 301
+/blog/2026-08-10-antigravity-gemini-solo-saas-ep7 /blog/ 301
+/blog/2026-08-11-antigravity-gemini-solo-saas-ep8/ /blog/ 301
+/blog/2026-08-11-antigravity-gemini-solo-saas-ep8 /blog/ 301
+/blog/2026-08-13-antigravity-gemini-solo-saas-ep10/ /blog/2026-07-30-solo-founder-tech-debt-audit/ 301
+/blog/2026-08-13-antigravity-gemini-solo-saas-ep10 /blog/2026-07-30-solo-founder-tech-debt-audit/ 301
 /tools/* /blog/ 301
 /tools /blog/ 301
 
