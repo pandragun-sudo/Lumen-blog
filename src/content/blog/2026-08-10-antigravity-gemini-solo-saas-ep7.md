@@ -62,4 +62,4 @@ Lucide SVG 전환의 성과 및 예상치 못한 변수:
 참고 자료:
 - [Tailwind CSS Official — Designing with Semantic Tokens and Dark Mode](https://tailwindcss.com/docs/dark-mode)
 - [Lucide Icons — Consistent & Clean Vector Icons for Modern Web](https://lucide.dev/)
-- [Nielsen Norman Group — Visual Hierarchy and Trust in Software UX](https://www.nngroup.com/articles/visual-hierarchy-ux/)
+- [Nielsen Norman Group — Visual Hierarchy in UX: Definition](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/)

@@ -74,5 +74,5 @@ async function fetchChannelMetadataWithFallback(channelId: string) {
 
 참고 자료:
 - [Martin Fowler — CircuitBreaker Pattern for Distributed Systems](https://martinfowler.com/bliki/CircuitBreaker.html)
-- [OWASP Foundation — Defensive Failure and Error Handling Guidelines](https://owasp.org/www-community/vulnerabilities/Improper_Error_Handling)
+- [OWASP Foundation — Improper Error Handling](https://owasp.org/www-community/Improper_Error_Handling)
 - [MDN Web Docs — Graceful Degradation and Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation)

@@ -98,5 +98,5 @@ AI 페어 프로그래밍의 완성도는 화려한 수식어에 있지 않습�
 
 참고 자료:
 - [Anthropic — System Prompts and Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)
-- [Google Cloud — Designing Effective Prompts for Gemini Agents](https://cloud.google.com/vertex-ai/docs/generative-ai/text/prompt-guidelines)
+- [Google Cloud — Introduction to prompting](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design)
 - [Martin Fowler — Specification by Example and Living Documentation](https://martinfowler.com/bliki/SpecificationByExample.html)

@@ -96,5 +96,5 @@ async function pruneDatabase() {
 
 참고 자료:
 - [PostgreSQL Official Documentation — Routine Vacuuming and Dead Tuples Management](https://www.postgresql.org/docs/current/routine-vacuuming.html)
-- [Supabase Documentation — Database Optimization and Storage Best Practices](https://supabase.com/docs/guides/database/managing-storage)
+- [Supabase Documentation — Understanding Database and Disk Size](https://supabase.com/docs/guides/platform/database-size)
 - [Martin Fowler — Database Administration and Scheduled Maintenance](https://martinfowler.com/articles/evodb.html)

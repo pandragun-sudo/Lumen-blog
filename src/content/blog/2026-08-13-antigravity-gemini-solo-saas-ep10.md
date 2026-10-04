@@ -59,5 +59,5 @@ heroImage: "../../assets/images/blog/ep10_halloffame.jpg"
 
 참고 자료:
 - [YouTube Help Center — Measuring Long-Term Video Performance and Evergreen Traffic](https://support.google.com/youtube/answer/141805)
-- [Supabase Documentation — Postgres Database Indexing for High-Volume Analytics](https://supabase.com/docs/guides/database/indexes)
+- [Supabase Documentation — Managing Indexes in Postgres](https://supabase.com/docs/guides/database/postgres/indexes)
 - [Think with Google — Evergreen Short-Form Video Strategy](https://www.thinkwithgoogle.com/marketing-strategies/video/youtube-shorts-trends/)

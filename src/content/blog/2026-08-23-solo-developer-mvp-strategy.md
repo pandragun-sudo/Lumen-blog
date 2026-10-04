@@ -63,4 +63,4 @@ export function UpcomingReleasesWidget({ items }: { items: UpcomingItem[] }) {
 참고 자료:
 - [CB Insights — The Top 12 Reasons Startups Fail](https://www.cbinsights.com/research/startup-failure-reasons-top/)
 - [Eric Ries — The Lean Startup Methodology and MVP Principles](https://theleanstartup.com/)
-- [Y Combinator — How to Plan and Build an MVP](https://www.ycombinator.com/library/4Q-how-to-plan-an-mvp)
+- [Y Combinator — How to plan an MVP](https://www.ycombinator.com/library/6f-how-to-plan-an-mvp)

@@ -202,6 +202,6 @@ flowchart TD
 ---
 
 ### 참고 공식 레퍼런스
-- [Google Cloud: Gemini Multimodal Video Understanding Architecture](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal-overview)
+- [Google Cloud — Video understanding (Gemini)](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/multimodal/video-understanding)
 - [YouTube Creators: How YouTube Search and Discovery Systems Work](https://support.google.com/youtube/answer/141805)
 - [Think with Google: The Evolution of Video Discovery and AI-Powered Intent](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/youtube-video-discovery-trends/)

@@ -78,5 +78,5 @@ API로 검증된 실제 수치는 선명한 에메랄드 그린 배지로 렌더
 
 참고 자료:
 - [Google Search Central — Creating Helpful, Reliable, People-First Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-- [Nielsen Norman Group — Credibility and Transparency in Web Design](https://www.nngroup.com/articles/trust-building/)
+- [Nielsen Norman Group — Trustworthiness in Web Design: 4 Credibility Factors](https://www.nngroup.com/articles/trustworthy-design/)
 - [W3C — Design Principles for Web Data Integrity and Provenance](https://www.w3.org/TR/prov-overview/)

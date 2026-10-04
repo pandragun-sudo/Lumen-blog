@@ -67,6 +67,6 @@ DB가 터져나가고 코드가 꼬여 밤을 새우며 SaaS를 고도화하는 
 ---
 
 참고 자료:
-- [YouTube Official Blog — Annual Letter from YouTube CEO Neal Mohan](https://blog.youtube/inside-youtube/letter-from-neal-2026/)
+- [YouTube Official Blog — YouTube CEO Neal Mohan’s 2026 Letter: The Future of YouTube](https://blog.youtube/inside-youtube/the-future-of-youtube-2026/)
 - [YouTube Help Center — YouTube Partner Program Overview and Monetization Updates](https://support.google.com/youtube/answer/72851)
 - [Think with Google — The Evolution of Creator Communities and Video Formats](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/youtube-trends/)

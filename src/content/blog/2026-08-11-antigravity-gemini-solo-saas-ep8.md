@@ -83,6 +83,6 @@ function parseDurationToSeconds(duration) {
 ---
 
 참고 자료:
-- [YouTube Creator Insider — YouTube Shorts Duration Policy and Feed Expansion](https://support.google.com/youtube/answer/1005907)
+- [YouTube 고객센터 — Understand three-minute YouTube Shorts](https://support.google.com/youtube/answer/15424877)
 - [YouTube Data API v3 — Video Duration ISO 8601 Format Reference](https://developers.google.com/youtube/v3/docs/videos)
 - [W3C Date and Time Formats — ISO 8601 Parsing Guidelines](https://www.w3.org/TR/NOTE-datetime)

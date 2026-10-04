@@ -288,6 +288,6 @@ flowchart TD
 ---
 
 ### 공식 권위 참고 자료 (References)
-* [YouTube Creators Official Guide: Understanding Shorts Analytics](https://support.google.com/youtube/answer/9314418) - 유튜브 고객센터 쇼츠 참여도 및 조회수 분석 공식 가이드
+* [YouTube 고객센터 — Content tab analytics tips (Shorts)](https://support.google.com/youtube/answer/12942217) - 유튜브 고객센터 쇼츠 참여도 및 조회수 분석 공식 가이드
 * [Think with Google: How Viewers Engage with Short-Form Video](https://www.thinkwithgoogle.com/marketing-strategies/video/) - 숏폼 비디오 인게이지먼트 및 플랫폼 체류 행동 분석 리포트
 * [Google Research: Deep Neural Networks for YouTube Recommendations](https://research.google/pubs/pub45530/) - 구글 리서치 유튜브 추천 시스템의 체류 시간 및 가중치 최적화 모델 논문

@@ -60,6 +60,6 @@ export function middleware(request: NextRequest) {
 ---
 
 참고 자료:
-- [OWASP Foundation — Defense in Depth Principles](https://owasp.org/www-community/Defense_in_Depth)
+- [OWASP Developer Guide — Principles of security (Defense in Depth)](https://devguide.owasp.org/en/02-foundations/03-security-principles/)
 - [Next.js Documentation — Edge Middleware Authentication Patterns](https://nextjs.org/docs/app/building-your-application/routing/middleware)
 - [MDN Web Docs — Using HTTP Cookies and SameSite Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
