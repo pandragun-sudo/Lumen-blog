@@ -4,57 +4,46 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
-	title="About Lumen Insights Lab"
-	description="1인 숏폼 크리에이터와 데이터 엔지니어가 함께 만드는 유튜브 알고리즘 연구 및 테크 웹진입니다."
+	title="이 블로그에 대하여"
+	description="2026년 2월에 쇼츠 채널을 시작한 1인 운영자가, 자기 채널의 스튜디오 지표와 직접 만든 분석 도구 이야기를 기록하는 블로그입니다."
 	pubDate={new Date('July 14 2026')}
 	heroImage={AboutHeroImage}
 >
-	<h2>데이터로 해독하는 1인 미디어의 생존 기록</h2>
+	<h2>누가 쓰는가</h2>
 	<p>
-		<strong>Lumen Insights Lab</strong>은 숏폼 채널을 직접 기획·운영하는 1인 크리에이터이자 풀스택 소프트웨어 엔지니어가 설립한 데이터 분석 연구소입니다.
-	</p>
-	<p>
-		유튜브 생태계에서 수많은 초보 창작자들이 마주하는 가장 큰 장벽은 "어떤 영상을 만들어야 알고리즘의 선택을 받을 수 있는가"에 대한 막연함입니다. 
-		시중에는 근거 없는 '100만 유튜버의 비결'이나 과장된 성공 공식이 난무하지만, 실제 현장에서 콘텐츠를 제작하고 업로드하는 크리에이터에게 필요한 것은 <strong>스튜디오 대시보드의 실제 지표와 통계적 근거</strong>입니다.
+		이 블로그는 한 사람이 운영합니다. 2026년 2월 스토리 기반 쇼츠 채널을 열었고, 수익화(YPP) 승인을 받아 운영 중입니다.
+		채널을 시작한 지 1년이 되지 않았고, 전문 개발자도 아닙니다. 그래서 이 블로그의 글은 전문가의 강의가 아니라 <strong>초보 운영자가 직접 해 보고 남긴 기록</strong>입니다.
 	</p>
 
-	<h2>우리가 연구하고 기록하는 세 가지 원칙</h2>
-
-	<h3>1. 실제 데이터 기반의 분석 (Evidence-Based Research)</h3>
-	<p>
-		추상적인 이론 대신, 평균 시청 지속 시간(AVD), 스와이프 이탈률(Swipe-Away Rate), 시간대별 피드 진입 속도 등 유튜브 스튜디오에서 추출되는 원시 데이터를 직접 측정하고 모델링합니다. 
-		저희는 가짜 난수나 임의의 추측을 배제하고, 실제 채널 운영에서 검증된 지표만을 다룹니다.
-	</p>
-
-	<h3>2. 솔직한 시행착오의 공유 (Build in Public)</h3>
-	<p>
-		성공한 사례뿐만 아니라, 조회수 100회에 멈춰 섰던 실패 원인, 데이터베이스 과부하 위기, 아키텍처 재설계 과정에서 겪은 수많은 기술적 부채를 가감 없이 투명하게 공개합니다. 
-		실패를 인정하고 분석하는 과정이야말로 가장 가치 있는 배움이기 때문입니다.
-	</p>
-
-	<h3>3. 1인 창업과 자동화 엔지니어링 (Solo Tech Stack)</h3>
-	<p>
-		소규모 인력으로 대규모 데이터를 수집·가공하기 위한 파이프라인 설계, 클라우드 인프라 최적화, 그리고 크롬 확장프로그램과 분석 도구 개발 과정을 기록합니다. 
-		1인 미디어와 1인 SaaS 창업가가 자본의 한계를 기술로 돌파하는 여정을 공유합니다.
-	</p>
-
-	<h2>연구소 문의 및 공식 채널 안내</h2>
-	<p>
-		루멘 인사이트 랩의 모든 분석과 가설은 자체 운영 중인 숏폼 채널들의 실제 제작 현장을 테스트베드로 삼아 정밀하게 진행됩니다.
-	</p>
+	<h2>무엇을 다루는가</h2>
 	<ul>
-		<li><strong>공식 유튜브:</strong> <a href="https://youtube.com/@lumeninsightslab" target="_blank" rel="noopener noreferrer">YouTube @lumeninsightslab</a></li>
-		<li><strong>연구 및 제휴 문의:</strong> <a href="mailto:dhlumen@gmail.com">dhlumen@gmail.com</a></li>
+		<li><strong>쇼츠 지표 읽기:</strong> 평균 시청 지속 시간, 스와이프 이탈률, 시청 유지율처럼 유튜브 스튜디오에서 직접 확인한 수치와 그 해석. 근거가 약한 해석은 글 안에 "추정" 또는 "저자 가설"로 표시합니다.</li>
+		<li><strong>분석 도구 만들기:</strong> 채널 데이터를 보기 위해 AI 코딩 에이전트와 함께 만든 대시보드, 크롬 확장 프로그램, 영상 제작 자동화 과정과 시행착오.</li>
+		<li><strong>유튜브 정책·공식 발표 정리:</strong> 공식 자료를 읽고 정리하되, 원문 링크를 함께 남깁니다.</li>
 	</ul>
 
+	<h2>글을 쓰는 원칙</h2>
+	<ol>
+		<li>직접 본 수치만 사실로 씁니다. 확인하지 못한 것은 추정이라고 적습니다.</li>
+		<li>틀린 내용을 발견하면 글을 고치고, 큰 정정은 본문에 밝힙니다.</li>
+		<li>특정 채널이나 외부 크리에이터의 성과를 근거 없이 단정하지 않습니다.</li>
+	</ol>
+
+	<h2>한계</h2>
 	<p>
-		화려한 허상 대신 데이터의 본질에 집중하며, 지속 가능한 1인 창작 생태계를 만들어가겠습니다.
+		표본은 채널 하나의 몇 달 치 데이터입니다. 여기서 나온 결론이 모든 채널에 들어맞는다고 보지 않습니다. 참고 자료로만 읽어 주세요.
 	</p>
+
+	<h2>연락</h2>
+	<ul>
+		<li><strong>공식 유튜브:</strong> <a href="https://youtube.com/@lumeninsightslab" target="_blank" rel="noopener noreferrer">YouTube @lumeninsightslab</a></li>
+		<li><strong>문의:</strong> <a href="mailto:dhlumen@gmail.com">dhlumen@gmail.com</a> 또는 <a href="/contact/">문의 페이지</a></li>
+	</ul>
 
 </Layout>
 
 <style>
-	ul {
+	ul, ol {
 		margin: 1.5em 0;
 		padding-left: 1.5em;
 		line-height: 1.8;
