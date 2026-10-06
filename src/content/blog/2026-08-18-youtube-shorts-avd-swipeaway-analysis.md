@@ -1,6 +1,6 @@
 ---
 title: "유튜브 쇼츠 시청 유지율과 완주율 기준: 360만 뷰 스튜디오 AVD 및 스와이프 비율 실측 분석"
-description: "유튜브 쇼츠 시청 유지율(AVD)과 완주율의 합격 기준을 스튜디오 실측치로 분석합니다. 360만 뷰 영상과 2.9만 뷰 영상의 스와이프 비율(Viewed vs Swiped Away) 비교를 통해 알고리즘 확장 임계점을 밝힙니다."
+description: "유튜브 쇼츠 시청 유지율(AVD)과 완주율의 합격 기준을 스튜디오 수치로 분석합니다. 360만 뷰 영상과 2.9만 뷰 영상의 스와이프 비율(Viewed vs Swiped Away) 비교를 통해 알고리즘 확장 임계점을 밝힙니다."
 pubDate: 2026-08-18T00:00:00.000Z
 heroImage: "../../assets/shorts_avd_swipeaway_1786874919787.jpg"
 category: "case-study"
