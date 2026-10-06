@@ -27,10 +27,10 @@
 2. **검색엔진 & 광고 크롤러 표준 세팅**:
    - `public/ads.txt` (게시자 ID `pub-8504228968555926` 정상 배포)
    - `public/robots.txt` (모든 크롤러 Allow 및 `sitemap-index.xml` 매핑)
-   - `@astrojs/sitemap` (44개 페이지 자동 인덱싱 완비)
+   - `@astrojs/sitemap` (자동 인덱싱. 2026-10-06 빌드 기준 33개 페이지)
    - `public/rss.xml` (RSS 2.0 피드 정상 배포)
 3. **콘텐츠 볼륨 및 정예화**:
-   - 총 37편의 초고품질 딥다이브 포스팅 (대부분 8~29KB, 3,000~6,000자 분량)
+   - 총 26편의 딥다이브 포스팅 (2026-10-06 기준. 이전 37편에서 가치가 낮은 글을 삭제하고 301로 이동한 뒤 신규 1편 추가)
    - 스튜디오 실측 대시보드 캡처, Mermaid 아키텍처 다이어그램, 반응형 와이드 데이터 테이블 탑재
 
 ### ⚠️ 현재 당면 과제: 2주간의 신규 포스팅 공백 및 대응 전략
@@ -202,3 +202,9 @@
     1. `1MIN_DRAMA_banner_cinematic_2560x1440.jpg` (숏폼 메인)
     2. `10MIN_DRAMA_banner_cinematic_2560x1440.jpg` (롱폼 심층 확장판)
   - **실시간 채널 비교 목업 완성**: `1min_drama_channel_redesign_preview.png` (현재 복고풍 콜라주 vs 신규 1MIN & 10MIN DRAMA 헤더 뷰 비교).
+- [x] **Step 37: 신규 글 "쇼츠 성장 방법: 137편 실제 데이터로 본 길이·평균 조회율·업로드 빈도 기준 (2026)" 발행** (완료, 2026-10-06, 커밋 `96ff0e2`)
+  - **파일명**: `src/content/blog/2026-10-06-shorts-growth-137-videos-length-retention-frequency.md` (본문 약 2,860자, 이미지 1장, 표 1개)
+  - **근거 데이터**: 채널 A 쇼츠 137편(2026-02-10 개설, 2026-10-06 기준, 삭제 영상 제외). 글감 자료 `docs/blog_inputs/20261006_초보크리에이터_쇼츠성장_실측.md`(루트, 로컬 전용). 상위 20편 합계는 스튜디오 화면과 일치 확인.
+  - **작성 규칙**: `docs/WRITING_RULES.md`(로컬, 미커밋)와 `scripts/lint-post.mjs`(로컬, 미커밋) 기준으로 점검. S1 0건.
+  - **영상 연동**: 공식 영상 `https://youtu.be/biIxTHEapvM`(ID: `biIxTHEapvM`)을 도입부 직후 iframe으로 탑재(커밋 대기).
+  - **다음**: 기존 글 25편 점검 보고서(읽기 전용) 진행.

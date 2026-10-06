@@ -16,6 +16,16 @@ category: "case-study"
 
 영상 데이터는 제 채널을 YouTube API로 가져왔고, 약 140편 기준입니다.
 
+<div class="video-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/biIxTHEapvM"
+    title="쇼츠 성장 방법: 137편 실제 데이터로 본 길이, 평균 조회율, 업로드 빈도"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
 ## 137편을 줄 세웠더니 20편이 77%를 가져갔습니다
 
 조회수 순으로 세우면 맨 위 20편, 조회 50만 이상 영상이 전체 조회수의 77%를 차지합니다.
@@ -149,7 +159,7 @@ YouTube 고객센터의 [Content 탭 분석 도움말](https://support.google.co
 
 ## 이 숫자를 믿기 전에 알아 둘 점
 
-이 글은 채널 하나, 영상 137편의 기록입니다.\
+이 글은 채널 하나, 영상 약 140편의 기록입니다.\
 지운 영상이 빠져 있어서 왜 지웠느냐에 따라 분포가 한쪽으로 쏠렸을 수 있습니다.
 
 구간마다 영상이 6편에서 21편뿐이라 표본도 작습니다.\
