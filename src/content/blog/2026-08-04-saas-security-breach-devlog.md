@@ -1,8 +1,9 @@
 ---
-title: "GitHub 100MB 파일 용량 제한 오류와 커밋 유출 해결: git-filter-repo 실전 복구 가이드"
-description: "GitHub 100MB 용량 초과 푸시 오류(Push Error)와 커밋 파일 유출을 해결한 포스트모텀입니다. git-filter-repo로 커밋 히스토리에서 대용량 파일을 제거하는 실전 방법과, 사고 이후 정한 재발 방지 규약을 다룹니다."
+title: "커밋 이력에 남은 DB 덤프와 소스 압축본: 키 교체로 먼저 막은 사고 기록과 git-filter-repo 정리 절차"
+description: "지운 줄 알았던 DB 덤프와 소스 압축본이 Git 커밋 이력에 남아 있던 사고 기록입니다. 키를 모두 교체해 위험부터 막은 과정과, 이력에서 파일을 지우는 git-filter-repo 절차, 사고 이후 정한 규칙을 정리했습니다."
 category: "devlog"
 pubDate: "2026-08-04T15:00:00+09:00"
+updatedDate: "2026-10-14T20:00:00+09:00"
 heroImage: "../../assets/saas_security_breach.jpg"
 ---
 

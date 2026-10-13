@@ -3,8 +3,12 @@ title: "1인 창업가의 기술 부채 전수 조사: 60.5MB의 유령 인덱�
 description: "Supabase 500MB 디스크 제한 압박 속에서 중복 인덱스 4개를 발굴하고, 슬라이딩 윈도우 보존 정책으로 60.5MB를 즉각 회수한 데이터베이스 리팩토링 실전기를 공유합니다."
 category: "devlog"
 pubDate: "2026-07-30T14:00:00+09:00"
+updatedDate: "2026-10-14T20:00:00+09:00"
 heroImage: "../../assets/tech_debt_audit_cover_1785403165549.jpg"
 ---
+
+> 업데이트(2026-10-14): 이 글은 7월 30일에 처음 올렸고, 8월 24일에 진행한 중복 인덱스 정리 내용을 8월 31일에 더해 고쳐 썼습니다. VACUUM이 디스크 공간을 OS에 바로 돌려준다고 쓴 잘못된 설명도 이번에 고쳤습니다.
+
 
 1인 소프트웨어 개발자에게 '기술 부채(Technical Debt)'는 소리 없이 다가오는 시한폭탄과 같습니다.  
 초기 개발 단계에서는 빠른 기능 완성이 최우선이기 때문에 데이터베이스 인덱스를 중복 생성하거나, 무제한 적재 쿼리를 방치하더라도 당장 눈앞의 기능은 문제없이 돌아갑니다.  
@@ -36,7 +40,7 @@ flowchart TD
         A --> C["idx_vds_video_record [20MB 완전 중복]"]
         D["channel_daily_stats 테이블"]
         D --> E["UNIQUE(channel_id, record_date) [정상 인덱스]"]
-        D --> F["idx_channel_daily_stats_date [26MB 완전 중복]"]
+        D --> F["idx_channel_daily_stats_channel_date [26MB 완전 중복]"]
         D --> G["idx_cds_channel_id [7.2MB 복합키 prefix 중복]"]
     end
 
@@ -47,7 +51,7 @@ flowchart TD
 
     subgraph Result["3. 최적화 결과 및 보존 정책 확립"]
         J --> K["디스크 용량: 402MB ➔ 341.5MB (60.5MB 즉각 회수)"]
-        K --> L["매일 새벽 3시 7일 슬라이딩 윈도우 크론잡 영구 안착"]
+        K --> L["매일 새벽 3시 7일 슬라이딩 윈도우 크론잡"]
     end
 
     classDef danger fill:#2a1215,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
@@ -78,7 +82,7 @@ DROP INDEX CONCURRENTLY IF EXISTS idx_videos_video_id;
 ## 7일 슬라이딩 윈도우(Sliding Window) 보존 정책 확립
 
 단순히 인덱스를 정리하는 것만으로는 영구적인 용량 방어가 불가능합니다.  
-우리는 매일 새벽 3시 크론잡(`cronJobs.js`)에서 7일이 지난 일일 통계 데이터를 자동 정리하고, `VACUUM`을 실행하여 물리 디스크 공간을 즉시 OS에 반환하는 자동 보존 파이프라인을 완성했습니다.  
+우리는 매일 새벽 3시 크론잡(`cronJobs.js`)에서 7일이 지난 일일 통계 데이터를 자동 정리하고 `VACUUM`을 실행하도록 했습니다. 일반 `VACUUM`은 지운 행이 차지하던 공간을 다시 쓸 수 있게 해 줄 뿐, 파일 크기를 OS에 바로 돌려주지는 않습니다. 그래도 새 데이터가 그 공간을 재사용하므로 용량이 계속 늘어나는 것은 막을 수 있습니다.  
 
 기술 부채는 방치하면 이자가 붙어 시스템을 무너뜨리지만, 정기적인 감사와 수치화된 데이터로 관리하면 가장 확실한 최적화의 기회가 됩니다.  
 1인 빌더일수록 기능 추가보다 데이터베이스의 건강 상태를 먼저 살피는 규율이 필요합니다.  
