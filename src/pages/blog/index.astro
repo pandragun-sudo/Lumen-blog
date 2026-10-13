@@ -12,7 +12,7 @@ const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const categoryNames: Record<string, string> = {
-	devlog: '개발일지',
+	devlog: '제작 기록',
 	'case-study': '채널 분석',
 	guide: '가이드',
 	trend: '트렌드',
@@ -220,7 +220,7 @@ const categoryNames: Record<string, string> = {
 			<section>
 				<div class="category-filter">
 					<button class="active" data-filter="all">전체보기</button>
-					<button data-filter="devlog">개발일지 (Devlog)</button>
+					<button data-filter="devlog">제작 기록</button>
 					<button data-filter="trend">트렌드 (Trend)</button>
 					<button data-filter="guide">가이드 (Guide)</button>
 					<button data-filter="case-study">채널 분석 (Case Study)</button>
@@ -239,7 +239,7 @@ const categoryNames: Record<string, string> = {
 									</div>
 									<div class="card-body">
 										<span class={`category-badge ${post.data.category || 'devlog'}`}>
-											{categoryNames[post.data.category] || '개발일지'}
+											{categoryNames[post.data.category] || '제작 기록'}
 										</span>
 										<h4 class="title">{post.data.title}</h4>
 										<p class="description">{post.data.description}</p>
