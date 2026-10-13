@@ -78,6 +78,15 @@
 /blog/2026-08-27-shorts-subscriber-myth /blog/ 301
 /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion/ /blog/ 301
 /blog/2026-09-16-youtube-channel-growth-stages-frame-expansion /blog/ 301
+# 2026-10-14 사실 점검 후 삭제한 요약 글
+/blog/2026-08-16-youtube-2026-ceo-letter-analysis/ /blog/ 301
+/blog/2026-08-16-youtube-2026-ceo-letter-analysis /blog/ 301
+/blog/2026-08-17-youtube-creators-final-destination/ /blog/ 301
+/blog/2026-08-17-youtube-creators-final-destination /blog/ 301
+/blog/2026-08-28-youtube-ceo-neal-mohan-interview/ /blog/ 301
+/blog/2026-08-28-youtube-ceo-neal-mohan-interview /blog/ 301
+/blog/2026-08-29-odyssey-storytelling-retention-framework/ /blog/2026-10-03-how-youtube-algorithm-measures-story-retention/ 301
+/blog/2026-08-29-odyssey-storytelling-retention-framework /blog/2026-10-03-how-youtube-algorithm-measures-story-retention/ 301
 # Community Fallback Redirects (Defend against old zombie URLs)
 /community/* /blog/ 301
 /community /blog/ 301
