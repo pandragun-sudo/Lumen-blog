@@ -4,7 +4,6 @@ description: "제목에 작품명이 없는데도 작품명이 검색어 상위�
 category: "guide"
 pubDate: "2026-08-21T00:00:00.000Z"
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/shorts_title_copywriting_1786875429543.jpg"
 ---
 
 ## 제목에 작품명을 넣을지 고민될 때

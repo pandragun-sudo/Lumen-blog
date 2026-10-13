@@ -4,7 +4,7 @@ description: "쇼츠 오프닝 3초 훅을 어떻게 설계했는지 정리했�
 category: "case-study"
 pubDate: "2026-08-19T21:00:00+09:00"
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/shorts_opening_hook_1786875110012.jpg"
+heroImage: "../../assets/blog/studio_shorts_hook_views_breakthrough.png"
 ---
 
 > 업데이트(2026-10-07): 이 글의 사례는 한 영상의 관측입니다. 이후 사례(피드 잔존율 55~58%에서도 250만 뷰 도달)에서는 높은 잔존율이 유일한 조건이 아니었습니다. 자세한 내용은 [예상과 달랐던 쇼츠 알고리즘 사례](/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm/)에서 다룹니다.
