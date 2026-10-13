@@ -4,20 +4,24 @@ import FormattedDate from './FormattedDate.astro';
 
 export interface Props {
 	currentTitle?: string;
+	category?: string;
 }
 
-const { currentTitle } = Astro.props;
+const { currentTitle, category } = Astro.props;
 
 const posts = (await getCollection('blog'))
 	.filter((post) => post.data.pubDate.valueOf() <= Date.now())
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const relatedPosts = posts.filter(post => post.data.title !== currentTitle).slice(0, 3);
+const others = posts.filter(post => post.data.title !== currentTitle);
+const sameCategory = others.filter(post => post.data.category === category);
+const rest = others.filter(post => post.data.category !== category);
+const relatedPosts = [...sameCategory, ...rest].slice(0, 3);
 ---
 
 {relatedPosts.length > 0 && (
 	<section class="related-posts-section">
-		<h3>🔥 이번 주 인기글 추천</h3>
+		<h3>함께 읽으면 좋은 글</h3>
 		<div class="posts-grid">
 			{
 				relatedPosts.map((post) => (

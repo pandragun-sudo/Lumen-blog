@@ -50,6 +50,34 @@ const categoryNames: Record<string, string> = {
 				line-height: 1.6;
 			}
 			
+
+			.start-here {
+				max-width: 760px;
+				margin: 0 auto 2.5rem;
+				padding: 1.5rem 1.75rem;
+				border: 1px solid var(--border-light);
+				border-radius: 16px;
+				background: var(--bg);
+			}
+			.start-here h2 {
+				font-size: 1.2rem;
+				margin: 0 0 0.6rem;
+			}
+			.start-here p {
+				margin: 0 0 0.8rem;
+				line-height: 1.7;
+				color: var(--text-muted);
+			}
+			.start-here ul {
+				margin: 0 0 0.8rem;
+				padding-left: 1.2rem;
+				line-height: 1.9;
+			}
+			.start-here .start-note {
+				margin: 0;
+				font-size: 0.95rem;
+			}
+
 			main {
 				max-width: 1200px;
 				margin: 0 auto;
@@ -249,7 +277,18 @@ const categoryNames: Record<string, string> = {
 		
 		<section class="hero">
 			<h1>Lumen Insights Lab</h1>
-			<p>데이터가 증명하는 유튜브 쇼츠 알고리즘 분석과 1인 엔지니어링 실전 기록</p>
+			<p>쇼츠 채널을 직접 운영하며 스튜디오 지표를 읽고, 분석 도구를 만든 과정을 기록합니다</p>
+		</section>
+
+		<section class="start-here">
+			<h2>처음 읽는 분께</h2>
+			<p>이 블로그는 한 명의 운영자가 쇼츠 채널에서 직접 확인한 지표와 그 해석, 그리고 분석 도구를 만든 기록을 다룹니다.</p>
+			<ul>
+				<li><a href="/blog/2026-10-06-shorts-growth-137-videos-length-retention-frequency/">쇼츠 137편 데이터로 본 길이, 평균 조회율, 업로드 빈도</a></li>
+				<li><a href="/blog/2026-09-11-shorts-retention-vs-watch-time-share-algorithm/">피드 잔존율 55%로 250만 뷰를 넘긴 사례</a></li>
+				<li><a href="/blog/2026-10-03-how-youtube-algorithm-measures-story-retention/">유튜브가 이야기의 재미를 수치로 읽는 방식</a></li>
+			</ul>
+			<p class="start-note">분류별로 보려면 <a href="/blog/">전체 글 목록</a>에서 개발일지, 채널 분석, 가이드, 트렌드를 골라 볼 수 있습니다.</p>
 		</section>
 
 		<main>
