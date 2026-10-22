@@ -3,7 +3,7 @@ title: "쇼츠 조회수 1만 벽: 지표가 좋은데도 7천 회에서 멈춘 
 description: "피드 잔존율 70.1%, 평균 조회율 93.9%를 기록하고도 7,334회에서 멈춘 쇼츠와 1만 회를 넘긴 쇼츠 2편의 스튜디오 지표를 비교했습니다. 무엇이 확인되고 무엇이 가설인지 나눠 정리했습니다."
 pubDate: 2026-09-29T04:00:00+09:00
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/shorts_10k_wall_thumb.jpg"
+heroImage: "../../assets/blog/shorts_wall10k_update_thumb.jpg"
 category: "case-study"
 ---
 

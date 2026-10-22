@@ -3,7 +3,7 @@ title: "유튜브는 어떻게 '스토리의 재미'를 수치화하는가: 추�
 description: "Google Research의 YouTube 추천 논문(Deep Neural Networks for YouTube Recommendations)이 시청 시간을 어떻게 다루는지 정리하고, 채널 A 쇼츠 3편의 리텐션 그래프를 나란히 놓고 피드 잔존율, 중반 이탈, 재시청 신호를 비교했습니다."
 pubDate: 2026-10-03T09:00:00+09:00
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/story_retention_vector_thumb.jpg"
+heroImage: "../../assets/blog/story_retention_3types_thumb.jpg"
 category: "guide"
 ---
 

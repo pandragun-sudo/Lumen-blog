@@ -3,7 +3,7 @@ title: "평균 조회율 150%의 함정: 완주율이 높아도 조회수 1만�
 description: "평균 조회율이 150%를 넘었는데 조회수는 1만 회에서 멈춘 쇼츠가 있었습니다. 채널 A의 쇼츠 5편을 나란히 놓고 피드 잔존율과 평균 조회율이 어떻게 달랐는지 비교했습니다."
 pubDate: 2026-09-05T00:00:00.000Z
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/SCR-20260905-ogyg.png"
+heroImage: "../../assets/blog/shorts_trap150_thumb.jpg"
 category: "case-study"
 ---
 

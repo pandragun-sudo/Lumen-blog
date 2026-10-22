@@ -3,7 +3,7 @@ title: "제목에 없던 작품명이 검색어 1위가 된 쇼츠 2편: 175만 
 description: "제목과 공식 태그에 작품명이 없었는데도 검색 유입 1위가 된 175만 뷰·104만 뷰 쇼츠의 스튜디오 지표를 공개합니다. 공개된 자료로 확인되는 AI 검색 변화와 확인되지 않는 부분을 구분하고, 해시태그·자막·대사가 검색 유입에 어떻게 작용했는지 저자의 가설을 정리합니다."
 pubDate: 2026-09-10T00:00:00.000Z
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/youtube_gemini_multimodal_seo_thumb.jpg"
+heroImage: "../../assets/blog/shorts_search_name_rank1_thumb.jpg"
 category: "trend"
 ---
 

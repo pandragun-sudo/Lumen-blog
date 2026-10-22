@@ -2,7 +2,7 @@
 title: "설명 영상은 프리미어 대신 React(Remotion) 코드로 만든 이유: 4분 49초 모션그래픽 제작 기록"
 description: "마우스로 타임라인을 쪼개고 수백 개의 자막 레이어를 수정하는 반복 노동에서 벗어나, React와 브라우저 렌더링 엔진(Remotion)으로 4분 49초 Full HD 모션그래픽 영상의 화면과 썸네일을 코드로 만든 1인 크리에이터의 엔지니어링 기록입니다."
 pubDate: 2026-09-30T09:00:00+09:00
-heroImage: "../../assets/blog/remotion_motion_graphics_thumb.jpg"
+heroImage: "../../assets/blog/remotion_code_4m49s_thumb.jpg"
 category: "devlog"
 ---
 

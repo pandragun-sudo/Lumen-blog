@@ -3,7 +3,7 @@ title: "유튜브 쇼츠 시청 유지율과 완주율: 360만 뷰·180만 뷰·
 description: "유튜브 쇼츠 시청 유지율(AVD)과 피드 시청 비율을 스튜디오 수치로 비교했습니다. 360만 뷰, 180만 뷰, 2.9만 뷰 영상 3편의 스와이프 비율(Viewed vs Swiped Away)과 시청 시간을 나란히 놓고 차이를 살펴봅니다."
 pubDate: 2026-08-18T00:00:00.000Z
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/SCR-20260824-1_1.png"
+heroImage: "../../assets/blog/shorts_avd_3cases_thumb.jpg"
 category: "case-study"
 ---
 

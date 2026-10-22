@@ -3,7 +3,7 @@ title: "쇼츠 알고리즘은 예상과 달랐다: 피드 잔존율 55%로 250�
 description: "참여도 지표가 낮아도 추천 피드가 살아나는 유튜브 쇼츠 알고리즘의 예외 메커니즘을 분석합니다. 피드 잔존율 55% 영상이 11만 뷰, 42만 뷰, 151만 뷰를 거쳐 258.2만 뷰(10월 14일 현재 523만 회)에 이르기까지 네 차례 추적한 데이터로 1.7만 시간 체류와 공유 신호의 역할을 해석합니다."
 pubDate: 2026-09-11T02:55:00+09:00
 updatedDate: "2026-10-14T20:00:00+09:00"
-heroImage: "../../assets/blog/shorts_watch_time_share_algorithm_thumb.jpg"
+heroImage: "../../assets/blog/shorts_feed55_579m_thumb.jpg"
 category: "case-study"
 ---
 
