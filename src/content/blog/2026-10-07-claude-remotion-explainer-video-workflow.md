@@ -3,6 +3,7 @@ title: "Claude와 함께 Remotion으로 설명 영상 만들기: 대본부터 �
 description: "5분 50초짜리 설명 영상을 만든 순서를 그대로 적었습니다. 대본과 음성은 사람이, 장면 데이터와 Remotion 코드는 Claude가 맡았고, 자막 타이밍은 음성 인식 결과를 썼습니다."
 pubDate: 2026-10-07T03:00:00+09:00
 category: "guide"
+heroImage: "../../assets/blog/claude_remotion_workflow_thumb.jpg"
 ---
 
 최근에 5분 50초짜리 설명 영상을 한 편 만들었습니다.\

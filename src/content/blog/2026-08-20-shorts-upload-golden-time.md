@@ -4,6 +4,7 @@ description: "쇼츠 채널 한 곳의 영상 122편을 업로드 시각별로 �
 pubDate: "2026-08-20T00:00:00.000Z"
 updatedDate: "2026-10-14T20:00:00+09:00"
 category: "case-study"
+heroImage: "../../assets/blog/shorts_upload_golden_time_thumb.jpg"
 ---
 이 글은 8월에 처음 올렸고 10월 14일에 채널 데이터로 다시 썼습니다.
 
