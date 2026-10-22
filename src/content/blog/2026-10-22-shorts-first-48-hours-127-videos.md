@@ -4,6 +4,7 @@ description: "쇼츠 채널 한 곳의 영상 127편에서 업로드 첫 48시�
 pubDate: 2026-10-22T20:00:00+09:00
 category: "case-study"
 heroImage: "../../assets/blog/shorts_first48h_thumb.jpg"
+updatedDate: "2026-10-23T09:00:00+09:00"
 ---
 첫 48시간에 조회수 5만 회를 넘긴 쇼츠 32편이 있습니다.\
 그중 30편이 결국 10만 회를 넘었습니다.
@@ -20,6 +21,18 @@ heroImage: "../../assets/blog/shorts_first48h_thumb.jpg"
 첫 48시간만 보고 그 영상의 결과를 얼마나 맞힐 수 있을까요?
 
 [쇼츠 조회수 1만 벽](/blog/2026-09-29-shorts-retention-paradox-channel-authority/) 글에서 영상 몇 편으로 던졌던 질문을 127편으로 다시 확인하는 글이기도 합니다.
+
+같은 내용을 영상으로도 정리했습니다.
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/5_NcBwCXiKc"
+    title="쇼츠 첫 48시간으로 본 127편: 5만 회 갈림길"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
 
 ## 이 글에서 말하는 첫 48시간과 유효 조회수
 
