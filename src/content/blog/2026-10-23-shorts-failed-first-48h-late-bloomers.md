@@ -17,6 +17,18 @@ heroImage: "../../assets/blog/shorts_late3_thumb.jpg"
 이번에는 40편의 하루 조회수를 처음부터 끝까지 꺼내 놓고 비교했습니다.\
 살아난 영상과 멈춘 영상은 언제 갈렸을까요?
 
+같은 내용을 영상으로도 정리했습니다.
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/yqeZSfTuRwY"
+    title="첫 이틀 실패한 쇼츠, 언제까지 기다려야 할까? (40편을 하루 단위로 끝까지)"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
 ## 이 글에서 말하는 실패
 
 표본은 지난 글과 같은 127편입니다.\
